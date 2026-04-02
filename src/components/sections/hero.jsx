@@ -32,14 +32,23 @@ export default function Hero({ onOpenSchedule }) {
           }}
         >
           {/* Eyebrow */}
-          <div className="hero-eyebrow" style={{ marginBottom: "2rem" }}>
+          <div className="hero-eyebrow" style={{ marginBottom: "1rem" }}>
             <span className="pulse" />
             Five Day Faculty Development Programme · 2026
           </div>
-          <div className="hero-eyebrow" style={{ marginBottom: "2rem" }}>
-            <span className="pulse" />
-            Department of Electrical & Electronics Engineering
-          </div>
+          <p
+            style={{
+              fontSize: "1.05rem",
+              color: "#475569",
+              lineHeight: 1.8,
+              maxWidth: 620,
+              marginBottom: "1rem",
+              marginLeft: "0.25rem", // slightly pushed right to visually align
+              fontWeight: 500,
+            }}
+          >
+            <strong style={{ color: "#022c22" }}>Department of Electrical & Electronics Engineering</strong>
+          </p>
 
           {/* Title */}
           <h1 className="hero-title" style={{ maxWidth: 840 }}>
