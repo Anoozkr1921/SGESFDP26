@@ -65,16 +65,61 @@ const chapters = [
 ];
 
 const labs = [
-  { name: "Power Systems Lab" },
-  { name: "Control System Lab" },
-  { name: "Smart Grid Lab" },
-  { name: "Electrical Machines Lab" },
-  { name: "NaMPET Power Electronics Lab" },
-  { name: "Power Electronics Lab" },
-  { name: "Electrical Measurement & Instrumentation Lab" },
-  { name: "Soft Computing Lab" },
-  { name: "Virtual Instrumentation & Signal Processing Lab" },
-  { name: "Drives Lab" },
+  {
+    name: "Power Systems Lab",
+    image: new URL("../../assets/images/8 Power System Lab.jpg", import.meta.url).href,
+  },
+  {
+    name: "Control System Lab",
+    image: new URL("../../assets/images/9a Control System Lab.jpg", import.meta.url).href,
+  },
+  {
+    name: "Smart Grid Lab",
+    image: new URL("../../assets/images/7 Smart Grid Lab.jpg", import.meta.url).href,
+  },
+  {
+    name: "Electrical Machines Lab",
+    image: new URL("../../assets/images/4 Machine Lab.JPG", import.meta.url).href,
+  },
+  {
+    name: "NaMPET Power Electronics Lab",
+    image: new URL("../../assets/images/8a Power System Lab.jpg", import.meta.url).href,
+  },
+  {
+    name: "Power Electronics Lab",
+    image: new URL("../../assets/images/8c Power System Lab.jpg", import.meta.url).href,
+  },
+  {
+    name: "Electrical Measurement & Instrumentation Lab",
+    image: new URL("../../assets/images/10 Measurement Lab.jpg", import.meta.url).href,
+  },
+  {
+    name: "Soft Computing Lab",
+    image: new URL("../../assets/images/5a Soft Computing Lab.jpg", import.meta.url).href,
+  },
+  {
+    name: "Virtual Instrumentation & Signal Processing Lab",
+    image: new URL("../../assets/images/6a Signal Processing Lab.jpg", import.meta.url).href,
+  },
+  {
+    name: "Drives Lab",
+    image: new URL("../../assets/images/4a Machine Lab.jpg", import.meta.url).href,
+  },
+];
+
+const colleges = [
+  {
+    name: "BIT Mesra Campus",
+    image: new URL("../../assets/images/1 BIT Campus.jpg", import.meta.url).href,
+  },
+  {
+    name: "EEE Building",
+    image: new URL("../../assets/images/3. EEE Labs.JPG", import.meta.url).href,
+  },
+  {
+    name: "Research Center",
+    image: new URL("../../assets/images/12 Faculty members.jpg", import.meta.url).href,
+  },
 ];
 
 const LAB_SHUFFLE_MS = 3000;
@@ -367,7 +412,11 @@ export default function About() {
                           style={{
                             ...glassCommon,
                             border,
-                            background,
+                            background: lab.image
+                              ? `linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.32)), url(${lab.image})`
+                              : background,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
                             boxShadow: shadow,
                           }}
                         >
@@ -474,6 +523,155 @@ export default function About() {
                 The Department hosts advanced laboratories in <strong>Power Systems</strong> and <strong>Control Systems</strong>, alongside a <strong>Smart Grid Lab</strong> built for hands-on learning.
                 It is also home to a <strong>NaMPET-funded Power Electronics Laboratory</strong> that supports modern inverter/control research and practical training.
                 With measurement, computing, and instrumentation facilities, students gain end-to-end exposure from theory to real-time experimentation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════
+          SECTION 1.75 — ABOUT THE COLLEGE (same design as DEPT)
+          ══════════════════════════════════════════════════ */}
+      <section
+        id="college"
+        className="sec-white"
+        style={{
+          paddingTop: "96px",
+          paddingBottom: "96px",
+          background:
+            "linear-gradient(170deg, #ffffff 0%, #f0fdf4 40%, #dcfce7 100%)",
+        }}
+      >
+        <div className="sec">
+          <div className="dept-grid">
+            <div>
+              <div className="tag">About the College</div>
+
+              <div
+                style={{
+                  marginTop: "0.75rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "0.85rem",
+                }}
+              >
+                <div
+                  style={{
+                    width: CARD_W,
+                    height: CARD_H,
+                    borderRadius: 18,
+                    overflow: "hidden",
+                    border: "1.5px solid rgba(4,120,87,0.45)",
+                    boxShadow: "0 14px 36px rgba(11,61,34,0.10)",
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.36)), url(${colleges[0].image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "radial-gradient(ellipse at 50% 0%, rgba(52,211,153,0.20) 0%, transparent 60%), linear-gradient(180deg, rgba(236,253,245,0.35) 0%, rgba(255,255,255,0.00) 60%)",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: 14,
+                      right: 14,
+                      bottom: 14,
+                      padding: "10px 12px",
+                      borderRadius: 12,
+                      background: "rgba(255,255,255,0.85)",
+                      border: "1px solid rgba(4,120,87,0.25)",
+                      fontFamily: "'Playfair Display', serif",
+                      fontWeight: 900,
+                      color: "#022c22",
+                      textAlign: "center",
+                    }}
+                  >
+                    {colleges[0].name}
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    width: CARD_W,
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))",
+                    gap: "0.75rem",
+                  }}
+                >
+                  {colleges.slice(1).map((college) => (
+                    <div
+                      key={college.name}
+                      style={{
+                        height: "108px",
+                        borderRadius: 14,
+                        overflow: "hidden",
+                        border: "1px solid rgba(4,120,87,0.2)",
+                        boxShadow: "0 10px 20px rgba(11,61,34,0.08)",
+                        backgroundImage: `url(${college.image})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        position: "relative",
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background:
+                            "linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.45) 100%)",
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: 8,
+                          left: 8,
+                          right: 8,
+                          color: "#ffffff",
+                          fontSize: "0.76rem",
+                          fontWeight: 700,
+                          textShadow: "0 2px 8px rgba(0,0,0,0.55)",
+                        }}
+                      >
+                        {college.name}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="about-text">
+              <h2
+                className="text-emerald-950 font-black"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)",
+                  lineHeight: 1.1,
+                  marginBottom: "0.85rem",
+                }}
+              >
+                About the College
+              </h2>
+              <div className="rule" style={{ marginBottom: "1.2rem" }} />
+
+              <p>
+                <strong>About the Birla Institute of Technology</strong>
+                <br />
+                JOHAR! Welcome to the Birla Institute of Technology (BIT) Mesra, one of the oldest institutions of Technology in independent India, founded in 1955 by the visionary industrialist and philanthropist Mr. B.M. Birla. BIT Mesra is located in Ranchi, the capital of the State of Jharkhand, the mineral hub and abode of serene beauty of natural forests, mountains, and waterfalls. In more than six decades of its glorious existence, this Institute, recognized by the University Grants Commission (UGC) as a deemed to be University in 1986 under section 3 of the UGC Act 1956, has emerged as one of the top most self-financed or private Engineering Institution catering to both traditional engineering disciplines and emerging technological domains with firm foundation in fundamental sciences and orientation toward modern innovations and applications.
+              </p>
+              <p>
+                <strong>A legacy of leadership</strong>
+                <br />
+                Established in 1955 by the visionary industrialist Mr. BM Birla, BIT Mesra was founded with a clear vision to offer its young minds a space where their imagination could take wings, and their ideas could come to fruition. For over 6 decades, the institute has nurtured minds with a rich heritage of academic excellence, developing learning frameworks that have been well ahead of their time.
               </p>
             </div>
           </div>
