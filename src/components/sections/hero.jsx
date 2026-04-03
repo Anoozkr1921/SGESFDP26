@@ -1,5 +1,6 @@
 import { Calendar, MapPin, Users, MonitorSmartphone } from "lucide-react";
 import whiteBg from "../../assets/images/white bg.png";
+import WorkshopAtAGlance from "../ui/WorkshopAtAGlance";
 
 export default function Hero({ onOpenSchedule }) {
   const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -23,14 +24,15 @@ export default function Hero({ onOpenSchedule }) {
             padding: "0 2rem",
             paddingTop: 140,
             paddingBottom: 80,
-            display: "flex",
-            flexDirection: "column",
+            display: "grid",
+            gridTemplateColumns: "1.2fr 1fr",
+            gap: "4rem",
+            alignItems: "center",
             minHeight: "100vh",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            textAlign: "left",
           }}
+          className="hero-grid"
         >
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", textAlign: "left" }}>
           {/* Eyebrow */}
           <div className="hero-eyebrow" style={{ marginBottom: "1rem" }}>
             <span className="pulse" />
@@ -104,6 +106,12 @@ export default function Hero({ onOpenSchedule }) {
                 </span>
               );
             })}
+          </div>
+          </div>
+          
+          {/* Right Column: Workshop At A Glance */}
+          <div className="hero-glance-col">
+            <WorkshopAtAGlance />
           </div>
         </div>
       </section>
@@ -304,6 +312,14 @@ export default function Hero({ onOpenSchedule }) {
               grid-template-columns: 1fr !important;
               gap: 2rem !important;
               padding: 56px 2rem !important;
+            }
+            .hero-grid {
+              grid-template-columns: 1fr !important;
+              gap: 3rem !important;
+              padding-top: 120px !important;
+            }
+            .hero-glance-col {
+              margin-bottom: 2rem;
             }
           }
         `}</style>

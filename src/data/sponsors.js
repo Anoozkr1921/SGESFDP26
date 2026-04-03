@@ -1,4 +1,4 @@
-import imgGAIL from "../assets/images/gail.jpeg";
+import imgGAIL from "../assets/images/GAIL.jpeg";
 import imgCreativeRobotics from "../assets/images/Creative Robotics.jpeg";
 import imgQuarbz from "../assets/images/QUARBZ Typhoon HIL.jpeg";
 

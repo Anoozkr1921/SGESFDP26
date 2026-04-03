@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { topics } from "../../data/content";
-import { getIconComponent } from "../icons";
 
 /* ───────────────────────────────────────────────────────────
-   COMBINED ABOUT + CURRICULUM
+   CURRICULUM SECTION (Home Page)
    Bitotsav layout structure · White/Green theme
    Professional language throughout
    ─────────────────────────────────────────────────────────── */
@@ -64,6 +62,7 @@ const chapters = [
   },
 ];
 
+<<<<<<< HEAD
 const labs = [
   {
     name: "Power Systems Lab",
@@ -131,23 +130,16 @@ function mod(n, m) {
 const CARD_W = 280;
 const CARD_H = 360;
 
+=======
+>>>>>>> origin/dhny
 export default function About() {
   const [activeChap, setActiveChap] = useState(0);
-  const [showEligibility, setShowEligibility] = useState(false);
   const ch = chapters[activeChap];
-
-  const [activeLabIndex, setActiveLabIndex] = useState(0);
-
-  useEffect(() => {
-    const id = window.setInterval(() => {
-      setActiveLabIndex((i) => mod(i + 1, labs.length));
-    }, LAB_SHUFFLE_MS);
-    return () => window.clearInterval(id);
-  }, []);
 
   return (
     <>
       {/* ══════════════════════════════════════════════════
+<<<<<<< HEAD
           SECTION 1 — ABOUT (original light section)
           ══════════════════════════════════════════════════ */}
       <section id="about" className="sec-white">
@@ -680,6 +672,9 @@ export default function About() {
 
       {/* ══════════════════════════════════════════════════
           SECTION 2 — CURRICULUM TRACKS (Light Green Theme)
+=======
+          CURRICULUM TRACKS (Light Green Theme)
+>>>>>>> origin/dhny
           Bitotsav-inspired 3-column interactive layout
           ══════════════════════════════════════════════════ */}
       <section
@@ -1121,118 +1116,6 @@ export default function About() {
           }
         `}</style>
       </section>
-
-      {/* ══════════════════════════════════════════════════
-          MODAL — TARGET PARTICIPANTS AND ELIGIBILITY
-          ══════════════════════════════════════════════════ */}
-      <AnimatePresence>
-        {showEligibility && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setShowEligibility(false)}
-            style={{
-              position: "fixed",
-              inset: 0,
-              zIndex: 9999,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "1.5rem",
-              background: "rgba(2, 44, 34, 0.4)",
-              backdropFilter: "blur(6px)",
-            }}
-          >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.95, opacity: 0, y: 20 }}
-              onClick={(e) => e.stopPropagation()}
-              style={{
-                background: "linear-gradient(175deg, #ffffff 0%, #f0fdf4 100%)",
-                borderRadius: 24,
-                padding: "2.5rem",
-                width: "100%",
-                maxWidth: 640,
-                boxShadow: "0 24px 48px rgba(2, 44, 34, 0.15)",
-                border: "1px solid rgba(4, 120, 87, 0.2)",
-                position: "relative",
-              }}
-            >
-              <button
-                onClick={() => setShowEligibility(false)}
-                style={{
-                  position: "absolute",
-                  top: "1.5rem",
-                  right: "1.5rem",
-                  background: "white",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: "50%",
-                  width: 36,
-                  height: 36,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                  color: "#047857",
-                  fontWeight: "bold",
-                }}
-              >
-                ✕
-              </button>
-              
-              <div style={{ marginBottom: "1.5rem" }}>
-                <span className="tag" style={{ margin: "0 0 1rem 0" }}>Target Participants</span>
-                <h3 style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "1.8rem",
-                  fontWeight: 900,
-                  color: "#022c22",
-                  lineHeight: 1.1,
-                  margin: 0
-                }}>
-                  Eligibility & <span style={{ color: "#047857" }}>Requirements</span>
-                </h3>
-              </div>
-
-              <ul style={{
-                listStyle: "none",
-                padding: 0,
-                margin: 0,
-                display: "flex",
-                flexDirection: "column",
-                gap: "1.25rem"
-              }}>
-                <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
-                  <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
-                    The FDP is open for faculty members of AICTE approved institutions / Ph.D. Scholars / PG Research Fellow / UG Final Year / Industry professionals.
-                  </span>
-                </li>
-                <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
-                  <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
-                    Please note that the registration fee is <strong>118 rupees</strong> and the maximum capacity is <strong>200</strong>. Selection would be made on a first come first serve basis.
-                  </span>
-                </li>
-                <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
-                  <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
-                    Certificates will be awarded at the end of the programme to participants having <strong>more than 80% attendance</strong> and who have secured <strong>more than 70% in the assessment</strong> during the FDP.
-                  </span>
-                </li>
-                <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
-                  <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
-                    All the participants will be provided with a <strong>welcome kit</strong>, with <strong>high tea</strong> after the Inauguration and valedictory sessions.
-                  </span>
-                </li>
-              </ul>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 }
