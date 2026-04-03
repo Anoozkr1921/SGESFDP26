@@ -140,10 +140,10 @@ export default function Hero({ onOpenSchedule }) {
         >
           <div className="join-ticker">
             <span className="join-ticker-text">
-              ENGINEERING · INNOVATION · SUSTAINABILITY · CONTROL · ENERGY · DIGITAL · RESEARCH · ENGINEERING · INNOVATION · SUSTAINABILITY · CONTROL · ENERGY · DIGITAL · RESEARCH ·&nbsp;
+              LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 ·&nbsp;
             </span>
             <span className="join-ticker-text" aria-hidden="true">
-              ENGINEERING · INNOVATION · SUSTAINABILITY · CONTROL · ENERGY · DIGITAL · RESEARCH · ENGINEERING · INNOVATION · SUSTAINABILITY · CONTROL · ENERGY · DIGITAL · RESEARCH ·&nbsp;
+              LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 ·&nbsp;
             </span>
           </div>
         </div>
@@ -230,30 +230,28 @@ export default function Hero({ onOpenSchedule }) {
           <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", alignItems: "flex-start" }}>
             <a
               href="#register"
+              className="btn-breath"
               onClick={(e) => { e.preventDefault(); go("register"); }}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 10,
+                gap: 12,
                 background: "#34d399",
                 color: "#022c22",
                 border: "none",
-                padding: "0.95rem 2.2rem",
-                borderRadius: 10,
+                padding: "1.1rem 2.8rem",
+                borderRadius: 12,
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: "0.8rem",
+                fontSize: "1.05rem",
                 fontWeight: 900,
                 textTransform: "uppercase",
                 letterSpacing: "0.12em",
                 cursor: "pointer",
                 textDecoration: "none",
                 transition: "all 0.22s",
-                boxShadow: "0 6px 24px rgba(52,211,153,0.25)",
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 10px 32px rgba(52,211,153,0.4)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "0 6px 24px rgba(52,211,153,0.25)"; }}
             >
-              REGISTER NOW <span style={{ fontSize: "1rem" }}>→</span>
+              REGISTER NOW <span style={{ fontSize: "1.4rem" }}>→</span>
             </a>
 
             <a
@@ -287,6 +285,20 @@ export default function Hero({ onOpenSchedule }) {
 
         {/* Ticker + Responsive CSS */}
         <style>{`
+          .btn-breath {
+            box-shadow: 0 6px 24px rgba(52,211,153,0.25);
+            animation: btn-breath-anim 2.5s infinite ease-in-out;
+          }
+          .btn-breath:hover {
+            animation: none !important;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 32px rgba(52,211,153,0.4) !important;
+          }
+          @keyframes btn-breath-anim {
+            0%, 100% { transform: scale(1); box-shadow: 0 6px 24px rgba(52,211,153,0.25); }
+            50% { transform: scale(1.03); box-shadow: 0 12px 32px rgba(52,211,153,0.45); }
+          }
+
           .join-ticker {
             display: flex;
             width: max-content;
