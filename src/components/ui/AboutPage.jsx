@@ -370,253 +370,256 @@ export default function AboutPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="dept-page-grid">
-            {/* Left: Lab carousel */}
-            <div>
-              <div className="tag">About the Department</div>
+          <div className="tag">About the Department</div>
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)",
+              fontWeight: 900,
+              lineHeight: 1.1,
+              marginBottom: "0.85rem",
+              color: "#022c22",
+            }}
+          >
+            Department of Electrical &{" "}
+            <span style={{ color: "#047857" }}>
+              Electronics Engineering
+            </span>
+          </h2>
+          <div className="rule" style={{ marginBottom: "2rem" }} />
 
-              <div
-                style={{
-                  position: "relative",
-                  height: CARD_H + 120,
-                  marginTop: "0.75rem",
-                }}
-              >
-                {(() => {
-                  const total = labs.length;
-                  const leftIdx = mod(activeLabIndex - 1, total);
-                  const centerIdx = activeLabIndex;
-                  const rightIdx = mod(activeLabIndex + 1, total);
+          {/* Carousel — centered, contained, won't overlap navbar */}
+          <div
+            style={{
+              position: "relative",
+              height: CARD_H + 80,
+              overflow: "hidden",
+              zIndex: 1,
+              marginBottom: "2.5rem",
+              maxWidth: 600,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            {(() => {
+              const total = labs.length;
+              const leftIdx = mod(activeLabIndex - 1, total);
+              const centerIdx = activeLabIndex;
+              const rightIdx = mod(activeLabIndex + 1, total);
 
-                  const SPRING = {
-                    type: "spring",
-                    stiffness: 340,
-                    damping: 28,
-                    mass: 0.85,
+              const SPRING = {
+                type: "spring",
+                stiffness: 340,
+                damping: 28,
+                mass: 0.85,
+              };
+
+              const glassCommon = {
+                position: "relative",
+                width: CARD_W,
+                height: CARD_H,
+                borderRadius: 18,
+                overflow: "hidden",
+                backdropFilter: "blur(14px)",
+                WebkitBackdropFilter: "blur(14px)",
+              };
+
+              const getPos = (pos) => {
+                if (pos === "center") {
+                  return {
+                    x: 0,
+                    scale: 1,
+                    opacity: 1,
+                    rotateY: 0,
+                    zIndex: 50,
+                    y: 0,
                   };
-
-                  const glassCommon = {
-                    position: "relative",
-                    width: CARD_W,
-                    height: CARD_H,
-                    borderRadius: 18,
-                    overflow: "hidden",
-                    backdropFilter: "blur(14px)",
-                    WebkitBackdropFilter: "blur(14px)",
+                }
+                if (pos === "left") {
+                  return {
+                    x: -112,
+                    scale: 0.82,
+                    opacity: 0.62,
+                    rotateY: 16,
+                    zIndex: 30,
+                    y: 12,
                   };
+                }
+                return {
+                  x: 112,
+                  scale: 0.82,
+                  opacity: 0.62,
+                  rotateY: -16,
+                  zIndex: 30,
+                  y: 12,
+                };
+              };
 
-                  const getPos = (pos) => {
-                    if (pos === "center") {
-                      return {
-                        x: 0,
-                        scale: 1,
-                        opacity: 1,
-                        rotateY: 0,
-                        zIndex: 50,
-                        y: 0,
-                      };
+              const renderCard = (idx, pos) => {
+                const lab = labs[idx];
+                const isActive = pos === "center";
+
+                const border = isActive
+                  ? "1.5px solid rgba(4,120,87,0.55)"
+                  : "1.5px solid rgba(4,120,87,0.20)";
+                const shadow = isActive
+                  ? "0 0 0 1px rgba(52,211,153,0.35) inset, 0 22px 60px rgba(11,61,34,0.12), 0 0 70px rgba(45,212,191,0.20)"
+                  : "0 14px 36px rgba(11,61,34,0.10)";
+
+                const background = isActive
+                  ? "rgba(255,255,255,0.78)"
+                  : "rgba(255,255,255,0.60)";
+
+                return (
+                  <motion.div
+                    key={lab.name}
+                    layoutId={`dept-lab-${lab.name}`}
+                    initial={false}
+                    animate={getPos(pos)}
+                    transition={SPRING}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: "50%",
+                      marginLeft: -CARD_W / 2,
+                      transformStyle: "preserve-3d",
+                      cursor: !isActive ? "pointer" : "default",
+                      pointerEvents: isActive ? "none" : "auto",
+                    }}
+                    onClick={() => {
+                      if (!isActive) setActiveLabIndex(idx);
+                    }}
+                    whileHover={
+                      !isActive ? { scale: 0.86, y: 8 } : {}
                     }
-                    if (pos === "left") {
-                      return {
-                        x: -112,
-                        scale: 0.82,
-                        opacity: 0.62,
-                        rotateY: 16,
-                        zIndex: 30,
-                        y: 12,
-                      };
-                    }
-                    return {
-                      x: 112,
-                      scale: 0.82,
-                      opacity: 0.62,
-                      rotateY: -16,
-                      zIndex: 30,
-                      y: 12,
-                    };
-                  };
-
-                  const renderCard = (idx, pos) => {
-                    const lab = labs[idx];
-                    const isActive = pos === "center";
-
-                    const border = isActive
-                      ? "1.5px solid rgba(4,120,87,0.55)"
-                      : "1.5px solid rgba(4,120,87,0.20)";
-                    const shadow = isActive
-                      ? "0 0 0 1px rgba(52,211,153,0.35) inset, 0 22px 60px rgba(11,61,34,0.12), 0 0 70px rgba(45,212,191,0.20)"
-                      : "0 14px 36px rgba(11,61,34,0.10)";
-
-                    const background = isActive
-                      ? "rgba(255,255,255,0.78)"
-                      : "rgba(255,255,255,0.60)";
-
-                    return (
-                      <motion.div
-                        key={lab.name}
-                        layoutId={`dept-lab-${lab.name}`}
-                        initial={false}
-                        animate={getPos(pos)}
-                        transition={SPRING}
+                  >
+                    <div
+                      style={{
+                        ...glassCommon,
+                        border,
+                        background,
+                        boxShadow: shadow,
+                      }}
+                    >
+                      <div
                         style={{
                           position: "absolute",
-                          top: 0,
-                          left: "50%",
-                          marginLeft: -CARD_W / 2,
-                          transformStyle: "preserve-3d",
-                          cursor: !isActive ? "pointer" : "default",
-                          pointerEvents: isActive ? "none" : "auto",
+                          inset: 0,
+                          background:
+                            "radial-gradient(ellipse at 50% 0%, rgba(52,211,153,0.20) 0%, transparent 60%), linear-gradient(180deg, rgba(236,253,245,0.35) 0%, rgba(255,255,255,0.00) 60%)",
+                          pointerEvents: "none",
                         }}
-                        onClick={() => {
-                          if (!isActive) setActiveLabIndex(idx);
-                        }}
-                        whileHover={
-                          !isActive ? { scale: 0.86, y: 8 } : {}
-                        }
-                      >
+                      />
+
+                      {!isActive && (
                         <div
                           style={{
-                            ...glassCommon,
-                            border,
-                            background,
-                            boxShadow: shadow,
+                            position: "absolute",
+                            inset: 0,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontFamily: "'Playfair Display', serif",
+                            fontSize: "3rem",
+                            fontWeight: 900,
+                            color: "rgba(4,120,87,0.16)",
+                            pointerEvents: "none",
                           }}
                         >
-                          <div
+                          {idx + 1}
+                        </div>
+                      )}
+
+                      <AnimatePresence mode="wait">
+                        {isActive && (
+                          <motion.div
+                            key={lab.name}
+                            initial={{ opacity: 0, y: 14 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{
+                              duration: 0.22,
+                              ease: "easeOut",
+                            }}
                             style={{
                               position: "absolute",
-                              inset: 0,
-                              background:
-                                "radial-gradient(ellipse at 50% 0%, rgba(52,211,153,0.20) 0%, transparent 60%), linear-gradient(180deg, rgba(236,253,245,0.35) 0%, rgba(255,255,255,0.00) 60%)",
-                              pointerEvents: "none",
+                              left: 14,
+                              right: 14,
+                              bottom: 14,
+                              padding: "10px 12px",
+                              borderRadius: 12,
+                              background: "rgba(255,255,255,0.85)",
+                              border: "1px solid rgba(4,120,87,0.25)",
+                              backdropFilter: "blur(10px)",
+                              WebkitBackdropFilter: "blur(10px)",
+                              boxShadow:
+                                "0 10px 30px rgba(11,61,34,0.10), 0 0 40px rgba(45,212,191,0.10)",
                             }}
-                          />
-
-                          {!isActive && (
+                          >
                             <div
                               style={{
-                                position: "absolute",
-                                inset: 0,
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
                                 fontFamily: "'Playfair Display', serif",
-                                fontSize: "3rem",
                                 fontWeight: 900,
-                                color: "rgba(4,120,87,0.16)",
-                                pointerEvents: "none",
+                                color: "#022c22",
+                                textAlign: "center",
+                                lineHeight: 1.15,
                               }}
                             >
-                              {idx + 1}
+                              {lab.name}
                             </div>
-                          )}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </motion.div>
+                );
+              };
 
-                          <AnimatePresence mode="wait">
-                            {isActive && (
-                              <motion.div
-                                key={lab.name}
-                                initial={{ opacity: 0, y: 14 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -10 }}
-                                transition={{
-                                  duration: 0.22,
-                                  ease: "easeOut",
-                                }}
-                                style={{
-                                  position: "absolute",
-                                  left: 14,
-                                  right: 14,
-                                  bottom: 14,
-                                  padding: "10px 12px",
-                                  borderRadius: 12,
-                                  background: "rgba(255,255,255,0.85)",
-                                  border: "1px solid rgba(4,120,87,0.25)",
-                                  backdropFilter: "blur(10px)",
-                                  WebkitBackdropFilter: "blur(10px)",
-                                  boxShadow:
-                                    "0 10px 30px rgba(11,61,34,0.10), 0 0 40px rgba(45,212,191,0.10)",
-                                }}
-                              >
-                                <div
-                                  style={{
-                                    fontFamily: "'Playfair Display', serif",
-                                    fontWeight: 900,
-                                    color: "#022c22",
-                                    textAlign: "center",
-                                    lineHeight: 1.15,
-                                  }}
-                                >
-                                  {lab.name}
-                                </div>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </div>
-                      </motion.div>
-                    );
-                  };
+              return (
+                <>
+                  {renderCard(leftIdx, "left")}
+                  {renderCard(centerIdx, "center")}
+                  {renderCard(rightIdx, "right")}
+                </>
+              );
+            })()}
+          </div>
 
-                  return (
-                    <>
-                      {renderCard(leftIdx, "left")}
-                      {renderCard(centerIdx, "center")}
-                      {renderCard(rightIdx, "right")}
-                    </>
-                  );
-                })()}
-              </div>
-            </div>
-
-            {/* Right: Department info */}
-            <div className="about-text">
-              <h2
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)",
-                  fontWeight: 900,
-                  lineHeight: 1.1,
-                  marginBottom: "0.85rem",
-                  color: "#022c22",
-                }}
-              >
-                Department of Electrical &{" "}
-                <span style={{ color: "#047857" }}>
-                  Electronics Engineering
-                </span>
-              </h2>
-              <div className="rule" style={{ marginBottom: "1.2rem" }} />
-
-              <p>
-                The Department of Electrical & Electronics Engineering is
-                dedicated to the current needs of industry with the flexibility
-                to tune its programmes according to different requirements.
-                Application of new technology in various fields is one of the
-                main focuses in the activities of the department.
-              </p>
-              <p>
-                Department of EEE has different ongoing and past projects where{" "}
-                <strong>AI and IoT</strong> has been directly used for
-                applications like <strong>smart grid concept in power
-                system</strong>, battery management system for EV, energy
-                efficient electrical motor drives or in health monitoring of
-                different electrical equipment.
-              </p>
-              <p>
-                The Department of EEE has MoUs with{" "}
-                <strong>University of Padova, Italy</strong>, TATA Motors, ERLDC
-                Grid-India Controller, Central Coal filed Limited, Larsen &
-                Turbo Technical Services Ltd. and other industries.
-              </p>
-              <p>
-                The Department hosts advanced laboratories in{" "}
-                <strong>Power Systems</strong> and{" "}
-                <strong>Control Systems</strong>, alongside a{" "}
-                <strong>Smart Grid Lab</strong> built for hands-on learning. It
-                is also home to a{" "}
-                <strong>NaMPET-funded Power Electronics Laboratory</strong> that
-                supports modern inverter/control research and practical training.
-              </p>
-            </div>
+          {/* Department text — flows full width below the carousel */}
+          <div className="about-text" style={{ maxWidth: 900, margin: "0 auto" }}>
+            <p>
+              The Department of Electrical & Electronics Engineering is
+              dedicated to the current needs of industry with the flexibility
+              to tune its programmes according to different requirements.
+              Application of new technology in various fields is one of the
+              main focuses in the activities of the department.
+            </p>
+            <p>
+              Department of EEE has different ongoing and past projects where{" "}
+              <strong>AI and IoT</strong> has been directly used for
+              applications like <strong>smart grid concept in power
+              system</strong>, battery management system for EV, energy
+              efficient electrical motor drives or in health monitoring of
+              different electrical equipment.
+            </p>
+            <p>
+              The Department of EEE has MoUs with{" "}
+              <strong>University of Padova, Italy</strong>, TATA Motors, ERLDC
+              Grid-India Controller, Central Coal filed Limited, Larsen &
+              Turbo Technical Services Ltd. and other industries.
+            </p>
+            <p>
+              The Department hosts advanced laboratories in{" "}
+              <strong>Power Systems</strong> and{" "}
+              <strong>Control Systems</strong>, alongside a{" "}
+              <strong>Smart Grid Lab</strong> built for hands-on learning. It
+              is also home to a{" "}
+              <strong>NaMPET-funded Power Electronics Laboratory</strong> that
+              supports modern inverter/control research and practical training.
+              With measurement, computing, and instrumentation facilities,
+              students gain end-to-end exposure from theory to real-time
+              experimentation.
+            </p>
           </div>
         </motion.div>
       </div>
@@ -635,12 +638,6 @@ export default function AboutPage() {
           gap: 2.5rem;
           align-items: start;
         }
-        .dept-page-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 2.5rem;
-          align-items: start;
-        }
         @media (max-width: 900px) {
           .about-page-grid {
             grid-template-columns: 1fr !important;
@@ -648,11 +645,9 @@ export default function AboutPage() {
           .institute-grid {
             grid-template-columns: 1fr !important;
           }
-          .dept-page-grid {
-            grid-template-columns: 1fr !important;
-          }
         }
       `}</style>
     </div>
   );
 }
+
