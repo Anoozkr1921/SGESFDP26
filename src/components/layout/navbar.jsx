@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onNavigate, currentPage }) {
+export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onOpenAbout, onNavigate, currentPage }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -23,7 +23,7 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
 
   // IntersectionObserver to track active section
   useEffect(() => {
-    const sectionIds = navLinks.map(l => l.id).filter(id => id !== "schedule" && id !== "committee" && id !== "speakers");
+    const sectionIds = navLinks.map(l => l.id).filter(id => id !== "schedule" && id !== "committee" && id !== "speakers" && id !== "about");
     const observers = [];
 
     const handleIntersect = (entries) => {
@@ -62,6 +62,11 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
     }
     if (id === "committee") {
       onOpenTeam?.();
+      setMenuOpen(false);
+      return;
+    }
+    if (id === "about") {
+      onOpenAbout?.();
       setMenuOpen(false);
       return;
     }
@@ -113,6 +118,7 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
                 const isActive = (currentPage === "schedule" && link.id === "schedule") || 
                                  (currentPage === "team" && link.id === "committee") || 
                                  (currentPage === "speakers" && link.id === "speakers") || 
+                                 (currentPage === "about" && link.id === "about") ||
                                  (currentPage === "home" && activeSection === link.id);
                 return (
                   <li key={link.id}>
@@ -201,6 +207,7 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
               const isActive = (currentPage === "schedule" && link.id === "schedule") || 
                                (currentPage === "team" && link.id === "committee") || 
                                (currentPage === "speakers" && link.id === "speakers") || 
+                               (currentPage === "about" && link.id === "about") ||
                                (currentPage === "home" && activeSection === link.id);
               return (
                 <a 
