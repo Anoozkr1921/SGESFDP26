@@ -508,7 +508,7 @@ export default function About() {
                   marginBottom: "0.85rem",
                 }}
               >
-                About the Department
+                About the Electrical and Electronics Department
               </h2>
               <div className="rule" style={{ marginBottom: "1.2rem" }} />
 

@@ -381,7 +381,7 @@ export default function AboutPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="tag">About the Department</div>
+          <div className="tag">About the Electrical and Electronics Engineering Department</div>
           <h2
             style={{
               fontFamily: "'Playfair Display', serif",
