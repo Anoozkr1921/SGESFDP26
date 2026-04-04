@@ -7,17 +7,53 @@ import WorkshopAtAGlance from "./WorkshopAtAGlance";
    Three sections: Workshop · Institute · Department
    ─────────────────────────────────────────────────────────── */
 
+import lab4a from "../../assets/images/EEE LAB Photos/4a Machine Lab.jpg";
+import lab4b from "../../assets/images/EEE LAB Photos/4b Machine Lab.jpg";
+import lab4c from "../../assets/images/EEE LAB Photos/4c Machine Lab.jpg";
+import lab5b from "../../assets/images/EEE LAB Photos/5b Soft Computing Lab.jpg";
+import lab6b from "../../assets/images/EEE LAB Photos/6b Signal Processing Lab.jpg";
+import lab7a from "../../assets/images/EEE LAB Photos/7a Smart Grid Lab.jpg";
+import lab7b from "../../assets/images/EEE LAB Photos/7b Smart Grid Lab.jpg";
+import lab7c from "../../assets/images/EEE LAB Photos/7c Smart Grid Lab.jpg";
+import lab8a from "../../assets/images/EEE LAB Photos/8a Power System Lab.jpg";
+import lab8b from "../../assets/images/EEE LAB Photos/8b Power System Lab.jpg";
+import lab8c from "../../assets/images/EEE LAB Photos/8c Power System Lab.jpg";
+import lab8d from "../../assets/images/EEE LAB Photos/8d Power System Lab.jpg";
+import lab8e from "../../assets/images/EEE LAB Photos/8e Power System Lab.jpg";
+import lab9a from "../../assets/images/EEE LAB Photos/9a Control System Lab.jpg";
+import lab9b from "../../assets/images/EEE LAB Photos/9b Control System Lab.jpg";
+import lab9c from "../../assets/images/EEE LAB Photos/9c Control System Lab.jpg";
+import lab9d from "../../assets/images/EEE LAB Photos/9d Control System Lab.jpg";
+import lab9e from "../../assets/images/EEE LAB Photos/9e Control System Lab.jpg";
+import lab9f from "../../assets/images/EEE LAB Photos/9f Control System Lab.jpg";
+import labMeas1 from "../../assets/images/EEE LAB Photos/Measurement Lab.jpg";
+import labMeas3 from "../../assets/images/EEE LAB Photos/Measurement Lab3.jpg";
+import labMeas4 from "../../assets/images/EEE LAB Photos/Measurement Lab4.jpg";
+import bitCampusImg from "../../assets/images/BITcampus.avif";
+
 const labs = [
-  { name: "Power Systems Lab" },
-  { name: "Control System Lab" },
-  { name: "Smart Grid Lab" },
-  { name: "Electrical Machines Lab" },
-  { name: "NaMPET Power Electronics Lab" },
-  { name: "Power Electronics Lab" },
-  { name: "Electrical Measurement & Instrumentation Lab" },
-  { name: "Soft Computing Lab" },
-  { name: "Virtual Instrumentation & Signal Processing Lab" },
-  { name: "Drives Lab" },
+  { name: "Machine Lab", image: lab4a },
+  { name: "Machine Lab", image: lab4b },
+  { name: "Machine Lab", image: lab4c },
+  { name: "Soft Computing Lab", image: lab5b },
+  { name: "Signal Processing Lab", image: lab6b },
+  { name: "Smart Grid Lab", image: lab7a },
+  { name: "Smart Grid Lab", image: lab7b },
+  { name: "Smart Grid Lab", image: lab7c },
+  { name: "Power System Lab", image: lab8a },
+  { name: "Power System Lab", image: lab8b },
+  { name: "Power System Lab", image: lab8c },
+  { name: "Power System Lab", image: lab8d },
+  { name: "Power System Lab", image: lab8e },
+  { name: "Control System Lab", image: lab9a },
+  { name: "Control System Lab", image: lab9b },
+  { name: "Control System Lab", image: lab9c },
+  { name: "Control System Lab", image: lab9d },
+  { name: "Control System Lab", image: lab9e },
+  { name: "Control System Lab", image: lab9f },
+  { name: "Measurement Lab", image: labMeas1 },
+  { name: "Measurement Lab", image: labMeas3 },
+  { name: "Measurement Lab", image: labMeas4 },
 ];
 
 const LAB_SHUFFLE_MS = 3000;
@@ -218,7 +254,32 @@ export default function AboutPage() {
             </h2>
             <div className="rule" />
 
-            <div className="institute-grid" style={{ marginTop: "2rem" }}>
+            {/* Campus Image Banner */}
+            <div
+              style={{
+                marginTop: "2rem",
+                width: "100%",
+                borderRadius: 16,
+                overflow: "hidden",
+                border: "1px solid rgba(4,120,87,0.15)",
+                boxShadow: "0 10px 30px rgba(4,120,87,0.08)",
+                background: "white",
+              }}
+            >
+              <img
+                src={bitCampusImg}
+                alt="BIT Mesra Campus"
+                style={{
+                  width: "100%",
+                  height: 380,
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  display: "block",
+                }}
+              />
+            </div>
+
+            <div className="institute-grid" style={{ marginTop: "2.5rem" }}>
               {/* Left: Key facts */}
               <div
                 style={{
@@ -472,8 +533,8 @@ export default function AboutPage() {
 
                 return (
                   <motion.div
-                    key={lab.name}
-                    layoutId={`dept-lab-${lab.name}`}
+                    key={`lab-${idx}`}
+                    layoutId={`dept-lab-${idx}`}
                     initial={false}
                     animate={getPos(pos)}
                     transition={SPRING}
@@ -505,11 +566,15 @@ export default function AboutPage() {
                         style={{
                           position: "absolute",
                           inset: 0,
-                          background:
+                          background: lab.image ? `url(${lab.image}) center/cover no-repeat` :
                             "radial-gradient(ellipse at 50% 0%, rgba(52,211,153,0.20) 0%, transparent 60%), linear-gradient(180deg, rgba(236,253,245,0.35) 0%, rgba(255,255,255,0.00) 60%)",
                           pointerEvents: "none",
                         }}
                       />
+                      {/* Gradient overlay for text reading */}
+                      {lab.image && (
+                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.6) 100%)", pointerEvents: "none" }} />
+                      )}
 
                       {!isActive && (
                         <div
@@ -533,7 +598,7 @@ export default function AboutPage() {
                       <AnimatePresence mode="wait">
                         {isActive && (
                           <motion.div
-                            key={lab.name}
+                            key={`text-${idx}`}
                             initial={{ opacity: 0, y: 14 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
