@@ -36,7 +36,7 @@ export default function Footer() {
             Concept, and Planning: <strong>Dr.Gauri Shanker Gupta</strong> and <strong>Dr.Mrinal Kumar Pathak</strong>
           </p>
           <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,.65)", margin: 0 }}>
-            Designed by - <strong>Mr. Dhnay Patil</strong> and <strong>Mr. Anooz kumar Burnwal</strong>
+            Designed by - <strong>Mr. Dhanay Patil</strong> and <strong>Mr. Anooz kumar Burnwal</strong>
           </p>
         </div>
         <div className="ft-bottom" style={{ borderTop: "none", paddingTop: 0 }}>

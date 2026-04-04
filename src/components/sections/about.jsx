@@ -415,7 +415,7 @@ export default function About() {
                     </ul>
                   </div>
 
-                  {/* Bottom link */}
+                  {/* Bottom link
                   <div style={{ marginTop: "auto", paddingTop: "1.25rem", borderTop: "1.5px solid #e5e7eb" }}>
                     <span
                       style={{
@@ -432,7 +432,7 @@ export default function About() {
                     >
                       VIEW FULL SYLLABUS <span style={{ fontSize: "0.85rem" }}>↗</span>
                     </span>
-                  </div>
+                  </div> */}
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -492,9 +492,9 @@ export default function About() {
                 </button>
               ))}
             </div>
-            <span style={{ fontSize: "0.6rem", fontWeight: 900, letterSpacing: "0.16em", color: "#047857", textTransform: "uppercase" }}>
+            {/* <span style={{ fontSize: "0.6rem", fontWeight: 900, letterSpacing: "0.16em", color: "#047857", textTransform: "uppercase" }}>
               BIT MESRA — EEE DEPT ↗
-            </span>
+            </span> */}
           </div>
         </div>
 

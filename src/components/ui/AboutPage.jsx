@@ -521,11 +521,11 @@ export default function AboutPage() {
                 const isActive = pos === "center";
 
                 const border = isActive
-                  ? "1.5px solid rgba(4,120,87,0.55)"
-                  : "1.5px solid rgba(4,120,87,0.20)";
+                  ? "3px solid #047857"
+                  : "2px solid rgba(4,120,87,0.15)";
                 const shadow = isActive
-                  ? "0 0 0 1px rgba(52,211,153,0.35) inset, 0 22px 60px rgba(11,61,34,0.12), 0 0 70px rgba(45,212,191,0.20)"
-                  : "0 14px 36px rgba(11,61,34,0.10)";
+                  ? "0 0 40px rgba(4,120,87,0.12), 0 25px 50px rgba(4,120,87,0.18)"
+                  : "0 10px 30px rgba(4,120,87,0.08)";
 
                 const background = isActive
                   ? "rgba(255,255,255,0.78)"

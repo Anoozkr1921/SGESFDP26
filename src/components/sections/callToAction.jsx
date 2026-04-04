@@ -46,19 +46,23 @@ export default function CallToAction() {
             </h3>
 
             <div style={{ display: "flex", gap: "2.5rem", alignItems: "center" }} className="reg-info-container">
-              <img
-                src={gssirImage}
-                alt="Dr. Gauri Shanker Gupta"
-                style={{
-                  width: 140,
-                  height: 140,
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  border: "4px solid #fff",
-                  boxShadow: "0 12px 32px rgba(0,0,0,0.08)",
-                  flexShrink: 0
-                }}
-              />
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem", flexShrink: 0 }}>
+                <img
+                  src={gssirImage}
+                  alt="Dr. Gauri Shanker Gupta"
+                  style={{
+                    width: 140,
+                    height: 140,
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    border: "4px solid #fff",
+                    boxShadow: "0 12px 32px rgba(0,0,0,0.08)",
+                  }}
+                />
+                <div style={{ fontSize: "0.85rem", fontWeight: 800, color: "#022c22", textAlign: "center", letterSpacing: "0.02em" }}>
+                  Dr. Gauri Shanker Gupta
+                </div>
+              </div>
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }} className="reg-info-grid">
                 {[

@@ -287,7 +287,7 @@ export default function Hero({ onOpenSchedule }) {
         <style>{`
           .btn-breath {
             box-shadow: 0 6px 24px rgba(52,211,153,0.25);
-            animation: btn-breath-anim 2.5s infinite ease-in-out;
+            animation: btn-breath-anim 1.5s infinite ease-in-out;
           }
           .btn-breath:hover {
             animation: none !important;
