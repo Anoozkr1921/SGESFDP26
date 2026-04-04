@@ -59,9 +59,9 @@ export default function WorkshopAtAGlance() {
           {[
             { lbl: "Dates", val: "18 – 22 May 2026" },
             { lbl: "Venue", val: "Dept. of EEE, BIT Mesra\nRanchi, Jharkhand – 835215" },
-            { lbl: "Duration", val: "5 Days · Hands-on Training" },
-            { lbl: "Eligible", val: "Faculty · PhD · PG Research Fellow · UG Final Year · Industry" },
-            { lbl: "Certificate", val: "80% Attendance + 70% Assessment" },
+            { lbl: "Duration", val: "5 Days" },
+            { lbl: "Eligible", val: "Faculty · PhD Scholars · PG Research Fellow · UG Final Year · Industry" },
+            { lbl: "Certificate", val: "80% Attendance" },
             { lbl: "Contact", val: "gaurishankergupta@bitmesra.ac.in" },
           ].map((r, rowIdx, arr) => {
             const IconComp = getIconComponent(r.lbl);
@@ -184,7 +184,7 @@ export default function WorkshopAtAGlance() {
               >
                 ✕
               </button>
-              
+
               <div style={{ marginBottom: "1.5rem" }}>
                 <span className="tag" style={{ margin: "0 0 1rem 0" }}>Target Participants</span>
                 <h3 style={{

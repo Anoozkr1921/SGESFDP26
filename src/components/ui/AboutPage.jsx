@@ -2,6 +2,17 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import WorkshopAtAGlance from "./WorkshopAtAGlance";
 
+import labImg1 from "../../assets/images/8 Power System Lab.jpg";
+import labImg2 from "../../assets/images/9a Control System Lab.jpg";
+import labImg3 from "../../assets/images/7 Smart Grid Lab.jpg";
+import labImg4 from "../../assets/images/4 Machine Lab.JPG";
+import labImg5 from "../../assets/images/8a Power System Lab.jpg";
+import labImg6 from "../../assets/images/8c Power System Lab.jpg";
+import labImg7 from "../../assets/images/10 Measurement Lab.jpg";
+import labImg8 from "../../assets/images/5a Soft Computing Lab.jpg";
+import labImg9 from "../../assets/images/6a Signal Processing Lab.jpg";
+import labImg10 from "../../assets/images/4a Machine Lab.jpg";
+
 /* ───────────────────────────────────────────────────────────
    ABOUT PAGE — Standalone page
    Three sections: Workshop · Institute · Department
@@ -165,7 +176,7 @@ export default function AboutPage() {
               <h2
                 style={{
                   fontFamily: "'Playfair Display', serif",
-                  fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+                  fontSize: "clamp(1.4rem, 3vw, 2.4rem)",
                   fontWeight: 900,
                   color: "#022c22",
                   lineHeight: 1.1,
@@ -377,7 +388,7 @@ export default function AboutPage() {
 
               {/* Right: Text content */}
               <div className="about-text">
-                <p>
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.65" }}>
                   The <strong>Birla Institute of Technology</strong> was
                   established in 1955 at Mesra, Ranchi, Jharkhand by the
                   philanthropist and industrialist <strong>B M Birla</strong>.
@@ -385,15 +396,15 @@ export default function AboutPage() {
                   of the pioneering engineering institutions of the country which
                   has contributed many outstanding engineers in India & abroad.
                 </p>
-                <p>
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.65" }}>
                   Completely residential, the campus is self contained with
                   excellent hostel facilities. With more than{" "}
                   <strong>10,000 registered students</strong> B.I.T is today a
                   global name. Along with UG and PG Programs, the Institute has
                   more than <strong>250 registered students for Doctoral
-                  Programs</strong> at present.
+                    Programs</strong> at present.
                 </p>
-                <p>
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.65" }}>
                   All of the courses has been accredited by the{" "}
                   <strong>
                     National Assessment & Accreditation Council (NAAC)
@@ -404,7 +415,7 @@ export default function AboutPage() {
                   collaborative arrangements with Universities in the USA, UK &
                   Canada.
                 </p>
-                <p>
+                <p style={{ fontSize: "1.1rem", lineHeight: "1.65" }}>
                   B.I.T Mesra is also an active member of the{" "}
                   <strong>'EAGER NETWIC' Project</strong> under the Asia Link
                   programme of European Commission.
@@ -431,7 +442,7 @@ export default function AboutPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="tag">About the Department</div>
+          <div className="tag">About the Electrical and Electronics Engineering Department</div>
           <h2
             style={{
               fontFamily: "'Playfair Display', serif",
@@ -521,11 +532,11 @@ export default function AboutPage() {
                 const isActive = pos === "center";
 
                 const border = isActive
-                  ? "1.5px solid rgba(4,120,87,0.55)"
-                  : "1.5px solid rgba(4,120,87,0.20)";
+                  ? "3px solid #047857"
+                  : "2px solid rgba(4,120,87,0.15)";
                 const shadow = isActive
-                  ? "0 0 0 1px rgba(52,211,153,0.35) inset, 0 22px 60px rgba(11,61,34,0.12), 0 0 70px rgba(45,212,191,0.20)"
-                  : "0 14px 36px rgba(11,61,34,0.10)";
+                  ? "0 0 40px rgba(4,120,87,0.12), 0 25px 50px rgba(4,120,87,0.18)"
+                  : "0 10px 30px rgba(4,120,87,0.08)";
 
                 const background = isActive
                   ? "rgba(255,255,255,0.78)"
@@ -560,8 +571,33 @@ export default function AboutPage() {
                         border,
                         background,
                         boxShadow: shadow,
+                        position: "relative",
                       }}
                     >
+                      {lab.image && (
+                        <>
+                          <img
+                            src={lab.image}
+                            alt={lab.name}
+                            style={{
+                              position: "absolute",
+                              inset: 0,
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              zIndex: 0,
+                            }}
+                          />
+                          <div
+                            style={{
+                              position: "absolute",
+                              inset: 0,
+                              background: "linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.32))",
+                              zIndex: 1,
+                            }}
+                          />
+                        </>
+                      )}
                       <div
                         style={{
                           position: "absolute",
@@ -569,6 +605,7 @@ export default function AboutPage() {
                           background: lab.image ? `url(${lab.image}) center/cover no-repeat` :
                             "radial-gradient(ellipse at 50% 0%, rgba(52,211,153,0.20) 0%, transparent 60%), linear-gradient(180deg, rgba(236,253,245,0.35) 0%, rgba(255,255,255,0.00) 60%)",
                           pointerEvents: "none",
+                          zIndex: 2,
                         }}
                       />
                       {/* Gradient overlay for text reading */}
@@ -652,28 +689,28 @@ export default function AboutPage() {
 
           {/* Department text — flows full width below the carousel */}
           <div className="about-text" style={{ maxWidth: 900, margin: "0 auto" }}>
-            <p>
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.65" }}>
               The Department of Electrical & Electronics Engineering is
               dedicated to the current needs of industry with the flexibility
               to tune its programmes according to different requirements.
               Application of new technology in various fields is one of the
               main focuses in the activities of the department.
             </p>
-            <p>
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.65" }}>
               Department of EEE has different ongoing and past projects where{" "}
               <strong>AI and IoT</strong> has been directly used for
               applications like <strong>smart grid concept in power
-              system</strong>, battery management system for EV, energy
+                system</strong>, battery management system for EV, energy
               efficient electrical motor drives or in health monitoring of
               different electrical equipment.
             </p>
-            <p>
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.65" }}>
               The Department of EEE has MoUs with{" "}
               <strong>University of Padova, Italy</strong>, TATA Motors, ERLDC
               Grid-India Controller, Central Coal filed Limited, Larsen &
               Turbo Technical Services Ltd. and other industries.
             </p>
-            <p>
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.65" }}>
               The Department hosts advanced laboratories in{" "}
               <strong>Power Systems</strong> and{" "}
               <strong>Control Systems</strong>, alongside a{" "}

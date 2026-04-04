@@ -488,30 +488,17 @@ export default function Speakers({ onSelectSpeaker }) {
    COVERFLOW CARD
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 function CoverflowCard({ speaker, isActive, initials }) {
-  const popShadow = isActive
-    ? `
-        0 0 0 1px rgba(255,255,255,0.8) inset,
-        0 2px 4px rgba(11,61,34,0.06) inset,
-        0 0 0 3px rgba(52, 211, 153, 0.45),
-        0 0 48px rgba(52, 211, 153, 0.28),
-        0 0 80px rgba(167, 243, 208, 0.35),
-        0 28px 56px rgba(11,61,34,0.12),
-        0 12px 28px rgba(11,61,34,0.08)
-      `
-    : `
-        0 10px 28px rgba(11,61,34,0.1),
-        0 4px 12px rgba(11,61,34,0.06)
-      `;
-
   return (
     <div
       className="w-full h-full relative overflow-hidden bg-white"
       style={{
         borderRadius: 18,
         border: isActive
-          ? "2px solid rgba(52, 211, 153, 0.85)"
-          : "2px solid rgba(20, 131, 74, 0.12)",
-        boxShadow: popShadow,
+          ? "3px solid #047857"
+          : "2px solid rgba(4,120,87,0.15)",
+        boxShadow: isActive
+          ? "0 0 40px rgba(4,120,87,0.12), 0 25px 50px rgba(4,120,87,0.18)"
+          : "0 10px 30px rgba(4,120,87,0.08)",
         transition: "border 0.35s ease, box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
       }}
     >
