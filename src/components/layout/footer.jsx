@@ -31,7 +31,15 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="ft-bottom">
+        <div className="ft-credits" style={{ padding: "2rem 0", display: "flex", flexDirection: "column", gap: "0.4rem", borderTop: "1px solid rgba(255,255,255,.12)", textAlign: "center" }}>
+          <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,.65)", margin: 0 }}>
+            Concept, and Planning: <strong>Dr.Gauri Shanker Gupta</strong> and <strong>Dr.Mrinal Kumar Pathak</strong>
+          </p>
+          <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,.65)", margin: 0 }}>
+            Designed by - <strong>Mr. Dhnay Patil</strong> and <strong>Mr. Anooz kumar Burnwal</strong>
+          </p>
+        </div>
+        <div className="ft-bottom" style={{ borderTop: "none", paddingTop: 0 }}>
           <p>© 2026 BIT Mesra · Dept. of Electrical &amp; Electronics Engineering</p>
           <p>Workshop on Emerging Control &amp; Digital Technologies for Sustainable Green Energy Systems</p>
         </div>

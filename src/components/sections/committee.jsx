@@ -1,21 +1,25 @@
 import { committee } from "../../data/content";
 import vc from "../../assets/images/vc.jpg";
 import imgSKMishra from "../../assets/images/sk_mishra.png";
+import DrPremPrakash from "../../assets/images/DrPremPrakash.png";
+import DrSurendraKumar from "../../assets/images/DrSurendraKumar.jpg";
 import gssir2 from "../../assets/images/gssir2.png";
 
 const COMMITTEE_PHOTOS = {
   "Prof. Indranil Manna": vc,
   "Dr. Sudhansu Kumar Mishra": imgSKMishra,
   "Dr. Gauri Shanker Gupta": gssir2,
+  "Dr. Prem Prakash": DrPremPrakash,
+  "Dr. Surendra Kumar": DrSurendraKumar,
 };
 
 export default function Committee() {
   return (
-    <section 
-      id="committee" 
-      className="sec-white" 
-      style={{ 
-        minHeight: "100vh", 
+    <section
+      id="committee"
+      className="sec-white"
+      style={{
+        minHeight: "100vh",
         paddingTop: "114px",
         background: "linear-gradient(170deg, #f8fafc 0%, #f0fdf4 40%, #dcfce7 100%)",
         paddingBottom: "56px"
@@ -31,11 +35,11 @@ export default function Committee() {
           {committee.map((m, i) => {
             const isCoCoordinator = m.role === "Co-Coordinator";
             return (
-              <div 
-                className="cm-card" 
+              <div
+                className="cm-card"
                 key={i}
               >
-                <div 
+                <div
                   className="cm-av"
                 >
                   {COMMITTEE_PHOTOS[m.name] ? (
@@ -48,7 +52,7 @@ export default function Committee() {
                     m.initials
                   )}
                 </div>
-                <div 
+                <div
                   className="cm-role"
                   style={isCoCoordinator ? { color: "#6b7280" } : {}}
                 >

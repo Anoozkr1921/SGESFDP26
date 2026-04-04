@@ -12,6 +12,9 @@ import Speakers from "./components/sections/speakers";
 import Committee from "./components/sections/committee";
 import CallToAction from "./components/sections/callToAction";
 
+// Page Components (standalone pages)
+import AboutPage from "./components/ui/AboutPage";
+
 // Page Components
 import SchedulePage from "./components/ui/ScheduleOverlay";
 
@@ -37,6 +40,11 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const goToAbout = () => {
+    setCurrentPage("about");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const goToHome = (sectionId) => {
     setCurrentPage("home");
     if (sectionId && sectionId !== "home") {
@@ -57,6 +65,7 @@ export default function App() {
         onOpenSchedule={goToSchedule} 
         onOpenSpeakers={goToSpeakers}
         onOpenTeam={goToTeam}
+        onOpenAbout={goToAbout}
         onNavigate={goToHome}
         currentPage={currentPage}
       />
@@ -68,6 +77,10 @@ export default function App() {
           <About />
           <CallToAction />
         </main>
+      )}
+
+      {currentPage === "about" && (
+        <AboutPage />
       )}
 
       {currentPage === "schedule" && (

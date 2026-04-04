@@ -1,5 +1,6 @@
 import { Calendar, MapPin, Users, MonitorSmartphone } from "lucide-react";
 import whiteBg from "../../assets/images/white bg.png";
+import WorkshopAtAGlance from "../ui/WorkshopAtAGlance";
 
 export default function Hero({ onOpenSchedule }) {
   const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -23,87 +24,94 @@ export default function Hero({ onOpenSchedule }) {
             padding: "0 2rem",
             paddingTop: 140,
             paddingBottom: 80,
-            display: "flex",
-            flexDirection: "column",
+            display: "grid",
+            gridTemplateColumns: "1.2fr 1fr",
+            gap: "4rem",
+            alignItems: "center",
             minHeight: "100vh",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            textAlign: "left",
           }}
+          className="hero-grid"
         >
-          {/* Eyebrow */}
-          <div className="hero-eyebrow" style={{ marginBottom: "1rem" }}>
-            <span className="pulse" />
-            Five Day Faculty Development Programme · 2026
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", textAlign: "left" }}>
+            {/* Eyebrow */}
+            <div className="hero-eyebrow" style={{ marginBottom: "1rem" }}>
+              <span className="pulse" />
+              Five Day Faculty Development Programme · 2026
+            </div>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                color: "#475569",
+                lineHeight: 1.8,
+                maxWidth: 620,
+                marginBottom: "1rem",
+                marginLeft: "0.25rem", // slightly pushed right to visually align
+                fontWeight: 500,
+              }}
+            >
+              <strong style={{ color: "#022c22" }}>Department of Electrical & Electronics Engineering</strong>
+            </p>
+
+            {/* Title */}
+            <h1 className="hero-title" style={{ maxWidth: 840 }}>
+              Emerging Control &amp;<br />
+              Digital Technologies for<br />
+              <em>Sustainable Green Energy Systems</em>
+            </h1>
+
+            {/* Subtitle — One clean line */}
+            <p
+              style={{
+                fontSize: "1.05rem",
+                color: "#475569",
+                lineHeight: 1.8,
+                maxWidth: 620,
+                marginBottom: "2.5rem",
+                fontWeight: 500,
+              }}
+            >
+              <strong style={{ color: "#022c22" }}>Distinguished speakers</strong> from IITs, NITs,
+              Politecnico di Milano, Microsoft & global universities.
+              Five days of hands-on training in EV systems, smart grids, AI & renewable energy.
+            </p>
+
+            {/* Info chips — compact row */}
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: "0.8rem", marginBottom: "2rem" }}>
+              {[
+                { text: "18–22 May 2026", Icon: Calendar },
+                { text: "BIT Mesra, Ranchi", Icon: MapPin },
+                { text: "18 Speakers", Icon: Users },
+                { text: "Hybrid", Icon: MonitorSmartphone },
+              ].map((chip, idx) => {
+                const { Icon, text } = chip;
+                return (
+                  <span
+                    key={idx}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      background: "rgba(255,255,255,0.65)",
+                      border: "1.5px solid #c3e8d0",
+                      color: "#022c22",
+                      fontSize: "1rem",
+                      padding: "0.75rem 1.5rem",
+                      borderRadius: 50,
+                      fontWeight: 700,
+                      backdropFilter: "blur(8px)",
+                    }}
+                  >
+                    <Icon size={18} color="#047857" strokeWidth={2.5} />
+                    {text}
+                  </span>
+                );
+              })}
+            </div>
           </div>
-          <p
-            style={{
-              fontSize: "1.05rem",
-              color: "#475569",
-              lineHeight: 1.8,
-              maxWidth: 620,
-              marginBottom: "1rem",
-              marginLeft: "0.25rem", // slightly pushed right to visually align
-              fontWeight: 500,
-            }}
-          >
-            <strong style={{ color: "#022c22" }}>Department of Electrical & Electronics Engineering</strong>
-          </p>
 
-          {/* Title */}
-          <h1 className="hero-title" style={{ maxWidth: 840 }}>
-            Emerging Control &amp;<br />
-            Digital Technologies for<br />
-            <em>Sustainable Green Energy Systems</em>
-          </h1>
-
-          {/* Subtitle — One clean line */}
-          <p
-            style={{
-              fontSize: "1.05rem",
-              color: "#475569",
-              lineHeight: 1.8,
-              maxWidth: 620,
-              marginBottom: "2.5rem",
-              fontWeight: 500,
-            }}
-          >
-            <strong style={{ color: "#022c22" }}>Distinguished speakers</strong> from IITs, NITs,
-            Politecnico di Milano, Microsoft & global universities.
-            Five days of hands-on training in EV systems, smart grids, AI & renewable energy.
-          </p>
-
-          {/* Info chips — compact row */}
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: "0.8rem", marginBottom: "2rem" }}>
-            {[
-              { text: "18–22 May 2026", Icon: Calendar },
-              { text: "BIT Mesra, Ranchi", Icon: MapPin },
-              { text: "18 Speakers", Icon: Users },
-              { text: "Hybrid", Icon: MonitorSmartphone },
-            ].map((chip, idx) => {
-              const { Icon, text } = chip;
-              return (
-                <span
-                  key={idx}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                    background: "rgba(255,255,255,0.65)",
-                    border: "1.5px solid #c3e8d0",
-                    color: "#022c22",
-                    fontSize: "1rem",
-                    padding: "0.75rem 1.5rem",
-                    borderRadius: 50,
-                    fontWeight: 700,
-                    backdropFilter: "blur(8px)",
-                  }}
-                >
-                  <Icon size={18} color="#047857" strokeWidth={2.5} />
-                  {text}
-                </span>
-              );
-            })}
+          {/* Right Column: Workshop At A Glance */}
+          <div className="hero-glance-col">
+            <WorkshopAtAGlance />
           </div>
         </div>
       </section>
@@ -132,10 +140,10 @@ export default function Hero({ onOpenSchedule }) {
         >
           <div className="join-ticker">
             <span className="join-ticker-text">
-              ENGINEERING · INNOVATION · SUSTAINABILITY · CONTROL · ENERGY · DIGITAL · RESEARCH · ENGINEERING · INNOVATION · SUSTAINABILITY · CONTROL · ENERGY · DIGITAL · RESEARCH ·&nbsp;
+              LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 ·&nbsp;
             </span>
             <span className="join-ticker-text" aria-hidden="true">
-              ENGINEERING · INNOVATION · SUSTAINABILITY · CONTROL · ENERGY · DIGITAL · RESEARCH · ENGINEERING · INNOVATION · SUSTAINABILITY · CONTROL · ENERGY · DIGITAL · RESEARCH ·&nbsp;
+              LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 · LAST DATE TO APPLY: 15TH MAY 2026 ·&nbsp;
             </span>
           </div>
         </div>
@@ -222,30 +230,28 @@ export default function Hero({ onOpenSchedule }) {
           <div style={{ display: "flex", flexDirection: "column", gap: "0.9rem", alignItems: "flex-start" }}>
             <a
               href="#register"
+              className="btn-breath"
               onClick={(e) => { e.preventDefault(); go("register"); }}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 10,
+                gap: 12,
                 background: "#34d399",
                 color: "#022c22",
                 border: "none",
-                padding: "0.95rem 2.2rem",
-                borderRadius: 10,
+                padding: "1.1rem 2.8rem",
+                borderRadius: 12,
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: "0.8rem",
+                fontSize: "1.05rem",
                 fontWeight: 900,
                 textTransform: "uppercase",
                 letterSpacing: "0.12em",
                 cursor: "pointer",
                 textDecoration: "none",
                 transition: "all 0.22s",
-                boxShadow: "0 6px 24px rgba(52,211,153,0.25)",
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 10px 32px rgba(52,211,153,0.4)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "0 6px 24px rgba(52,211,153,0.25)"; }}
             >
-              REGISTER NOW <span style={{ fontSize: "1rem" }}>→</span>
+              REGISTER NOW <span style={{ fontSize: "1.4rem" }}>→</span>
             </a>
 
             <a
@@ -279,6 +285,20 @@ export default function Hero({ onOpenSchedule }) {
 
         {/* Ticker + Responsive CSS */}
         <style>{`
+          .btn-breath {
+            box-shadow: 0 6px 24px rgba(52,211,153,0.25);
+            animation: btn-breath-anim 2.5s infinite ease-in-out;
+          }
+          .btn-breath:hover {
+            animation: none !important;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 32px rgba(52,211,153,0.4) !important;
+          }
+          @keyframes btn-breath-anim {
+            0%, 100% { transform: scale(1); box-shadow: 0 6px 24px rgba(52,211,153,0.25); }
+            50% { transform: scale(1.03); box-shadow: 0 12px 32px rgba(52,211,153,0.45); }
+          }
+
           .join-ticker {
             display: flex;
             width: max-content;
@@ -304,6 +324,14 @@ export default function Hero({ onOpenSchedule }) {
               grid-template-columns: 1fr !important;
               gap: 2rem !important;
               padding: 56px 2rem !important;
+            }
+            .hero-grid {
+              grid-template-columns: 1fr !important;
+              gap: 3rem !important;
+              padding-top: 120px !important;
+            }
+            .hero-glance-col {
+              margin-bottom: 2rem;
             }
           }
         `}</style>

@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onNavigate, currentPage }) {
+export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onOpenAbout, onNavigate, currentPage }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  
+
   const navLinks = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
@@ -23,7 +23,7 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
 
   // IntersectionObserver to track active section
   useEffect(() => {
-    const sectionIds = navLinks.map(l => l.id).filter(id => id !== "schedule" && id !== "committee" && id !== "speakers");
+    const sectionIds = navLinks.map(l => l.id).filter(id => id !== "schedule" && id !== "committee" && id !== "speakers" && id !== "about");
     const observers = [];
 
     const handleIntersect = (entries) => {
@@ -65,7 +65,12 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
       setMenuOpen(false);
       return;
     }
-    
+    if (id === "about") {
+      onOpenAbout?.();
+      setMenuOpen(false);
+      return;
+    }
+
     if (currentPage !== "home") {
       onNavigate?.(id);
       setMenuOpen(false);
@@ -73,11 +78,11 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
     }
 
     setActiveSection(id);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); 
-    setMenuOpen(false); 
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false);
   };
 
-  const googleFormLink = "https://forms.gle/YXM16hAbYpxbFv1o7";
+  const googleFormLink = "https://forms.gle/FY8yWq8d8FsJ9jG99";
 
   /* Inline keyframes for the underline expand animation */
   const underlineStyle = `
@@ -90,13 +95,12 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
   return (
     <>
       <style>{underlineStyle}</style>
-      <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-white/60 backdrop-blur-xl backdrop-saturate-150 border-b border-white/60 shadow-sm py-3" 
+      <nav className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500 ${scrolled
+          ? "bg-white/60 backdrop-blur-xl backdrop-saturate-150 border-b border-white/60 shadow-sm py-3"
           : "bg-white/20 backdrop-blur-md border-b border-white/30 py-4"
-      }`}>
+        }`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          
+
           {/* Brand */}
           <a href="#home" onClick={e => { e.preventDefault(); go("home"); }} className="flex items-center gap-3 group !no-underline">
             <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Birla_Institute_of_Technology_Mesra.png" alt="BIT Mesra" className="h-9 transition-transform duration-300 group-hover:scale-105" />
@@ -110,17 +114,18 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
           <div className="hidden md:flex items-center">
             <ul className="flex items-center gap-7 m-0 p-0 list-none">
               {navLinks.map(link => {
-                const isActive = (currentPage === "schedule" && link.id === "schedule") || 
-                                 (currentPage === "team" && link.id === "committee") || 
-                                 (currentPage === "speakers" && link.id === "speakers") || 
-                                 (currentPage === "home" && activeSection === link.id);
+                const isActive = (currentPage === "schedule" && link.id === "schedule") ||
+                  (currentPage === "team" && link.id === "committee") ||
+                  (currentPage === "speakers" && link.id === "speakers") ||
+                  (currentPage === "about" && link.id === "about") ||
+                  (currentPage === "home" && activeSection === link.id);
                 return (
                   <li key={link.id}>
-                    <a 
-                      href={`#${link.id}`} 
+                    <a
+                      href={`#${link.id}`}
                       onClick={e => { e.preventDefault(); go(link.id); }}
                       className="text-[0.7rem] font-black uppercase tracking-widest transition-opacity !no-underline relative pb-1"
-                      style={{ 
+                      style={{
                         color: "#022c22",
                         opacity: isActive ? 1 : 0.7,
                       }}
@@ -146,12 +151,12 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
                   </li>
                 );
               })}
-              
+
               {/* Green Register Button */}
               <li className="ml-3">
-                <a 
-                  href={googleFormLink} 
-                  target="_blank" 
+                <a
+                  href={googleFormLink}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="!no-underline"
                   style={{
@@ -198,17 +203,18 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
         {menuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-emerald-100 shadow-xl p-6 flex flex-col gap-5">
             {navLinks.map(link => {
-              const isActive = (currentPage === "schedule" && link.id === "schedule") || 
-                               (currentPage === "team" && link.id === "committee") || 
-                               (currentPage === "speakers" && link.id === "speakers") || 
-                               (currentPage === "home" && activeSection === link.id);
+              const isActive = (currentPage === "schedule" && link.id === "schedule") ||
+                (currentPage === "team" && link.id === "committee") ||
+                (currentPage === "speakers" && link.id === "speakers") ||
+                (currentPage === "about" && link.id === "about") ||
+                (currentPage === "home" && activeSection === link.id);
               return (
-                <a 
+                <a
                   key={link.id}
-                  href={`#${link.id}`} 
+                  href={`#${link.id}`}
                   onClick={e => { e.preventDefault(); go(link.id); }}
                   className="text-sm font-black uppercase tracking-widest !no-underline"
-                  style={{ 
+                  style={{
                     color: "#022c22",
                     opacity: isActive ? 1 : 0.65,
                     borderLeft: isActive ? "3px solid #047857" : "3px solid transparent",
@@ -220,9 +226,9 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onN
                 </a>
               );
             })}
-            <a 
-              href={googleFormLink} 
-              target="_blank" 
+            <a
+              href={googleFormLink}
+              target="_blank"
               rel="noopener noreferrer"
               className="!no-underline"
               style={{

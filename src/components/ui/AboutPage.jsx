@@ -1,0 +1,718 @@
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import WorkshopAtAGlance from "./WorkshopAtAGlance";
+
+/* ───────────────────────────────────────────────────────────
+   ABOUT PAGE — Standalone page
+   Three sections: Workshop · Institute · Department
+   ─────────────────────────────────────────────────────────── */
+
+import lab4a from "../../assets/images/EEE LAB Photos/4a Machine Lab.jpg";
+import lab4b from "../../assets/images/EEE LAB Photos/4b Machine Lab.jpg";
+import lab4c from "../../assets/images/EEE LAB Photos/4c Machine Lab.jpg";
+import lab5b from "../../assets/images/EEE LAB Photos/5b Soft Computing Lab.jpg";
+import lab6b from "../../assets/images/EEE LAB Photos/6b Signal Processing Lab.jpg";
+import lab7a from "../../assets/images/EEE LAB Photos/7a Smart Grid Lab.jpg";
+import lab7b from "../../assets/images/EEE LAB Photos/7b Smart Grid Lab.jpg";
+import lab7c from "../../assets/images/EEE LAB Photos/7c Smart Grid Lab.jpg";
+import lab8a from "../../assets/images/EEE LAB Photos/8a Power System Lab.jpg";
+import lab8b from "../../assets/images/EEE LAB Photos/8b Power System Lab.jpg";
+import lab8c from "../../assets/images/EEE LAB Photos/8c Power System Lab.jpg";
+import lab8d from "../../assets/images/EEE LAB Photos/8d Power System Lab.jpg";
+import lab8e from "../../assets/images/EEE LAB Photos/8e Power System Lab.jpg";
+import lab9a from "../../assets/images/EEE LAB Photos/9a Control System Lab.jpg";
+import lab9b from "../../assets/images/EEE LAB Photos/9b Control System Lab.jpg";
+import lab9c from "../../assets/images/EEE LAB Photos/9c Control System Lab.jpg";
+import lab9d from "../../assets/images/EEE LAB Photos/9d Control System Lab.jpg";
+import lab9e from "../../assets/images/EEE LAB Photos/9e Control System Lab.jpg";
+import lab9f from "../../assets/images/EEE LAB Photos/9f Control System Lab.jpg";
+import labMeas1 from "../../assets/images/EEE LAB Photos/Measurement Lab.jpg";
+import labMeas3 from "../../assets/images/EEE LAB Photos/Measurement Lab3.jpg";
+import labMeas4 from "../../assets/images/EEE LAB Photos/Measurement Lab4.jpg";
+import bitCampusImg from "../../assets/images/BITcampus.avif";
+
+const labs = [
+  { name: "Machine Lab", image: lab4a },
+  { name: "Machine Lab", image: lab4b },
+  { name: "Machine Lab", image: lab4c },
+  { name: "Soft Computing Lab", image: lab5b },
+  { name: "Signal Processing Lab", image: lab6b },
+  { name: "Smart Grid Lab", image: lab7a },
+  { name: "Smart Grid Lab", image: lab7b },
+  { name: "Smart Grid Lab", image: lab7c },
+  { name: "Power System Lab", image: lab8a },
+  { name: "Power System Lab", image: lab8b },
+  { name: "Power System Lab", image: lab8c },
+  { name: "Power System Lab", image: lab8d },
+  { name: "Power System Lab", image: lab8e },
+  { name: "Control System Lab", image: lab9a },
+  { name: "Control System Lab", image: lab9b },
+  { name: "Control System Lab", image: lab9c },
+  { name: "Control System Lab", image: lab9d },
+  { name: "Control System Lab", image: lab9e },
+  { name: "Control System Lab", image: lab9f },
+  { name: "Measurement Lab", image: labMeas1 },
+  { name: "Measurement Lab", image: labMeas3 },
+  { name: "Measurement Lab", image: labMeas4 },
+];
+
+const LAB_SHUFFLE_MS = 3000;
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}
+
+const CARD_W = 280;
+const CARD_H = 360;
+
+export default function AboutPage() {
+  const [activeLabIndex, setActiveLabIndex] = useState(0);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setActiveLabIndex((i) => mod(i + 1, labs.length));
+    }, LAB_SHUFFLE_MS);
+    return () => window.clearInterval(id);
+  }, []);
+
+  return (
+    <div
+      style={{
+        minHeight: "100vh",
+        background:
+          "linear-gradient(170deg, #f8fafc 0%, #f0fdf4 40%, #dcfce7 100%)",
+        position: "relative",
+      }}
+    >
+      {/* ── Subtle background dots ── */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          opacity: 0.05,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1' fill='%23047857'/%3E%3C/svg%3E")`,
+          backgroundSize: "40px 40px",
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* ━━━━━━━━━ HERO HEADER ━━━━━━━━━ */}
+      <div
+        style={{
+          position: "relative",
+          padding: "7rem 2rem 3rem",
+          maxWidth: 1200,
+          margin: "0 auto",
+        }}
+      >
+        {/* Green accent bar */}
+        <div
+          style={{
+            position: "absolute",
+            left: "2rem",
+            top: "6.5rem",
+            width: 4,
+            height: 90,
+            background: "linear-gradient(to bottom, #047857, #10b981)",
+            borderRadius: 2,
+          }}
+        />
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          style={{ paddingLeft: "1.5rem" }}
+        >
+          <h1
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+              fontWeight: 900,
+              color: "#022c22",
+              lineHeight: 1,
+              letterSpacing: "-0.02em",
+              marginBottom: "0.6rem",
+            }}
+          >
+            ABOUT.
+          </h1>
+          <p
+            style={{
+              fontSize: "0.85rem",
+              fontWeight: 700,
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "#047857",
+            }}
+          >
+            WORKSHOP · INSTITUTE · DEPARTMENT
+          </p>
+        </motion.div>
+      </div>
+
+      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+          SECTION 1 — ABOUT THE WORKSHOP
+          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 2rem 4rem" }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <div className="about-page-grid">
+            <div>
+              <div className="tag">About the Workshop</div>
+              <h2
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+                  fontWeight: 900,
+                  color: "#022c22",
+                  lineHeight: 1.1,
+                  marginBottom: "0.6rem",
+                }}
+              >
+                Bridging Theory with{" "}
+                <span style={{ color: "#047857" }}>Industrial Practice</span>
+              </h2>
+              <div className="rule" />
+              <div className="about-text" style={{ marginTop: "1.2rem" }}>
+                <p>
+                  This{" "}
+                  <strong>
+                    Five-Day Online Faculty Development Programme
+                  </strong>{" "}
+                  brings together 18 distinguished speakers from IITs, NITs,
+                  international universities, and industry to deliver a rigorous
+                  exploration of emerging control and digital technologies for
+                  green energy systems.
+                </p>
+                <p>
+                  The programme covers the full spectrum — from{" "}
+                  <strong>
+                    EV charging infrastructure and bidirectional grid
+                    interactions
+                  </strong>{" "}
+                  to AI-driven predictive maintenance, port-Hamiltonian control,
+                  and cyber-resilience of legacy power networks.
+                </p>
+                <p>
+                  Designed for{" "}
+                  <strong>
+                    faculty, PhD scholars, and industry professionals
+                  </strong>
+                  . Certificates awarded on meeting attendance and assessment
+                  criteria. All participants receive welcome kits and high tea
+                  at inauguration and valedictory.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column: Workshop At a Glance */}
+            <WorkshopAtAGlance />
+          </div>
+        </motion.div>
+      </div>
+
+      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+          SECTION 2 — ABOUT THE INSTITUTE
+          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <div
+        style={{
+          background:
+            "linear-gradient(175deg, #ffffff 0%, #f0fdf4 50%, #dcfce7 100%)",
+          borderTop: "1px solid rgba(4,120,87,0.1)",
+          borderBottom: "1px solid rgba(4,120,87,0.1)",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "5rem 2rem",
+          }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <div className="tag">About the Institute</div>
+            <h2
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: "clamp(1.6rem, 3vw, 2.4rem)",
+                fontWeight: 900,
+                color: "#022c22",
+                lineHeight: 1.1,
+                marginBottom: "0.6rem",
+              }}
+            >
+              Birla Institute of Technology,{" "}
+              <span style={{ color: "#047857" }}>Mesra</span>
+            </h2>
+            <div className="rule" />
+
+            {/* Campus Image Banner */}
+            <div
+              style={{
+                marginTop: "2rem",
+                width: "100%",
+                borderRadius: 16,
+                overflow: "hidden",
+                border: "1px solid rgba(4,120,87,0.15)",
+                boxShadow: "0 10px 30px rgba(4,120,87,0.08)",
+                background: "white",
+              }}
+            >
+              <img
+                src={bitCampusImg}
+                alt="BIT Mesra Campus"
+                style={{
+                  width: "100%",
+                  height: 380,
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  display: "block",
+                }}
+              />
+            </div>
+
+            <div className="institute-grid" style={{ marginTop: "2.5rem" }}>
+              {/* Left: Key facts */}
+              <div
+                style={{
+                  background: "white",
+                  border: "1px solid rgba(4,120,87,0.15)",
+                  borderRadius: 16,
+                  padding: "2rem 1.75rem",
+                  boxShadow: "0 10px 30px rgba(4,120,87,0.04)",
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontSize: "1.15rem",
+                    fontWeight: 900,
+                    color: "#022c22",
+                    marginBottom: "1.25rem",
+                    paddingBottom: "0.85rem",
+                    borderBottom: "1px solid rgba(4,120,87,0.12)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                  }}
+                >
+                  <span
+                    style={{
+                      display: "inline-block",
+                      width: 8,
+                      height: 8,
+                      background: "#047857",
+                      borderRadius: "50%",
+                    }}
+                  />
+                  Key Facts
+                </h3>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1.1rem",
+                  }}
+                >
+                  {[
+                    { label: "Established", value: "1955" },
+                    { label: "Location", value: "Mesra, Ranchi, Jharkhand" },
+                    { label: "Founded By", value: "B.M. Birla" },
+                    { label: "Status", value: "Deemed University (1986)" },
+                    { label: "Students", value: "10,000+ Registered" },
+                    { label: "Research", value: "250+ Doctoral Scholars" },
+                    {
+                      label: "Accreditation",
+                      value: "NAAC & NBA Accredited",
+                    },
+                    {
+                      label: "Global Reach",
+                      value: "Collaborations with USA, UK & Canada",
+                    },
+                  ].map((item) => (
+                    <div
+                      key={item.label}
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "1rem",
+                      }}
+                    >
+                      <div style={{ minWidth: 0 }}>
+                        <div
+                          style={{
+                            fontSize: "0.68rem",
+                            fontWeight: 900,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.12em",
+                            color: "#047857",
+                            marginBottom: "0.15rem",
+                          }}
+                        >
+                          {item.label}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: "0.88rem",
+                            color: "#475569",
+                            lineHeight: 1.45,
+                            fontWeight: 600,
+                          }}
+                        >
+                          {item.value}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right: Text content */}
+              <div className="about-text">
+                <p>
+                  The <strong>Birla Institute of Technology</strong> was
+                  established in 1955 at Mesra, Ranchi, Jharkhand by the
+                  philanthropist and industrialist <strong>B M Birla</strong>.
+                  B.I.T was declared a deemed university in 1986. B.I.T is one
+                  of the pioneering engineering institutions of the country which
+                  has contributed many outstanding engineers in India & abroad.
+                </p>
+                <p>
+                  Completely residential, the campus is self contained with
+                  excellent hostel facilities. With more than{" "}
+                  <strong>10,000 registered students</strong> B.I.T is today a
+                  global name. Along with UG and PG Programs, the Institute has
+                  more than <strong>250 registered students for Doctoral
+                  Programs</strong> at present.
+                </p>
+                <p>
+                  All of the courses has been accredited by the{" "}
+                  <strong>
+                    National Assessment & Accreditation Council (NAAC)
+                  </strong>{" "}
+                  & the{" "}
+                  <strong>National Board of Accreditation (NBA)</strong>{" "}
+                  established by the UGC & AICTE respectively. It has
+                  collaborative arrangements with Universities in the USA, UK &
+                  Canada.
+                </p>
+                <p>
+                  B.I.T Mesra is also an active member of the{" "}
+                  <strong>'EAGER NETWIC' Project</strong> under the Asia Link
+                  programme of European Commission.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+          SECTION 3 — ABOUT THE DEPARTMENT
+          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "5rem 2rem 5rem",
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <div className="tag">About the Department</div>
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)",
+              fontWeight: 900,
+              lineHeight: 1.1,
+              marginBottom: "0.85rem",
+              color: "#022c22",
+            }}
+          >
+            Department of Electrical &{" "}
+            <span style={{ color: "#047857" }}>
+              Electronics Engineering
+            </span>
+          </h2>
+          <div className="rule" style={{ marginBottom: "2rem" }} />
+
+          {/* Carousel — centered, contained, won't overlap navbar */}
+          <div
+            style={{
+              position: "relative",
+              height: CARD_H + 80,
+              overflow: "hidden",
+              zIndex: 1,
+              marginBottom: "2.5rem",
+              maxWidth: 600,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            {(() => {
+              const total = labs.length;
+              const leftIdx = mod(activeLabIndex - 1, total);
+              const centerIdx = activeLabIndex;
+              const rightIdx = mod(activeLabIndex + 1, total);
+
+              const SPRING = {
+                type: "spring",
+                stiffness: 340,
+                damping: 28,
+                mass: 0.85,
+              };
+
+              const glassCommon = {
+                position: "relative",
+                width: CARD_W,
+                height: CARD_H,
+                borderRadius: 18,
+                overflow: "hidden",
+                backdropFilter: "blur(14px)",
+                WebkitBackdropFilter: "blur(14px)",
+              };
+
+              const getPos = (pos) => {
+                if (pos === "center") {
+                  return {
+                    x: 0,
+                    scale: 1,
+                    opacity: 1,
+                    rotateY: 0,
+                    zIndex: 50,
+                    y: 0,
+                  };
+                }
+                if (pos === "left") {
+                  return {
+                    x: -112,
+                    scale: 0.82,
+                    opacity: 0.62,
+                    rotateY: 16,
+                    zIndex: 30,
+                    y: 12,
+                  };
+                }
+                return {
+                  x: 112,
+                  scale: 0.82,
+                  opacity: 0.62,
+                  rotateY: -16,
+                  zIndex: 30,
+                  y: 12,
+                };
+              };
+
+              const renderCard = (idx, pos) => {
+                const lab = labs[idx];
+                const isActive = pos === "center";
+
+                const border = isActive
+                  ? "1.5px solid rgba(4,120,87,0.55)"
+                  : "1.5px solid rgba(4,120,87,0.20)";
+                const shadow = isActive
+                  ? "0 0 0 1px rgba(52,211,153,0.35) inset, 0 22px 60px rgba(11,61,34,0.12), 0 0 70px rgba(45,212,191,0.20)"
+                  : "0 14px 36px rgba(11,61,34,0.10)";
+
+                const background = isActive
+                  ? "rgba(255,255,255,0.78)"
+                  : "rgba(255,255,255,0.60)";
+
+                return (
+                  <motion.div
+                    key={`lab-${idx}`}
+                    layoutId={`dept-lab-${idx}`}
+                    initial={false}
+                    animate={getPos(pos)}
+                    transition={SPRING}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: "50%",
+                      marginLeft: -CARD_W / 2,
+                      transformStyle: "preserve-3d",
+                      cursor: !isActive ? "pointer" : "default",
+                      pointerEvents: isActive ? "none" : "auto",
+                    }}
+                    onClick={() => {
+                      if (!isActive) setActiveLabIndex(idx);
+                    }}
+                    whileHover={
+                      !isActive ? { scale: 0.86, y: 8 } : {}
+                    }
+                  >
+                    <div
+                      style={{
+                        ...glassCommon,
+                        border,
+                        background,
+                        boxShadow: shadow,
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background: lab.image ? `url(${lab.image}) center/cover no-repeat` :
+                            "radial-gradient(ellipse at 50% 0%, rgba(52,211,153,0.20) 0%, transparent 60%), linear-gradient(180deg, rgba(236,253,245,0.35) 0%, rgba(255,255,255,0.00) 60%)",
+                          pointerEvents: "none",
+                        }}
+                      />
+                      {/* Gradient overlay for text reading */}
+                      {lab.image && (
+                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.6) 100%)", pointerEvents: "none" }} />
+                      )}
+
+                      {!isActive && (
+                        <div
+                          style={{
+                            position: "absolute",
+                            inset: 0,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontFamily: "'Playfair Display', serif",
+                            fontSize: "3rem",
+                            fontWeight: 900,
+                            color: "rgba(4,120,87,0.16)",
+                            pointerEvents: "none",
+                          }}
+                        >
+                          {idx + 1}
+                        </div>
+                      )}
+
+                      <AnimatePresence mode="wait">
+                        {isActive && (
+                          <motion.div
+                            key={`text-${idx}`}
+                            initial={{ opacity: 0, y: 14 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{
+                              duration: 0.22,
+                              ease: "easeOut",
+                            }}
+                            style={{
+                              position: "absolute",
+                              left: 14,
+                              right: 14,
+                              bottom: 14,
+                              padding: "10px 12px",
+                              borderRadius: 12,
+                              background: "rgba(255,255,255,0.85)",
+                              border: "1px solid rgba(4,120,87,0.25)",
+                              backdropFilter: "blur(10px)",
+                              WebkitBackdropFilter: "blur(10px)",
+                              boxShadow:
+                                "0 10px 30px rgba(11,61,34,0.10), 0 0 40px rgba(45,212,191,0.10)",
+                            }}
+                          >
+                            <div
+                              style={{
+                                fontFamily: "'Playfair Display', serif",
+                                fontWeight: 900,
+                                color: "#022c22",
+                                textAlign: "center",
+                                lineHeight: 1.15,
+                              }}
+                            >
+                              {lab.name}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </motion.div>
+                );
+              };
+
+              return (
+                <>
+                  {renderCard(leftIdx, "left")}
+                  {renderCard(centerIdx, "center")}
+                  {renderCard(rightIdx, "right")}
+                </>
+              );
+            })()}
+          </div>
+
+          {/* Department text — flows full width below the carousel */}
+          <div className="about-text" style={{ maxWidth: 900, margin: "0 auto" }}>
+            <p>
+              The Department of Electrical & Electronics Engineering is
+              dedicated to the current needs of industry with the flexibility
+              to tune its programmes according to different requirements.
+              Application of new technology in various fields is one of the
+              main focuses in the activities of the department.
+            </p>
+            <p>
+              Department of EEE has different ongoing and past projects where{" "}
+              <strong>AI and IoT</strong> has been directly used for
+              applications like <strong>smart grid concept in power
+              system</strong>, battery management system for EV, energy
+              efficient electrical motor drives or in health monitoring of
+              different electrical equipment.
+            </p>
+            <p>
+              The Department of EEE has MoUs with{" "}
+              <strong>University of Padova, Italy</strong>, TATA Motors, ERLDC
+              Grid-India Controller, Central Coal filed Limited, Larsen &
+              Turbo Technical Services Ltd. and other industries.
+            </p>
+            <p>
+              The Department hosts advanced laboratories in{" "}
+              <strong>Power Systems</strong> and{" "}
+              <strong>Control Systems</strong>, alongside a{" "}
+              <strong>Smart Grid Lab</strong> built for hands-on learning. It
+              is also home to a{" "}
+              <strong>NaMPET-funded Power Electronics Laboratory</strong> that
+              supports modern inverter/control research and practical training.
+              With measurement, computing, and instrumentation facilities,
+              students gain end-to-end exposure from theory to real-time
+              experimentation.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* ── Responsive styles ── */}
+      <style>{`
+        .about-page-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2.5rem;
+          align-items: start;
+        }
+        .institute-grid {
+          display: grid;
+          grid-template-columns: 380px 1fr;
+          gap: 2.5rem;
+          align-items: start;
+        }
+        @media (max-width: 900px) {
+          .about-page-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .institute-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+
