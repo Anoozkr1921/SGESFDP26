@@ -37,7 +37,7 @@ export default function Details() {
           <div>
             <div className="cert-lbl">Certificate of Participation</div>
             <p className="cert-txt">
-              Certificates are awarded to participants with more than 80% attendance who secure more than 70% in the assessment. All participants receive a welcome kit, with high tea provided after Inauguration and Valedictory sessions.
+              Certificates will be awarded to participants with more than 80% attendance who secure more than 70% in the assessment. All participants receive a welcome kit, with high tea provided after Inauguration and Valedictory sessions.
             </p>
           </div>
         </div>

@@ -5,7 +5,10 @@ export default function Timeline({ onSelectSpeaker }) {
   const [activeDay, setActiveDay] = useState(0);
 
   // Helper functions to match speakers to the schedule
-  const findSpeaker = (spk) => speakers.find(s => s.name.includes(spk.split(" ").slice(-1)[0])) || null;
+  const findSpeaker = (spkName) => {
+    if (!spkName) return null;
+    return speakers.find((s) => s.name === spkName) || null;
+  };
   
   const initials = (name) => name.replace(/^(Dr\.|Prof\.|Mr\.|Ms\.)\s*/gi, "").split(" ").filter(Boolean).map(w => w[0]).join("").slice(0, 2).toUpperCase();
 

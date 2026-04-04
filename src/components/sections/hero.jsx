@@ -22,7 +22,7 @@ export default function Hero({ onOpenSchedule }) {
             margin: "0 auto",
             width: "100%",
             padding: "0 2rem",
-            paddingTop: 140,
+            paddingTop: 100,
             paddingBottom: 80,
             display: "grid",
             gridTemplateColumns: "1.2fr 1fr",
@@ -33,84 +33,84 @@ export default function Hero({ onOpenSchedule }) {
           className="hero-grid"
         >
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", textAlign: "left" }}>
-          {/* Eyebrow */}
-          <div className="hero-eyebrow" style={{ marginBottom: "1rem" }}>
-            <span className="pulse" />
-            Five Day Faculty Development Programme · 2026
-          </div>
-          <p
-            style={{
-              fontSize: "1.05rem",
-              color: "#475569",
-              lineHeight: 1.8,
-              maxWidth: 620,
-              marginBottom: "1rem",
-              marginLeft: "0.25rem", // slightly pushed right to visually align
-              fontWeight: 500,
-            }}
-          >
-            <strong style={{ color: "#022c22" }}>Department of Electrical & Electronics Engineering</strong>
-          </p>
+            {/* Eyebrow */}
+            <div className="hero-eyebrow" style={{ marginBottom: "1rem" }}>
+              <span className="pulse" />
+              Five Day Faculty Development Programme · 2026
+            </div>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                color: "#475569",
+                lineHeight: 1.8,
+                maxWidth: 620,
+                marginBottom: "1rem",
+                marginLeft: "0.25rem", // slightly pushed right to visually align
+                fontWeight: 500,
+              }}
+            >
+              <strong style={{ color: "#022c22" }}>Department of Electrical & Electronics Engineering</strong>
+            </p>
 
-          {/* Title */}
-          <h1 className="hero-title" style={{ maxWidth: 840 }}>
-            Emerging Control &amp;<br />
-            Digital Technologies for<br />
-            <em>Sustainable Green Energy Systems</em>
-          </h1>
+            {/* Title */}
+            <h1 className="hero-title" style={{ maxWidth: 840 }}>
+              Emerging Control &amp;<br />
+              Digital Technologies for<br />
+              <em>Sustainable Green Energy Systems</em>
+            </h1>
 
-          {/* Subtitle — One clean line */}
-          <p
-            style={{
-              fontSize: "1.05rem",
-              color: "#475569",
-              lineHeight: 1.8,
-              maxWidth: 620,
-              marginBottom: "2.5rem",
-              fontWeight: 500,
-            }}
-          >
-            <strong style={{ color: "#022c22" }}>Distinguished speakers</strong> from IITs, NITs,
-            Politecnico di Milano, Microsoft & global universities.
-            Five days of hands-on training in EV systems, smart grids, AI & renewable energy.
-          </p>
+            {/* Subtitle — One clean line */}
+            <p
+              style={{
+                fontSize: "1.05rem",
+                color: "#475569",
+                lineHeight: 1.8,
+                maxWidth: 620,
+                marginBottom: "2.5rem",
+                fontWeight: 500,
+              }}
+            >
+              <strong style={{ color: "#022c22" }}>Distinguished speakers</strong> from IITs, NITs,
+              Politecnico di Milano, Microsoft & global universities.
+              Five days of hands-on training in EV systems, smart grids, AI & renewable energy.
+            </p>
 
-          {/* Info chips — compact row */}
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: "0.8rem", marginBottom: "2rem" }}>
-            {[
-              { text: "18–22 May 2026", Icon: Calendar },
-              { text: "BIT Mesra, Ranchi", Icon: MapPin },
-              { text: "18 Speakers", Icon: Users },
-              { text: "Hybrid", Icon: MonitorSmartphone },
-            ].map((chip, idx) => {
-              const { Icon, text } = chip;
-              return (
-                <span
-                  key={idx}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                    background: "rgba(255,255,255,0.65)",
-                    border: "1.5px solid #c3e8d0",
-                    color: "#022c22",
-                    fontSize: "1rem",
-                    padding: "0.75rem 1.5rem",
-                    borderRadius: 50,
-                    fontWeight: 700,
-                    backdropFilter: "blur(8px)",
-                  }}
-                >
-                  <Icon size={18} color="#047857" strokeWidth={2.5} />
-                  {text}
-                </span>
-              );
-            })}
+            {/* Info chips — compact row */}
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: "0.8rem", marginBottom: "2rem" }}>
+              {[
+                { text: "18–22 May 2026", Icon: Calendar },
+                { text: "BIT Mesra, Ranchi", Icon: MapPin },
+                { text: "18 Speakers", Icon: Users },
+                { text: "Hybrid", Icon: MonitorSmartphone },
+              ].map((chip, idx) => {
+                const { Icon, text } = chip;
+                return (
+                  <span
+                    key={idx}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      background: "rgba(255,255,255,0.65)",
+                      border: "1.5px solid #c3e8d0",
+                      color: "#022c22",
+                      fontSize: "1rem",
+                      padding: "0.75rem 1.5rem",
+                      borderRadius: 50,
+                      fontWeight: 700,
+                      backdropFilter: "blur(8px)",
+                    }}
+                  >
+                    <Icon size={18} color="#047857" strokeWidth={2.5} />
+                    {text}
+                  </span>
+                );
+              })}
+            </div>
           </div>
-          </div>
-          
+
           {/* Right Column: Workshop At A Glance */}
-          <div className="hero-glance-col">
+          <div className="hero-glance-col" style={{ marginTop: "-10rem" }}>
             <WorkshopAtAGlance />
           </div>
         </div>
@@ -316,7 +316,7 @@ export default function Hero({ onOpenSchedule }) {
             .hero-grid {
               grid-template-columns: 1fr !important;
               gap: 3rem !important;
-              padding-top: 120px !important;
+              padding-top: 80px !important;
             }
             .hero-glance-col {
               margin-bottom: 2rem;

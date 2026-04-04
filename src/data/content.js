@@ -175,7 +175,7 @@ export const speakers = [
     name: "Dr. Ajay Kumar",
     role: "Assistant Professor, Electrical Engineering",
     inst: "Punjab Engineering College, Chandigarh",
-    topic: "Deveolepement and hardware implementation of Power condtitioning system for SPV system",
+    topic: "Development and hardware implementation of Power conditioning system for SPV system",
     badge: "Invited",
     image: imgAjayKumar,
     bio: "Dr. Ajay Kumar (MIEEE, MIE) specialises in distributed generation, renewable energy integration, and power quality assessment. His research emphasises control structure development, hardware testing, and experimental result analysis for grid-connected solar PV systems.",
