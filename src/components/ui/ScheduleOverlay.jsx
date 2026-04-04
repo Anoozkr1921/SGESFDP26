@@ -11,8 +11,10 @@ import { schedule, speakers } from "../../data/content";
 export default function SchedulePage({ onSelectSpeaker }) {
   const [activeDay, setActiveDay] = useState(0);
 
-  const findSpeaker = (spk) =>
-    speakers.find((s) => s.name.includes(spk.split(" ").slice(-1)[0])) || null;
+  const findSpeaker = (spkName) => {
+    if (!spkName) return null;
+    return speakers.find((s) => s.name === spkName) || null;
+  };
 
   const initials = (name) =>
     name

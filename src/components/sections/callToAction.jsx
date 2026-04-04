@@ -66,7 +66,7 @@ export default function CallToAction() {
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }} className="reg-info-grid">
                 {[
-                  { IcoC: IcoMail, lbl: "Coordinators", val: "gaurishankergupta@bitmesra.ac.in" },
+                  { IcoC: IcoMail, lbl: "Contact", val: "gaurishankergupta@bitmesra.ac.in" },
                   { IcoC: IcoPhone, lbl: "Phone", val: "+91-9471301045" },
                   { IcoC: IcoBuilding, lbl: "Department", val: "Electrical & Electronics Engineering\nBIT Mesra, Ranchi" },
                   { IcoC: IcoCalendar, lbl: "Important Dates", val: "Reg. closes: 15 May 2026\nConfirmation: 17 May" },

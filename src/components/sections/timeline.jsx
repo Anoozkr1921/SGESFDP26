@@ -9,7 +9,7 @@ export default function Timeline({ onSelectSpeaker }) {
     if (!spkName) return null;
     return speakers.find((s) => s.name === spkName) || null;
   };
-
+  
   const initials = (name) => name.replace(/^(Dr\.|Prof\.|Mr\.|Ms\.)\s*/gi, "").split(" ").filter(Boolean).map(w => w[0]).join("").slice(0, 2).toUpperCase();
 
   return (

@@ -1,5 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getIconComponent } from "../icons";
+
+import labImg1 from "../../assets/images/8 Power System Lab.jpg";
+import labImg2 from "../../assets/images/9a Control System Lab.jpg";
+import labImg3 from "../../assets/images/7 Smart Grid Lab.jpg";
+import labImg4 from "../../assets/images/4 Machine Lab.JPG";
+import labImg5 from "../../assets/images/8a Power System Lab.jpg";
+import labImg6 from "../../assets/images/8c Power System Lab.jpg";
+import labImg7 from "../../assets/images/10 Measurement Lab.jpg";
+import labImg8 from "../../assets/images/5a Soft Computing Lab.jpg";
+import labImg9 from "../../assets/images/6a Signal Processing Lab.jpg";
+import labImg10 from "../../assets/images/4a Machine Lab.jpg";
+
+import colImg1 from "../../assets/images/1 BIT Campus.jpg";
+import colImg2 from "../../assets/images/3. EEE Labs.JPG";
+import colImg3 from "../../assets/images/12 Faculty members.jpg";
 
 /* ───────────────────────────────────────────────────────────
    CURRICULUM SECTION (Home Page)
@@ -62,14 +78,637 @@ const chapters = [
   },
 ];
 
+const labs = [
+  { name: "Power Systems Lab", image: labImg1 },
+  { name: "Control System Lab", image: labImg2 },
+  { name: "Smart Grid Lab", image: labImg3 },
+  { name: "Electrical Machines Lab", image: labImg4 },
+  { name: "NaMPET Power Electronics Lab", image: labImg5 },
+  { name: "Power Electronics Lab", image: labImg6 },
+  { name: "Electrical Measurement & Instrumentation Lab", image: labImg7 },
+  { name: "Soft Computing Lab", image: labImg8 },
+  { name: "Virtual Instrumentation & Signal Processing Lab", image: labImg9 },
+  { name: "Drives Lab", image: labImg10 },
+];
+
+const colleges = [
+  { name: "BIT Mesra Campus", image: colImg1 },
+  { name: "EEE Building", image: colImg2 },
+  { name: "Research Center", image: colImg3 },
+];
+
+const LAB_SHUFFLE_MS = 3500;
+const CARD_W = 260; // Slightly smaller card for department carousel vs speakers
+const CARD_H = 340;
+const mod = (n, m) => ((n % m) + m) % m;
+
 export default function About() {
   const [activeChap, setActiveChap] = useState(0);
+  const [activeLabIndex, setActiveLabIndex] = useState(0);
+  const [showEligibility, setShowEligibility] = useState(false);
+
   const ch = chapters[activeChap];
+
+  // Auto-shuffle labs
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveLabIndex((prev) => (prev + 1) % labs.length);
+    }, LAB_SHUFFLE_MS);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <>
       {/* ══════════════════════════════════════════════════
-          CURRICULUM TRACKS (Light Green Theme)
+          SECTION 1 — ABOUT (original light section)
+          ══════════════════════════════════════════════════ */}
+      <section id="about" className="sec-white">
+        <div className="sec">
+          <div className="about-grid">
+            <div>
+              <div className="tag">About the Workshop</div>
+              <h2 className="sec-h">Bridging Theory with Industrial Practice</h2>
+              <div className="rule" />
+              <div className="about-text">
+                <p>
+                  This{" "}
+                  <strong>
+                    Five-Day Online Faculty Development Programme
+                  </strong>{" "}
+                  brings together 18 distinguished speakers from IITs, NITs,
+                  international universities, and industry to deliver a rigorous
+                  exploration of emerging control and digital technologies for
+                  green energy systems.
+                </p>
+                <p>
+                  The programme covers the full spectrum — from{" "}
+                  <strong>
+                    EV charging infrastructure and bidirectional grid
+                    interactions
+                  </strong>{" "}
+                  to AI-driven predictive maintenance, port-Hamiltonian control,
+                  and cyber-resilience of legacy power networks.
+                </p>
+                <p>
+                  Designed for{" "}
+                  <strong>
+                    faculty, PhD scholars, and industry professionals
+                  </strong>
+                  . Certificates awarded on meeting attendance and assessment
+                  criteria. All participants receive welcome kits and high tea
+                  at inauguration and valedictory.
+                </p>
+              </div>
+            </div>
+            {/* Right Column: Workshop At a Glance — stretches to match about column */}
+            <div
+              style={{
+                background: "#ffffff",
+                border: "1px solid #e5e7eb",
+                borderRadius: 18,
+                padding: "2.25rem 2.35rem",
+                boxShadow: "0 10px 30px rgba(11,61,34,0.04)",
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "100%",
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.25rem, 1.6vw, 1.45rem)",
+                  fontWeight: 900,
+                  color: "#022c22",
+                  marginBottom: "1.35rem",
+                  paddingBottom: "1.1rem",
+                  borderBottom: "1px solid #e5e7eb",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  flexShrink: 0,
+                }}
+              >
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: 8,
+                    height: 8,
+                    background: "#047857",
+                    borderRadius: "50%",
+                  }}
+                />
+                Workshop at a Glance
+              </h3>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: 1,
+                  justifyContent: "space-between",
+                  gap: "0.5rem",
+                }}
+              >
+                {[
+                  { lbl: "Dates", val: "18 – 22 May 2026" },
+                  { lbl: "Venue", val: "Dept. of EEE, BIT Mesra\nRanchi, Jharkhand – 835215" },
+                  { lbl: "Duration", val: "5 Days · Hands-on Training" },
+                  { lbl: "Eligible", val: "Faculty · PhD · PG Research Fellow · UG Final Year · Industry" },
+                  { lbl: "Certificate", val: "80% Attendance + 70% Assessment" },
+                  { lbl: "Contact", val: "gaurishankergupta@bitmesra.ac.in" },
+                ].map((r, rowIdx, arr) => {
+                  const IconComp = getIconComponent(r.lbl);
+                  const isLast = rowIdx === arr.length - 1;
+                  return (
+                    <div
+                      key={r.lbl}
+                      onClick={() => {
+                        if (r.lbl === "Eligible") setShowEligibility(true);
+                      }}
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "1rem",
+                        paddingBottom: isLast ? 0 : "0.95rem",
+                        borderBottom: isLast ? "none" : "1px solid rgba(11,61,34,0.06)",
+                        cursor: r.lbl === "Eligible" ? "pointer" : "default",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: 42,
+                          height: 42,
+                          borderRadius: 10,
+                          background: "#ecfdf5",
+                          border: "1px solid #d1fae5",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                          color: "#047857",
+                        }}
+                      >
+                        <IconComp size={20} color="currentColor" sw={2.25} />
+                      </div>
+                      <div style={{ minWidth: 0 }}>
+                        <div
+                          style={{
+                            fontSize: "0.68rem",
+                            fontWeight: 900,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.12em",
+                            color: "#047857",
+                            marginBottom: "0.28rem",
+                          }}
+                        >
+                          {r.lbl}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: "0.92rem",
+                            color: "#475569",
+                            lineHeight: 1.45,
+                            whiteSpace: "pre-line",
+                            fontWeight: 600,
+                          }}
+                        >
+                          {r.val}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════
+          SECTION 1.5 — ABOUT THE DEPARTMENT (Glass carousel + Info)
+          ══════════════════════════════════════════════════ */}
+      <section
+        id="department"
+        className="sec-white"
+        style={{
+          paddingTop: "96px",
+          paddingBottom: "96px",
+          background:
+            "linear-gradient(170deg, #ffffff 0%, #f0fdf4 40%, #dcfce7 100%)",
+        }}
+      >
+        <div className="sec">
+          <div className="dept-grid">
+            {/* Left: shuffling carousel */}
+            <div>
+              <div className="tag">About the Department</div>
+
+              <div
+                style={{
+                  position: "relative",
+                  height: CARD_H + 120,
+                  marginTop: "0.75rem",
+                }}
+              >
+                {/* Side/center indices */}
+                {(() => {
+                  const total = labs.length;
+                  const leftIdx = mod(activeLabIndex - 1, total);
+                  const centerIdx = activeLabIndex;
+                  const rightIdx = mod(activeLabIndex + 1, total);
+
+                  const SPRING = {
+                    type: "spring",
+                    stiffness: 340,
+                    damping: 28,
+                    mass: 0.85,
+                  };
+
+                  const glassCommon = {
+                    position: "relative",
+                    width: CARD_W,
+                    height: CARD_H,
+                    borderRadius: 18,
+                    overflow: "hidden",
+                    backdropFilter: "blur(14px)",
+                    WebkitBackdropFilter: "blur(14px)",
+                  };
+
+                  const getPos = (pos) => {
+                    if (pos === "center") {
+                      return { x: 0, scale: 1, opacity: 1, rotateY: 0, zIndex: 50, y: 0 };
+                    }
+                    if (pos === "left") {
+                      return { x: -112, scale: 0.82, opacity: 0.62, rotateY: 16, zIndex: 30, y: 12 };
+                    }
+                    return { x: 112, scale: 0.82, opacity: 0.62, rotateY: -16, zIndex: 30, y: 12 };
+                  };
+
+                  const renderCard = (idx, pos) => {
+                    const lab = labs[idx];
+                    const isActive = pos === "center";
+
+                    const border = isActive
+                      ? "1.5px solid rgba(4,120,87,0.55)"
+                      : "1.5px solid rgba(4,120,87,0.20)";
+                    const shadow = isActive
+                      ? "0 0 0 1px rgba(52,211,153,0.35) inset, 0 22px 60px rgba(11,61,34,0.12), 0 0 70px rgba(45,212,191,0.20)"
+                      : "0 14px 36px rgba(11,61,34,0.10)";
+
+                    const background = isActive
+                      ? "rgba(255,255,255,0.78)"
+                      : "rgba(255,255,255,0.60)";
+
+                    return (
+                      <motion.div
+                        key={lab.name}
+                        layoutId={`dept-lab-${lab.name}`}
+                        initial={false}
+                        animate={getPos(pos)}
+                        transition={SPRING}
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          left: "50%",
+                          marginLeft: -CARD_W / 2,
+                          transformStyle: "preserve-3d",
+                          cursor: !isActive ? "pointer" : "default",
+                          pointerEvents: isActive ? "none" : "auto",
+                        }}
+                        onClick={() => {
+                          if (!isActive) setActiveLabIndex(idx);
+                        }}
+                        whileHover={!isActive ? { scale: 0.86, y: 8 } : {}}
+                      >
+                        <div
+                          style={{
+                            ...glassCommon,
+                            border,
+                            backgroundColor: background,
+                            boxShadow: shadow,
+                            position: "relative",
+                          }}
+                        >
+                          {lab.image && (
+                            <>
+                              <img
+                                src={lab.image}
+                                alt={lab.name}
+                                style={{
+                                  position: "absolute",
+                                  inset: 0,
+                                  width: "100%",
+                                  height: "100%",
+                                  objectFit: "cover",
+                                  zIndex: 0,
+                                }}
+                              />
+                              <div
+                                style={{
+                                  position: "absolute",
+                                  inset: 0,
+                                  background: "linear-gradient(rgba(0,0,0,0.24), rgba(0,0,0,0.32))",
+                                  zIndex: 1,
+                                }}
+                              />
+                            </>
+                          )}
+                          <div
+                            style={{
+                              position: "absolute",
+                              inset: 0,
+                              background:
+                                "radial-gradient(ellipse at 50% 0%, rgba(52,211,153,0.20) 0%, transparent 60%), linear-gradient(180deg, rgba(236,253,245,0.35) 0%, rgba(255,255,255,0.00) 60%)",
+                              pointerEvents: "none",
+                            }}
+                          />
+
+                          {/* Side cards: subtle placeholder number, no text */}
+                          {!isActive && (
+                            <div
+                              style={{
+                                position: "absolute",
+                                inset: 0,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                fontFamily: "'Playfair Display', serif",
+                                fontSize: "3rem",
+                                fontWeight: 900,
+                                color: "rgba(4,120,87,0.16)",
+                                pointerEvents: "none",
+                              }}
+                            >
+                              {idx + 1}
+                            </div>
+                          )}
+
+                          {/* Center card: lab name overlay (fade in/out) */}
+                          <AnimatePresence mode="wait">
+                            {isActive && (
+                              <motion.div
+                                key={lab.name}
+                                initial={{ opacity: 0, y: 14 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.22, ease: "easeOut" }}
+                                style={{
+                                  position: "absolute",
+                                  left: 14,
+                                  right: 14,
+                                  bottom: 14,
+                                  padding: "10px 12px",
+                                  borderRadius: 12,
+                                  background: "rgba(255,255,255,0.85)",
+                                  border: "1px solid rgba(4,120,87,0.25)",
+                                  backdropFilter: "blur(10px)",
+                                  WebkitBackdropFilter: "blur(10px)",
+                                  boxShadow:
+                                    "0 10px 30px rgba(11,61,34,0.10), 0 0 40px rgba(45,212,191,0.10)",
+                                }}
+                              >
+                                <div
+                                  style={{
+                                    fontFamily: "'Playfair Display', serif",
+                                    fontWeight: 900,
+                                    color: "#022c22",
+                                    textAlign: "center",
+                                    lineHeight: 1.15,
+                                  }}
+                                >
+                                  {lab.name}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      </motion.div>
+                    );
+                  };
+
+                  return (
+                    <>
+                      {renderCard(leftIdx, "left")}
+                      {renderCard(centerIdx, "center")}
+                      {renderCard(rightIdx, "right")}
+                    </>
+                  );
+                })()}
+              </div>
+            </div>
+
+            {/* Right: compact department info */}
+            <div className="about-text">
+              <h2
+                className="text-emerald-950 font-black"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)",
+                  lineHeight: 1.1,
+                  marginBottom: "0.85rem",
+                }}
+              >
+                About the Electrical and Electronics Department
+              </h2>
+              <div className="rule" style={{ marginBottom: "1.2rem" }} />
+
+              <p>
+                The Department hosts advanced laboratories in <strong>Power Systems</strong> and <strong>Control Systems</strong>, alongside a <strong>Smart Grid Lab</strong> built for hands-on learning.
+                It is also home to a <strong>NaMPET-funded Power Electronics Laboratory</strong> that supports modern inverter/control research and practical training.
+                With measurement, computing, and instrumentation facilities, students gain end-to-end exposure from theory to real-time experimentation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════
+          SECTION 1.75 — ABOUT THE COLLEGE (same design as DEPT)
+          ══════════════════════════════════════════════════ */}
+      <section
+        id="college"
+        className="sec-white"
+        style={{
+          paddingTop: "96px",
+          paddingBottom: "96px",
+          background:
+            "linear-gradient(170deg, #ffffff 0%, #f0fdf4 40%, #dcfce7 100%)",
+        }}
+      >
+        <div className="sec">
+          <div className="dept-grid">
+            <div>
+              <div className="tag">About the College</div>
+
+              <div
+                style={{
+                  marginTop: "0.75rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "0.85rem",
+                }}
+              >
+                <div
+                  style={{
+                    width: CARD_W,
+                    height: CARD_H,
+                    borderRadius: 18,
+                    overflow: "hidden",
+                    border: "1.5px solid rgba(4,120,87,0.45)",
+                    boxShadow: "0 14px 36px rgba(11,61,34,0.10)",
+                    backgroundColor: "#f0fdf4",
+                    position: "relative",
+                  }}
+                >
+                  {colleges[0].image && (
+                    <>
+                      <img
+                        src={colleges[0].image}
+                        alt={colleges[0].name}
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          zIndex: 0,
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background: "linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.36))",
+                          zIndex: 1,
+                        }}
+                      />
+                    </>
+                  )}
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "radial-gradient(ellipse at 50% 0%, rgba(52,211,153,0.20) 0%, transparent 60%), linear-gradient(180deg, rgba(236,253,245,0.35) 0%, rgba(255,255,255,0.00) 60%)",
+                      zIndex: 2,
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: 14,
+                      right: 14,
+                      bottom: 14,
+                      padding: "10px 12px",
+                      borderRadius: 12,
+                      background: "rgba(255,255,255,0.85)",
+                      border: "1px solid rgba(4,120,87,0.25)",
+                      fontFamily: "'Playfair Display', serif",
+                      fontWeight: 900,
+                      color: "#022c22",
+                      textAlign: "center",
+                    }}
+                  >
+                    {colleges[0].name}
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    width: CARD_W,
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))",
+                    gap: "0.75rem",
+                  }}
+                >
+                  {colleges.slice(1).map((college) => (
+                    <div
+                      key={college.name}
+                      style={{
+                        height: "108px",
+                        borderRadius: 14,
+                        overflow: "hidden",
+                        border: "1px solid rgba(4,120,87,0.2)",
+                        boxShadow: "0 10px 20px rgba(11,61,34,0.08)",
+                        backgroundColor: "#f0fdf4",
+                        position: "relative",
+                      }}
+                    >
+                      {college.image && (
+                        <img
+                          src={college.image}
+                          alt={college.name}
+                          style={{
+                            position: "absolute",
+                            inset: 0,
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            zIndex: 0,
+                          }}
+                        />
+                      )}
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background:
+                            "linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.45) 100%)",
+                          zIndex: 1,
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: 8,
+                          left: 8,
+                          right: 8,
+                          color: "#ffffff",
+                          fontSize: "0.76rem",
+                          fontWeight: 700,
+                          textShadow: "0 2px 8px rgba(0,0,0,0.55)",
+                        }}
+                      >
+                        {college.name}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="about-text">
+              <h2
+                className="text-emerald-950 font-black"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)",
+                  lineHeight: 1.1,
+                  marginBottom: "0.85rem",
+                }}
+              >
+                About the College
+              </h2>
+              <div className="rule" style={{ marginBottom: "1.2rem" }} />
+
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.55" }}>
+                <strong>About the Birla Institute of Technology</strong>
+                <br />
+                JOHAR! Welcome to the Birla Institute of Technology (BIT) Mesra, one of the oldest institutions of Technology in independent India, founded in 1955 by the visionary industrialist and philanthropist Mr. B.M. Birla. BIT Mesra is located in Ranchi, the capital of the State of Jharkhand, the mineral hub and abode of serene beauty of natural forests, mountains, and waterfalls. In more than six decades of its glorious existence, this Institute, recognized by the University Grants Commission (UGC) as a deemed to be University in 1986 under section 3 of the UGC Act 1956, has emerged as one of the top most self-financed or private Engineering Institution catering to both traditional engineering disciplines and emerging technological domains with firm foundation in fundamental sciences and orientation toward modern innovations and applications.
+              </p>
+              <p style={{ fontSize: "1.1rem", lineHeight: "1.55" }}>
+                <strong>A legacy of leadership</strong>
+                <br />
+                Established in 1955 by the visionary industrialist Mr. BM Birla, BIT Mesra was founded with a clear vision to offer its young minds a space where their imagination could take wings, and their ideas could come to fruition. For over 6 decades, the institute has nurtured minds with a rich heritage of academic excellence, developing learning frameworks that have been well ahead of their time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════
+          SECTION 2 — CURRICULUM TRACKS (Light Green Theme)
           Bitotsav-inspired 3-column interactive layout
           ══════════════════════════════════════════════════ */}
       <section
@@ -511,6 +1150,118 @@ export default function About() {
           }
         `}</style>
       </section>
+
+      {/* ───────────────────────────────────────────────────────────
+          MODAL: ELIGIBILITY & REQUIREMENTS
+          ─────────────────────────────────────────────────────────── */}
+      <AnimatePresence>
+        {showEligibility && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowEligibility(false)}
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 9999,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "1.5rem",
+              background: "rgba(2, 44, 34, 0.4)",
+              backdropFilter: "blur(6px)",
+            }}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                background: "linear-gradient(175deg, #ffffff 0%, #f0fdf4 100%)",
+                borderRadius: 24,
+                padding: "2.5rem",
+                width: "100%",
+                maxWidth: 640,
+                boxShadow: "0 24px 48px rgba(2, 44, 34, 0.15)",
+                border: "1px solid rgba(4, 120, 87, 0.2)",
+                position: "relative",
+              }}
+            >
+              <button
+                onClick={() => setShowEligibility(false)}
+                style={{
+                  position: "absolute",
+                  top: "1.5rem",
+                  right: "1.5rem",
+                  background: "white",
+                  border: "1px solid #e5e7eb",
+                  borderRadius: "50%",
+                  width: 36,
+                  height: 36,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  color: "#047857",
+                  fontWeight: "bold",
+                }}
+              >
+                ✕
+              </button>
+
+              <div style={{ marginBottom: "1.5rem" }}>
+                <span className="tag" style={{ margin: "0 0 1rem 0" }}>Target Participants</span>
+                <h3 style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "1.8rem",
+                  fontWeight: 900,
+                  color: "#022c22",
+                  lineHeight: 1.1,
+                  margin: 0
+                }}>
+                  Eligibility & <span style={{ color: "#047857" }}>Requirements</span>
+                </h3>
+              </div>
+
+              <ul style={{
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.25rem"
+              }}>
+                <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                  <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
+                  <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
+                    The FDP is open for faculty members of AICTE approved institutions / Ph.D. Scholars / PG Research Fellow / UG Final Year / Industry professionals.
+                  </span>
+                </li>
+                <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                  <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
+                  <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
+                    Please note that the registration fee is <strong>118 rupees</strong> and the maximum capacity is <strong>200</strong>. Selection would be made on a first come first serve basis.
+                  </span>
+                </li>
+                <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                  <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
+                  <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
+                    Certificates will be awarded at the end of the programme to participants having <strong>more than 80% attendance</strong> and who have secured <strong>more than 70% in the assessment</strong> during the FDP.
+                  </span>
+                </li>
+                <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                  <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
+                  <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
+                    All the participants will be provided with a <strong>welcome kit</strong>, with <strong>high tea</strong> after the Inauguration and valedictory sessions.
+                  </span>
+                </li>
+              </ul>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

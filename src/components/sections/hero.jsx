@@ -22,7 +22,7 @@ export default function Hero({ onOpenSchedule }) {
             margin: "0 auto",
             width: "100%",
             padding: "0 2rem",
-            paddingTop: 140,
+            paddingTop: 100,
             paddingBottom: 80,
             display: "grid",
             gridTemplateColumns: "1.2fr 1fr",
@@ -110,7 +110,7 @@ export default function Hero({ onOpenSchedule }) {
           </div>
 
           {/* Right Column: Workshop At A Glance */}
-          <div className="hero-glance-col">
+          <div className="hero-glance-col" style={{ marginTop: "-10rem" }}>
             <WorkshopAtAGlance />
           </div>
         </div>
@@ -328,7 +328,7 @@ export default function Hero({ onOpenSchedule }) {
             .hero-grid {
               grid-template-columns: 1fr !important;
               gap: 3rem !important;
-              padding-top: 120px !important;
+              padding-top: 80px !important;
             }
             .hero-glance-col {
               margin-bottom: 2rem;
