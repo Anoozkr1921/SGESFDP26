@@ -14,6 +14,7 @@ import imgSoumyaChatterjee from "../assets/images/soumya_chatterjee.png";
 import imgAdityaGautam from "../assets/images/aditya_gautam.png";
 import imgPratyushAnand from "../assets/images/pratyush_anand.png";
 import imgDeepakKumar from "../assets/images/deepak_kumar.png";
+import imgShivaSarode from "../assets/images/Shivasir.jpg";
 import imgTGhosh from "../assets/images/tghosh.jpeg";
 import imgGruosso from "../assets/images/gruosso.png";
 
@@ -69,12 +70,12 @@ export const schedule = [
   {
     day: "Day 3", subtitle: "Smart Systems & Solar PV", date: "20 May 2026",
     items: [
-      { ico: "🌱", time: "09:30 – 10:30 AM", event: "Green Hydrogen Power Supplies", spk: "Shrinivas Bhaskar Karanki", inst: "(TBA)", hl: true },
-      { ico: "💻", time: "10:30 – 11:30 AM", event: "Writing Firmware for Energy-Efficient System", spk: "Pratyush Anand", inst: "Microsoft", hl: true },
+      { ico: "🌱", time: "09:30 – 11:00 AM", event: "Green Hydrogen Power Supplies", spk: "Dr. Shiva S. Sarode", inst: "BIT Mesra, Ranchi", hl: true },
+      { ico: "💻", time: "11:00 – 11:30 AM", event: "Writing Firmware for Energy-Efficient System", spk: "Pratyush Anand", inst: "Microsoft", hl: true },
       { ico: "☕", time: "11:30 – 11:45 AM", event: "Tea Break", spk: null, inst: "", hl: false },
       { ico: "🚀", time: "11:45 AM – 01:00 PM", event: "Future of EV Charging Systems", spk: "Dr. Giambattista Gruosso", inst: "Politecnico di Milano, Italy", hl: true },
       { ico: "🍽️", time: "01:00 – 02:30 PM", event: "Break", spk: null, inst: "", hl: false },
-      { ico: "☀️", time: "02:30 – 04:00 PM", event: "Reliability Prediction in Solar Energy Systems", spk: null, inst: "", hl: true },
+      { ico: "☀️", time: "02:30 – 04:00 PM", event: "Reliability Prediction in Solar Energy Systems", spk: "Dr. Sudhanshu Kumar Mishra", inst: "BIT Mesra, Ranchi", hl: true },
       { ico: "☕", time: "04:00 – 04:15 PM", event: "Tea Break", spk: null, inst: "", hl: false },
       { ico: "☀️", time: "04:15 – 05:30 PM", event: "Solar PV Systems Integrated with Grid", spk: "Dr. T. Ghose", inst: "BIT Mesra", hl: true },
     ],
@@ -242,7 +243,17 @@ export const speakers = [
   },
 
   {
-    name: "Dr. S.K. Mishra",
+    name: "Dr. Shiva S. Sarode",
+    role: "Faculty, Department of EEE",
+    inst: "BIT Mesra, Ranchi",
+    topic: "Green Hydrogen Power Supplies",
+    badge: "Faculty",
+    image: imgShivaSarode,
+    bio: "Dr. Shiva S. Sarode is associated with the Department of Electrical and Electronics Engineering at BIT Mesra and works in sustainable energy and power system applications.",
+  },
+
+  {
+    name: "Dr. Sudhanshu Kumar Mishra",
     role: "Head, Department of EEE",
     inst: "BIT Mesra, Ranchi",
     topic: "AI in Autonomous Vehicles & Smart Agriculture",
