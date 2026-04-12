@@ -61,6 +61,7 @@ export default function WorkshopAtAGlance() {
             { lbl: "Venue", val: "Dept. of EEE, BIT Mesra\nRanchi, Jharkhand – 835215" },
             { lbl: "Duration", val: "5 Days" },
             { lbl: "Eligible", val: "Faculty · PhD Scholars · PG Research Fellow · UG Final Year · Industry" },
+            { lbl: "Registration Fee", val: "Nominal - Rs. 118 (including GST)" },
             { lbl: "Certificate", val: "80% Attendance" },
             { lbl: "Contact", val: "gaurishankergupta@bitmesra.ac.in" },
           ].map((r, rowIdx, arr) => {
@@ -222,7 +223,7 @@ export default function WorkshopAtAGlance() {
                 <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
                   <span style={{ color: "#047857", fontSize: "1.2rem", marginTop: "-2px" }}>•</span>
                   <span style={{ fontSize: "0.95rem", color: "#475569", lineHeight: 1.6, fontWeight: 500 }}>
-                    Certificates will be awarded at the end of the programme to participants having <strong>more than 80% attendance</strong> and who have secured <strong>more than 70% in the assessment</strong> during the FDP.
+                    Certificates will be awarded at the end of the programme to participants having <strong>more than 80% attendance</strong> and who have secured <strong></strong> during the FDP.
                   </span>
                 </li>
                 <li style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>

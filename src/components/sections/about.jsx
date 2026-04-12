@@ -214,7 +214,8 @@ export default function About() {
                   { lbl: "Venue", val: "Dept. of EEE, BIT Mesra\nRanchi, Jharkhand – 835215" },
                   { lbl: "Duration", val: "5 Days · Hands-on Training" },
                   { lbl: "Eligible", val: "Faculty · PhD · PG Research Fellow · UG Final Year · Industry" },
-                  { lbl: "Certificate", val: "80% Attendance + 70% Assessment" },
+                  { lbl: "Registration Fee", val: "Nominal - Rs. 118 (including GST)" },
+                  { lbl: "Certificate", val: "80% Attendance" },
                   { lbl: "Contact", val: "gaurishankergupta@bitmesra.ac.in" },
                 ].map((r, rowIdx, arr) => {
                   const IconComp = getIconComponent(r.lbl);
