@@ -154,8 +154,8 @@ export default function About() {
                   <strong>
                     faculty, PhD scholars, and industry professionals
                   </strong>
-                  . Certificates awarded on meeting attendance and assessment
-                  criteria. All participants receive welcome kits and high tea
+                  . Certificates awarded on meeting attendance
+                  . All participants receive welcome kits and high tea
                   at inauguration and valedictory.
                 </p>
               </div>
