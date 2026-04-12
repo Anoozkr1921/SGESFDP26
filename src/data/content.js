@@ -51,7 +51,7 @@ export const schedule = [
       { ico: "☕", time: "11:30 – 12:00 PM", event: "Tea Break", spk: null, inst: "", hl: false },
       { ico: "🚗", time: "12:00 – 01:30 PM", event: "EV Charging & Grid Interaction", spk: "Dr. Ritesh Kumar Keshri", inst: "VNIT Nagpur", hl: true },
       { ico: "🍽️", time: "01:30 – 02:30 PM", event: "Break", spk: null, inst: "", hl: false },
-      { ico: "🏘️", time: "02:30 – 05:30 PM", event: "Energy Management for Microgrid", spk: "Dr. Arghya Mitra", inst: "VNIT Nagpur", hl: true },
+      { ico: "🏘️", time: "02:30 – 04:00 PM", event: "Energy Management for Microgrid", spk: "Dr. Arghya Mitra", inst: "VNIT Nagpur", hl: true },
     ],
   },
   {
