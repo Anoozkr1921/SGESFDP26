@@ -32,11 +32,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="ft-credits" style={{ padding: "2rem 0", display: "flex", flexDirection: "column", gap: "0.4rem", borderTop: "1px solid rgba(255,255,255,.12)", textAlign: "center" }}>
-          <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,.65)", margin: 0 }}>
+          <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,.5)", margin: 0 }}>
             Concept, and Planning: <strong>Dr.Gauri Shanker Gupta</strong> and <strong>Dr.Mrinal Kumar Pathak</strong>
           </p>
-          <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,.65)", margin: 0 }}>
-            Designed by - <strong>Mr. Dhanay Patil, ECE (3rd Year)</strong> and <strong>Mr. Anooz kumar Burnwal, ECE (1st Year)</strong>
+          <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,.5)", margin: 0 }}>
+            Designed by - <strong>Mr. Dhanay Patil , ECE (3rd Year)</strong> and <strong>Mr. Anooz kumar Burnwal , ECE (1st Year)</strong>
           </p>
         </div>
         <div className="ft-bottom" style={{ borderTop: "none", paddingTop: 0 }}>

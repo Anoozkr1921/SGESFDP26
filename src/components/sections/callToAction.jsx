@@ -20,7 +20,7 @@ export default function CallToAction() {
           <h2 className="sec-h" style={{ marginBottom: "0.5rem" }}>Register for the Workshop</h2>
           <div className="rule" style={{ margin: "1rem auto 0" }} />
           <p style={{ color: "#64748b", fontSize: "1.05rem", lineHeight: 1.75, maxWidth: 620, margin: "1.5rem auto 0", fontWeight: 500 }}>
-            Seats are limited. Registration deadline is <strong>15 May 2026</strong>. <br />
+            Seats are limited. Registration deadline is <strong>17 May 2026</strong>. <br />
             Open to AICTE-approved Faculty, PhD/PG Scholars, and Industry Professionals.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function CallToAction() {
                   { IcoC: IcoMail, lbl: "Contact", val: "gaurishankergupta@bitmesra.ac.in" },
                   { IcoC: IcoPhone, lbl: "Phone", val: "+91-9471301045" },
                   { IcoC: IcoBuilding, lbl: "Department", val: "Electrical & Electronics Engineering\nBIT Mesra, Ranchi" },
-                  { IcoC: IcoCalendar, lbl: "Important Dates", val: "Reg. closes: 15 May 2026\nConfirmation: 17 May" },
+                  { IcoC: IcoCalendar, lbl: "Important Dates", val: "Reg. closes: 17 May 2026" },
                 ].map(r => (
                   <div key={r.lbl} style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
                     <div style={{ width: 44, height: 44, borderRadius: 12, background: "#ecfdf5", border: "1px solid #d1fae5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#047857" }}>

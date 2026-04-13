@@ -154,8 +154,8 @@ export default function About() {
                   <strong>
                     faculty, PhD scholars, and industry professionals
                   </strong>
-                  . Certificates awarded on meeting attendance and assessment
-                  criteria. All participants receive welcome kits and high tea
+                  . Certificates awarded on meeting attendance
+                  . All participants receive welcome kits and high tea
                   at inauguration and valedictory.
                 </p>
               </div>
@@ -214,7 +214,8 @@ export default function About() {
                   { lbl: "Venue", val: "Dept. of EEE, BIT Mesra\nRanchi, Jharkhand – 835215" },
                   { lbl: "Duration", val: "5 Days · Hands-on Training" },
                   { lbl: "Eligible", val: "Faculty · PhD · PG Research Fellow · UG Final Year · Industry" },
-                  { lbl: "Certificate", val: "80% Attendance + 70% Assessment" },
+                  { lbl: "Registration Fee", val: "Nominal - Rs. 118 (including GST)" },
+                  { lbl: "Certificate", val: "80% Attendance" },
                   { lbl: "Contact", val: "gaurishankergupta@bitmesra.ac.in" },
                 ].map((r, rowIdx, arr) => {
                   const IconComp = getIconComponent(r.lbl);
