@@ -7,6 +7,7 @@ import Footer from "./components/layout/footer";
 // Section Components
 import Hero from "./components/sections/hero";
 import SponsorsSection from "./components/sections/sponsors";
+import RadioOrangeSection from "./components/sections/radioOrange";
 import About from "./components/sections/about";
 import Speakers from "./components/sections/speakers";
 import Committee from "./components/sections/committee";
@@ -74,6 +75,7 @@ export default function App() {
         <main>
           <Hero />
           <SponsorsSection />
+          <RadioOrangeSection />
           <About />
           <CallToAction />
         </main>
