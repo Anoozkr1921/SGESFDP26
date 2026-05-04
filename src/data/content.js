@@ -17,6 +17,7 @@ import imgDeepakKumar from "../assets/images/deepak_kumar.png";
 import imgShivaSarode from "../assets/images/Shivasir.jpg";
 import imgTGhosh from "../assets/images/tghosh.jpeg";
 import imgGruosso from "../assets/images/gruosso.png";
+import imgEraBajpai from "../assets/images/eraimg.jpeg";
 
 export const topics = {
   Robotics: [
@@ -73,7 +74,7 @@ export const schedule = [
       { ico: "🌱", time: "09:00 – 10:00 AM", event: "Green Hydrogen Power Supplies", spk: "Dr. Shiva S. Sarode", inst: "BIT Mesra, Ranchi", hl: true },
       { ico: "💻", time: "10:00 – 11:00 AM", event: "Writing Firmware for Energy-Efficient System", spk: "Pratyush Anand", inst: "Microsoft", hl: true },
       { ico: "☕", time: "11:00 – 11:30 AM", event: "Tea Break", spk: null, inst: "", hl: false },
-      { ico: "🚀", time: "11:30 AM – 1:00 PM", event: "Reliability Prediction in Solar Energy Systems", spk: "Dr. Sudhanshu Kumar Mishra", inst: "BIT Mesra, Ranchi", hl: true },
+      { ico: "🚀", time: "11:30 AM – 1:00 PM", event: "AI in Autonomous Vehicles & Smart Agriculture", spk: "Dr. Sudhanshu Kumar Mishra", inst: "BIT Mesra, Ranchi", hl: true },
       { ico: "🍽️", time: "1:00 PM – 02:30 PM", event: "Break", spk: null, inst: "", hl: false },
       { ico: "☀️", time: "02:30 – 03:30 PM", event: "Shaping the Future of EV Charging: Impacts and Integration with Power, Communication and ICT Systems", spk: "Dr. Giambattista Gruosso", inst: "Politecnico di Milano, Italy", hl: true },
       { ico: "☕", time: "03:30 – 03:45 PM", event: "Tea Break", spk: null, inst: "", hl: false },
@@ -90,7 +91,7 @@ export const schedule = [
       { ico: "🍽️", time: "01:00 – 02:30 PM", event: "Break", spk: null, inst: "", hl: false },
       { ico: "⚙️", time: "02:30 – 04:00 PM", event: "Development & Implementation of Power in SPV", spk: "Dr. Ajay Kumar", inst: "Punjab Engineering College", hl: true },
       { ico: "☕", time: "04:00 – 04:15 PM", event: "Tea Break", spk: null, inst: "", hl: false },
-      { ico: "⚡", time: "04:15 – 05:30 PM", event: "HV Systems & Renewable Integration", spk: "Dr. Soumya Chatterjee", inst: "NIT Durgapur", hl: true },
+      { ico: "⚡", time: "04:15 – 05:30 PM", event: "HEV Systems & Renewable Integration", spk: "Dr. Soumya Chatterjee", inst: "NIT Durgapur", hl: true },
     ],
   },
   {
@@ -98,7 +99,9 @@ export const schedule = [
     items: [
       { ico: "♻️", time: "09:00 – 10:30 AM", event: "Control Techniques for RE Applications", spk: "Dr. Aditya R. Gautam", inst: "BITS Pilani", hl: true },
       { ico: "☕", time: "10:30 – 10:45 AM", event: "Tea Break", spk: null, inst: "", hl: false },
-      { ico: "🏆", time: "10:45 AM Onwards", event: "Valedictory Session", spk: null, inst: "", hl: true },
+      { ico: "🧠", time: "10:45 - 12:00 PM", event: "Typhoon Hill Solutions for Efficient digital Control Techniques fostering sustainable systems.", spk: "Era Bajpai", inst: "Quarbz Info Systems, Kanpur", hl: true },
+      {ico: "🍽️", time: "12:00 PM – 2:00 PM", event: "Break", spk: null, inst: "", hl: false},
+      {ico: "🎉", time: "2:00 PM Onwards", event: "Valedictory Session", spk: null, inst: "", hl: false}
     ],
   },
 ];
@@ -117,7 +120,7 @@ export const speakers = [
     name: "Dr. Rajesh Gupta",
     role: "Professor, Electrical Engineering",
     inst: "MNNIT Allahabad, Prayagraj",
-    topic: "Digital Controllers in Power Converters for Renewable Energy",
+    topic: "Cyber Resiliency of Legacy Power Networks",
     badge: "Invited",
     image: imgRajeshGupta,
     bio: "Dr. Gupta received his M.Tech in Control Systems from BIT Mesra and Ph.D. from IIT Kanpur in Power Electronics. He has guided 14 Ph.D. and 65 Masters students, published 200 papers, holds 4 patents, and was PI for projects from DST, SERB, CSIR, MNRE. Listed among Stanford's top 2% scientists globally (2020–2024).",
@@ -162,7 +165,7 @@ export const speakers = [
     name: "Dr. Subhojit Ghosh",
     role: "Professor, Electrical Engineering",
     inst: "NIT Raipur",
-    topic: "Cyber Resiliency of Legacy Power Networks",
+    topic: "Digital Controllers in Power Converters for Renewable Energy",
     badge: "Invited",
     image: imgSubhojitGhosh,
     bio: "Dr. Ghosh's research spans Optimization, System Modeling and Control, Renewable Energy, and Cyber Physical Systems. His work on cyber resiliency addresses the challenge of securing legacy power infrastructure against cyber threats under resource-constrained operational settings — a growing concern in modern smart grid deployments.",
@@ -240,6 +243,15 @@ export const speakers = [
     badge: "Invited",
     image: imgAdityaGautam,
     bio: "Dr. Gautam received his Ph.D. from IIT Jodhpur (2019). He joined BITS Pilani in July 2019. Research interests: control of power electronic converters, microgrids, electric vehicles, and renewable energy technology — bridging theoretical control design with practical implementation.",
+  },
+  {
+    name: "Era Bajpai",
+    role: "Application Engineer",
+    inst: "Quarbz Info Systems, Kanpur",
+    topic: "Typhoon HIL Solutions for Efficient Digital Control Techniques Fostering Sustainable Systems",
+    badge: "Industry",
+    image: imgEraBajpai,
+    bio: "B.Tech in 2018: Electrical and Electronics Engineering, Kanpur Institute of Technology, Kanpur. M.Tech in 2022: Renewable Energy, Rajiv Gandhi Institute of Petroleum Technology, Bengaluru. Area of Interest: Electric Vehicles, Battery Management Systems, Smartgrids and related domains. Certified: HIL Specialist 2.0. Experience: Application Engineer (Quarbz Info Systems, Kanpur) – 3+ years; Energy Research Intern (Genesis Ray Energy, Hyderabad) – 06 months; Lecturer (Kanpur Institute of Technology, Kanpur) – 1 year.",
   },
 
   {
