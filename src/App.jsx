@@ -15,6 +15,7 @@ import CallToAction from "./components/sections/callToAction";
 
 // Page Components (standalone pages)
 import AboutPage from "./components/ui/AboutPage";
+import ParticipantsPage from "./components/ui/ParticipantsPage";
 
 // Page Components
 import SchedulePage from "./components/ui/ScheduleOverlay";
@@ -24,7 +25,7 @@ import SpeakerModal from "./components/ui/SpeakerModal";
 
 export default function App() {
   const [selectedSpeaker, setSelectedSpeaker] = useState(null);
-  const [currentPage, setCurrentPage] = useState("home"); // "home" | "schedule"
+  const [currentPage, setCurrentPage] = useState("home"); // "home" | "schedule" | "speakers" | "team" | "about" | "participants"
 
   const goToSchedule = () => {
     setCurrentPage("schedule");
@@ -43,6 +44,11 @@ export default function App() {
 
   const goToAbout = () => {
     setCurrentPage("about");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const goToParticipants = () => {
+    setCurrentPage("participants");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -67,6 +73,7 @@ export default function App() {
         onOpenSpeakers={goToSpeakers}
         onOpenTeam={goToTeam}
         onOpenAbout={goToAbout}
+        onOpenParticipants={goToParticipants}
         onNavigate={goToHome}
         currentPage={currentPage}
       />
@@ -83,6 +90,10 @@ export default function App() {
 
       {currentPage === "about" && (
         <AboutPage />
+      )}
+
+      {currentPage === "participants" && (
+        <ParticipantsPage />
       )}
 
       {currentPage === "schedule" && (
