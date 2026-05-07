@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
-const workbookUrl = new URL("../../assets/Response Sheet FDP.xlsx", import.meta.url).href;
+const workbookUrl = new URL("../../assets/Response Sheet FDP Updated.xlsx", import.meta.url).href;
 
 function formatCellValue(value) {
   if (value === null || value === undefined) return "";
@@ -46,12 +46,35 @@ export default function ParticipantsList() {
             return label || `Column ${index + 1}`;
           });
 
+        // Determine column indices for Serial and Gender if present
+        const serialHeaderRegex = /serial|s\.?no|sr\.?no|sno/i;
+        const genderHeaderRegex = /gender|sex/i;
+        const serialIndex = cleanedHeaders.findIndex((h) => serialHeaderRegex.test(h));
+        const genderIndex = cleanedHeaders.findIndex((h) => genderHeaderRegex.test(h));
+
         const normalizedRows = rawRows
           .filter((row) => row.some((cell) => formatCellValue(cell) !== ""))
-          .map((row, rowIndex) => ({
-            key: `row-${rowIndex}`,
-            cells: cleanedHeaders.map((_, cellIndex) => formatCellValue(row[cellIndex])),
-          }));
+          .map((row, rowIndex) => {
+            const cells = cleanedHeaders.map((_, cellIndex) => formatCellValue(row[cellIndex]));
+
+            // Try to parse serial number for this row
+            const serialRaw = serialIndex >= 0 ? cells[serialIndex] : formatCellValue(row[0]);
+            const serialNum = Number.parseInt(String(serialRaw).replace(/[^0-9]/g, ""), 10);
+
+            // Apply overrides: 54, 59, 62 -> Female; remaining 55-62 -> Male
+            if (!Number.isNaN(serialNum) && genderIndex >= 0) {
+              if (serialNum === 54 || serialNum === 59 || serialNum === 62) {
+                cells[genderIndex] = "Female";
+              } else if ((serialNum >= 55 && serialNum <= 58) || serialNum === 60 || serialNum === 61) {
+                cells[genderIndex] = "Male";
+              }
+            }
+
+            return {
+              key: `row-${rowIndex}`,
+              cells,
+            };
+          });
 
         if (!cancelled) {
           setHeaders(cleanedHeaders);
@@ -146,7 +169,7 @@ export default function ParticipantsList() {
           <div style={{ padding: "1rem 1.25rem", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
             <div>
               <div className="tag" style={{ marginBottom: "0.35rem" }}>Workbook</div>
-              <div style={{ fontSize: "1rem", fontWeight: 800, color: "var(--navy)" }}>Response Sheet FDP.xlsx</div>
+              <div style={{ fontSize: "1rem", fontWeight: 800, color: "var(--navy)" }}>Response Sheet FDP Updated.xlsx</div>
             </div>
             <div style={{ fontSize: "0.82rem", color: "var(--slate)" }}>
               {loading ? "Loading participants..." : `${rows.length} participant rows loaded`}
