@@ -16,6 +16,7 @@ import CallToAction from "./components/sections/callToAction";
 // Page Components (standalone pages)
 import AboutPage from "./components/ui/AboutPage";
 import ParticipantsPage from "./components/ui/ParticipantsPage";
+import VolunteersPage from "./components/ui/VolunteersPage";
 
 // Page Components
 import SchedulePage from "./components/ui/ScheduleOverlay";
@@ -25,7 +26,7 @@ import SpeakerModal from "./components/ui/SpeakerModal";
 
 export default function App() {
   const [selectedSpeaker, setSelectedSpeaker] = useState(null);
-  const [currentPage, setCurrentPage] = useState("home"); // "home" | "schedule" | "speakers" | "team" | "about" | "participants"
+  const [currentPage, setCurrentPage] = useState("home"); // "home" | "schedule" | "speakers" | "team" | "about" | "participants" | "volunteers"
 
   const goToSchedule = () => {
     setCurrentPage("schedule");
@@ -52,6 +53,11 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const goToVolunteers = () => {
+    setCurrentPage("volunteers");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const goToHome = (sectionId) => {
     setCurrentPage("home");
     if (sectionId && sectionId !== "home") {
@@ -74,6 +80,7 @@ export default function App() {
         onOpenTeam={goToTeam}
         onOpenAbout={goToAbout}
         onOpenParticipants={goToParticipants}
+        onOpenVolunteers={goToVolunteers}
         onNavigate={goToHome}
         currentPage={currentPage}
       />
@@ -96,6 +103,10 @@ export default function App() {
         <ParticipantsPage />
       )}
 
+      {currentPage === "volunteers" && (
+        <VolunteersPage />
+      )}
+
       {currentPage === "schedule" && (
         <SchedulePage
           onSelectSpeaker={(sp) => setSelectedSpeaker(sp)}
@@ -112,9 +123,9 @@ export default function App() {
 
       <Footer />
 
-      <SpeakerModal 
-        speaker={selectedSpeaker} 
-        onClose={() => setSelectedSpeaker(null)} 
+      <SpeakerModal
+        speaker={selectedSpeaker}
+        onClose={() => setSelectedSpeaker(null)}
       />
     </>
   );

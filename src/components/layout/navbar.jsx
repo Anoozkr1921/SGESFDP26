@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onOpenAbout, onOpenParticipants, onNavigate, currentPage }) {
+export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onOpenAbout, onOpenParticipants, onOpenVolunteers, onNavigate, currentPage }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -10,6 +10,7 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onO
     { name: "About", id: "about" },
     { name: "Curriculum", id: "topics" },
     { name: "Participants List", id: "participants" },
+    { name: "Volunteers", id: "volunteers" },
     { name: "Schedule", id: "schedule" },
     { name: "Speakers", id: "speakers" },
     { name: "Team", id: "committee" }
@@ -73,6 +74,11 @@ export default function Navbar({ onOpenSchedule, onOpenSpeakers, onOpenTeam, onO
     }
     if (id === "participants") {
       onOpenParticipants?.();
+      setMenuOpen(false);
+      return;
+    }
+    if (id === "volunteers") {
+      onOpenVolunteers?.();
       setMenuOpen(false);
       return;
     }

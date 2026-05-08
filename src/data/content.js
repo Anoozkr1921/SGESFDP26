@@ -52,7 +52,7 @@ export const schedule = [
       { ico: "☕", time: "11:30 – 12:00 PM", event: "Tea Break", spk: null, inst: "", hl: false },
       { ico: "🚗", time: "12:00 – 01:30 PM", event: "EV Charging & Grid Interaction", spk: "Dr. Ritesh Kumar Keshri", inst: "VNIT Nagpur", hl: true },
       { ico: "🍽️", time: "01:30 – 02:30 PM", event: "Break", spk: null, inst: "", hl: false },
-      { ico: "🏘️", time: "02:30 – 04:00 PM", event: "Energy Management for Microgrid", spk: "Dr. Arghya Mitra", inst: "VNIT Nagpur", hl: true },
+      { ico: "🌱", time: "02:30 – 04:00 PM", event: "Green Hydrogen Power Supplies", spk: "Dr. Shiva S. Sarode", inst: "BIT Mesra, Ranchi", hl: true },
     ],
   },
   {
@@ -71,7 +71,7 @@ export const schedule = [
   {
     day: "Day 3", subtitle: "Smart Systems & Solar PV", date: "20 May 2026",
     items: [
-      { ico: "🌱", time: "09:00 – 10:00 AM", event: "Green Hydrogen Power Supplies", spk: "Dr. Shiva S. Sarode", inst: "BIT Mesra, Ranchi", hl: true },
+      { ico: "🏘️", time: "09:00 – 10:00 AM", event: "Energy Management for Microgrid", spk: "Dr. Arghya Mitra", inst: "VNIT Nagpur", hl: true },
       { ico: "💻", time: "10:00 – 11:00 AM", event: "Writing Firmware for Energy-Efficient System", spk: "Pratyush Anand", inst: "Microsoft", hl: true },
       { ico: "☕", time: "11:00 – 11:30 AM", event: "Tea Break", spk: null, inst: "", hl: false },
       { ico: "🚀", time: "11:30 AM – 1:00 PM", event: "AI in Autonomous Vehicles & Smart Agriculture", spk: "Dr. Sudhanshu Kumar Mishra", inst: "BIT Mesra, Ranchi", hl: true },
