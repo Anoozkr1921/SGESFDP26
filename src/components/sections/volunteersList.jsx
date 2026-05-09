@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { participants as rawParticipants } from "../../data/participant";
+import { useMemo, useState, useEffect } from "react";
+import { volunteers as rawVolunteers } from "../../data/volunteers";
 
 function formatCellValue(value) {
   if (value === null || value === undefined) return "";
@@ -8,7 +8,7 @@ function formatCellValue(value) {
   return String(value);
 }
 
-export default function ParticipantsList() {
+export default function VolunteersList() {
   const [headers, setHeaders] = useState([]);
   const [rows, setRows] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -21,12 +21,12 @@ export default function ParticipantsList() {
       setLoading(true);
       setError("");
 
-      if (!rawParticipants || rawParticipants.length === 0) {
-        throw new Error("No participants data found. Please add participants to src/data/participant.js");
+      if (!rawVolunteers || rawVolunteers.length === 0) {
+        throw new Error("No volunteers data found. Please add volunteers to src/data/volunteers.js");
       }
 
-      // Extract headers from the first participant object
-      const cleanedHeaders = Object.keys(rawParticipants[0]).map((key) => {
+      // Extract headers from the first volunteer object
+      const cleanedHeaders = Object.keys(rawVolunteers[0]).map((key) => {
         // Convert camelCase to Title Case
         return key
           .replace(/([A-Z])/g, " $1")
@@ -34,10 +34,10 @@ export default function ParticipantsList() {
           .trim();
       });
 
-      // Convert participant objects to table rows
-      const normalizedRows = rawParticipants
-        .map((participant, rowIndex) => {
-          const cells = Object.values(participant).map((val) => formatCellValue(val));
+      // Convert volunteer objects to table rows
+      const normalizedRows = rawVolunteers
+        .map((volunteer, rowIndex) => {
+          const cells = Object.values(volunteer).map((val) => formatCellValue(val));
 
           return {
             key: `row-${rowIndex}`,
@@ -51,7 +51,7 @@ export default function ParticipantsList() {
       }
     } catch (err) {
       if (!cancelled) {
-        setError(err instanceof Error ? err.message : "Failed to load participants data.");
+        setError(err instanceof Error ? err.message : "Failed to load volunteers data.");
       }
     } finally {
       if (!cancelled) {
@@ -64,15 +64,15 @@ export default function ParticipantsList() {
     return [
       { label: "Rows in database", value: rows.length },
       { label: "Visible columns", value: headers.length },
-      { label: "Source", value: "Excel workbook" },
+      { label: "Source", value: "JSON data" },
     ];
   }, [headers.length, rows.length]);
 
   return (
     <>
       <div style={{ textAlign: "center", maxWidth: 700, margin: "0 auto 2.25rem" }}>
-        <div className="tag" style={{ justifyContent: "center" }}>Community</div>
-        <h2 className="sec-h">Participants List</h2>
+        <div className="tag" style={{ justifyContent: "center" }}>Team</div>
+        <h2 className="sec-h">Volunteers List</h2>
         <div className="rule" style={{ margin: "0 auto" }} />
         <p style={{ color: "var(--slate)", marginTop: "1rem", fontSize: "1.02rem", lineHeight: 1.8 }}>
         
@@ -86,7 +86,7 @@ export default function ParticipantsList() {
           gap: "1rem",
           marginBottom: "1.5rem",
         }}
-        className="participants-stats"
+        className="volunteers-stats"
       >
         {stats.map((stat) => (
           <div
@@ -131,10 +131,10 @@ export default function ParticipantsList() {
           <div style={{ padding: "1rem 1.25rem", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
             <div>
               <div className="tag" style={{ marginBottom: "0.35rem" }}>Data Source</div>
-              <div style={{ fontSize: "1rem", fontWeight: 800, color: "var(--navy)" }}>participant.js</div>
+              <div style={{ fontSize: "1rem", fontWeight: 800, color: "var(--navy)" }}>volunteers.js</div>
             </div>
             <div style={{ fontSize: "0.82rem", color: "var(--slate)" }}>
-              {loading ? "Loading participants..." : `${rows.length} participant rows loaded`}
+              {loading ? "Loading volunteers..." : `${rows.length} volunteer rows loaded`}
             </div>
           </div>
 
@@ -191,7 +191,7 @@ export default function ParticipantsList() {
                 ) : (
                   <tr>
                     <td colSpan={Math.max(headers.length, 1)} style={{ padding: "1.4rem", color: "var(--slate)" }}>
-                      No participant rows were found in the workbook.
+                      No volunteer rows were found in the workbook.
                     </td>
                   </tr>
                 )}
