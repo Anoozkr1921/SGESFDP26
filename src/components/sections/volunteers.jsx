@@ -5,15 +5,17 @@ import Architpic from "../../assets/images/Archit.jpeg";
 import Aayushpic from "../../assets/images/Aayush.jpeg";
 import Anandpic from "../../assets/images/Anand.jpeg";
 import Satyampic from "../../assets/images/Satyam.jpeg";
+import PalakPic from "../../assets/images/Palak.jpeg";
 
 
 const VOLUNTEER_PHOTOS = {
   "Anooz Kumar Burnwal": anoozPic,
-    "Dhannay Patil": DhnyPic,
-    "Archit Anand": Architpic,
-    "Aayush Raj": Aayushpic,
-    "Anand Shivam": Anandpic,
-    "Satyam Kumar": Satyampic,
+  "Dhannay Patil": DhnyPic,
+  "Palak Agarwala": PalakPic,
+  "Archit Anand": Architpic,
+  "Aayush Raj": Aayushpic,
+  "Anand Shivam": Anandpic,
+  "Satyam Kumar": Satyampic,
 };
 
 export default function Volunteers() {
