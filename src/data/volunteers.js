@@ -1,5 +1,5 @@
 export const volunteers = [
-   {
+  {
     role: "Website Deveoloper",
     name: "Dhannay Patil",
     title: "Pre-Final Year Student at BIT Mesra ECE.",
@@ -7,6 +7,16 @@ export const volunteers = [
     contact: {
       phone: "+91-8097334080",
       email: "patildhanay7@gmail.com"
+    }
+  },
+  {
+    role: "Designing",
+    name: "Anand Shivam",
+    title: "Sophomore at BIT Mesra ,MNC.",
+    initials: "AS",
+    contact: {
+      phone: "+91-8271302262",
+      email: "anand90856@gmail.com"
     }
   },
   {
@@ -19,7 +29,7 @@ export const volunteers = [
       email: "anoozburnwal1921@gmail.com"
     }
   },
-   {
+  {
     role: "Poster And Brochure",
     name: "Archit Anand",
     title: "Undergrad at BIT Mesra ECE, 1st Year.",
@@ -29,7 +39,7 @@ export const volunteers = [
       email: "architanand110208@gmail.com"
     }
   },
-   {
+  {
     role: "Poster And Brochure",
     name: "Aayush Raj",
     title: "Undergrad at BIT Mesra ECE, 1st Year.",
@@ -39,17 +49,7 @@ export const volunteers = [
       email: "aayushraj12666@gmail.com"
     }
   },
-   {
-    role: "Designing",
-    name: "Anand Shivam",
-    title: "Sophomore at BIT Mesra ,MNC.",
-    initials: "AS",
-    contact: {
-      phone: "+91-8271302262",
-      email: "anand90856@gmail.com"
-    }
-  },
-   {
+  {
     role: "Video Designing",
     name: "Satyam Kumar",
     title: "Undergrad at BIT Mesra ,MECH , 1st Year.",

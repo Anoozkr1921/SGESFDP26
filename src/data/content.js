@@ -106,8 +106,8 @@ export const schedule = [
       { ico: "♻️", time: "09:00 – 10:30 AM", event: "Control Techniques for RE Applications", spk: "Dr. Aditya R. Gautam", inst: "BITS Pilani", hl: true },
       { ico: "☕", time: "10:30 – 10:45 AM", event: "Tea Break", spk: null, inst: "", hl: false },
       { ico: "🧠", time: "10:45 - 12:00 PM", event: "Typhoon Hill Solutions for Efficient digital Control Techniques fostering sustainable systems.", spk: "Era Bajpai", inst: "Quarbz Info Systems, Kanpur", hl: true },
-      {ico: "🍽️", time: "12:00 PM – 2:00 PM", event: "Break", spk: null, inst: "", hl: false},
-      {ico: "🎉", time: "2:00 PM Onwards", event: "Valedictory Session", spk: null, inst: "", hl: false}
+      { ico: "🍽️", time: "12:00 PM – 2:00 PM", event: "Break", spk: null, inst: "", hl: false },
+      { ico: "🎉", time: "2:00 PM Onwards", event: "Valedictory Session", spk: null, inst: "", hl: false }
     ],
   },
 ];
@@ -332,11 +332,11 @@ export const committee = [
 ];
 
 export const volunteeringCommittee = [
-  { name: "Dr. Mrinal Pathak", image: imgMrinalSir },
+  { name: "Dr. Mrinal Kumar Pathak", image: imgMrinalSir },
   { name: "Dr. Gajendra Kant Mishra", image: imgGajendraSir },
   { name: "Dr. Vishal H. Shah", image: imgVishalSir },
   { name: "Dr. Pankaj Mishra", image: imgPankajSir },
   { name: "Dr. Prateem Pan", image: imgPrateemSir },
   { name: "Dr. Brajesh Kumar", image: imgBrajeshSir },
-  
+
 ];
