@@ -854,7 +854,129 @@ export const participants = [
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Instutute of Technology and Management",
     "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Telangana"
+  }
+  ,
+  {
+    "Serial No.": 79,
+    "Name of Participants": "Sandagala Rajkumar",
+    "Phone No.": 8019211460,
+    "Email-ID": "srajkumar3e@gmail.com",
+    "Address": "Dundigal,Hyderabad",
+    "Institute Name/Organisation Name": "Marri Laxman Reddy Institute of Technology and Management",
+    "Gender": "Male",
     "Designation": "Faculty",
     "State": "Telangana"
+  },
+  {
+    "Serial No.": 80,
+    "Name of Participants": "S K Himabindu",
+    "Phone No.": 9110704969,
+    "Email-ID": "bindukrupal@mlritm.ac.in",
+    "Address": "Dundigal,Hyderabad",
+    "Institute Name/Organisation Name": "Marri Laxman Reddy Institute of Technology and Management",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Telangana"
+  },
+  {
+    "Serial No.": 81,
+    "Name of Participants": "Dr R Chander",
+    "Phone No.": 9949123470,
+    "Email-ID": "chanderou19@gmail.com",
+    "Address": "Dundigal,Hyderabad",
+    "Institute Name/Organisation Name": "Marri Laxman Reddy Institute of Technology and Management",
+    "Gender": "Male",
+    "Designation": "Ph.D",
+    "State": "Telangana"
+  },
+  {
+    "Serial No.": 82,
+    "Name of Participants": "Chanchal Kumar",
+    "Phone No.": 6204986254,
+    "Email-ID": "chanchalkumar9470@gmail.com",
+    "Address": "Aktan",
+    "Institute Name/Organisation Name": "Birla Institute of Technology,Mesra,Ranchi",
+    "Gender": "Male",
+    "Designation": "UG persuing",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 83,
+    "Name of Participants": "Rajesh Yadav",
+    "Phone No.": 9348589355,
+    "Email-ID": "mtee10009.25@bitmesra.ac.in",
+    "Address": "Getlatu, BIT More, Ranchi",
+    "Institute Name/Organisation Name": "Birla Institute of Technology,Mesra,Ranchi",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 84,
+    "Name of Participants": "Naina Singh",
+    "Phone No.": 2178198141,
+    "Email-ID": "naina3@illinois.edu",
+    "Address": "202 E. Green St.",
+    "Institute Name/Organisation Name": "University of Illinois Urbana-Champaign",
+    "Gender": "Female",
+    "Designation": "Bachelors",
+    "State": "Illinois"
+  },
+  {
+    "Serial No.": 85,
+    "Name of Participants": "Anjan Kumar Tiwary",
+    "Phone No.": 6207611053,
+    "Email-ID": "anjankr38@gmail.com",
+    "Address": "Ramgarh",
+    "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 86,
+    "Name of Participants": "Savitri Kumari",
+    "Phone No.": 9117992292,
+    "Email-ID": "savitricse@gmail.com",
+    "Address": "Ramgarh",
+    "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
+    "Gender": "Female",
+    "Designation": "faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 87,
+    "Name of Participants": "Vinay Prakash Chaudhary",
+    "Phone No.": 9102711879,
+    "Email-ID": "vinay.20210201002@cuj.ac.in",
+    "Address": "Dhanbad",
+    "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 88,
+    "Name of Participants": "MD. Farooque Azam",
+    "Phone No.": 9800538434,
+    "Email-ID": "farooqueee.rgu@gmail.com",
+    "Address": "Ramgarh",
+    "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 89,
+    "Name of Participants": "Sourav Dutta",
+    "Phone No.": 7004700528,
+    "Email-ID": "mtev10001.25@bitmesra.ac.in",
+    "Address": "BIT Gate, Near Hanuman Mandir, Mesra",
+    "Institute Name/Organisation Name": "Birla Institute of Technology,Mesra,Ranchi",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Jharkhand"
   }
 ];

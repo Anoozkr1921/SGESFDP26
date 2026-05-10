@@ -18,6 +18,12 @@ import imgShivaSarode from "../assets/images/Shivasir.jpg";
 import imgTGhosh from "../assets/images/tghosh.jpeg";
 import imgGruosso from "../assets/images/gruosso.png";
 import imgEraBajpai from "../assets/images/eraimg.jpeg";
+import imgVishalSir from "../assets/images/VishalSir.jpeg";
+import imgMrinalSir from "../assets/images/MrinalSir.jpeg";
+import imgPrateemSir from "../assets/images/PrateemSir.jpeg";
+import imgBrajeshSir from "../assets/images/BrajeshSir.jpeg";
+import imgPankajSir from "../assets/images/PankajSir.jpeg";
+import imgGajendraSir from "../assets/images/GajendraSir.jpeg";
 
 export const topics = {
   Robotics: [
@@ -323,4 +329,14 @@ export const committee = [
     initials: "SK",
     contact: null,
   },
+];
+
+export const volunteeringCommittee = [
+  { name: "Dr. Mrinal Pathak", image: imgMrinalSir },
+  { name: "Dr. Gajendra Kant Mishra", image: imgGajendraSir },
+  { name: "Dr. Vishal H. Shah", image: imgVishalSir },
+  { name: "Dr. Pankaj Mishra", image: imgPankajSir },
+  { name: "Dr. Prateem Pan", image: imgPrateemSir },
+  { name: "Dr. Brajesh Kumar", image: imgBrajeshSir },
+  
 ];

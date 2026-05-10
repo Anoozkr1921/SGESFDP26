@@ -1,4 +1,4 @@
-import { committee } from "../../data/content";
+import { committee, volunteeringCommittee } from "../../data/content";
 import vc from "../../assets/images/vc.jpg";
 import imgSKMishra from "../../assets/images/sk_mishra.png";
 import DrPremPrakash from "../../assets/images/DrPremPrakash.png";
@@ -28,19 +28,19 @@ export default function Committee() {
       <div className="sec" style={{ paddingTop: "1.25rem", paddingBottom: "2.5rem" }}>
         <div style={{ textAlign: "center", maxWidth: 560, margin: "0 auto 1.75rem" }}>
           <div className="tag" style={{ justifyContent: "center" }}>Organisation</div>
-          <h2 className="sec-h">Organizing Committee</h2>
+          <h2 className="sec-h">Core Team</h2>
           <div className="rule" style={{ margin: "0 auto" }} />
         </div>
-        <div className="cm-grid">
+        <div className="cm-grid cm-grid-org">
           {committee.map((m, i) => {
             const isCoCoordinator = m.role === "Co-Coordinator";
             return (
               <div
-                className="cm-card"
+                className="cm-card cm-card-org"
                 key={i}
               >
                 <div
-                  className="cm-av"
+                  className="cm-av cm-av-org"
                 >
                   {COMMITTEE_PHOTOS[m.name] ? (
                     <img
@@ -73,6 +73,29 @@ export default function Committee() {
               </div>
             );
           })}
+        </div>
+
+        <div style={{ textAlign: "center", maxWidth: 560, margin: "3.5rem auto 1.75rem" }}>
+          <div className="tag" style={{ justifyContent: "center", backgroundColor: "#fcd34d" }}>Support Team</div>
+          <h2 className="sec-h">Organizing Committee</h2>
+          <div className="rule" style={{ margin: "0 auto" }} />
+        </div>
+
+        <div className="cm-grid cm-grid-vol">
+          {volunteeringCommittee.map((member, index) => (
+            <div className="cm-card cm-card-vol" key={member.name || index}>
+              <div className="cm-av cm-av-vol">
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name || `Volunteering committee member ${index + 1}`}
+                    style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "cover" }}
+                  />
+                ) : null}
+              </div>
+              {member.name ? <div className="cm-name">{member.name}</div> : null}
+            </div>
+          ))}
         </div>
       </div>
     </section>
