@@ -12,6 +12,7 @@ import About from "./components/sections/about";
 import Speakers from "./components/sections/speakers";
 import Committee from "./components/sections/committee";
 import CallToAction from "./components/sections/callToAction";
+import Location from "./components/sections/location";
 
 // Page Components (standalone pages)
 import AboutPage from "./components/ui/AboutPage";
@@ -121,6 +122,7 @@ export default function App() {
         <Committee />
       )}
 
+      <Location />
       <Footer />
 
       <SpeakerModal
