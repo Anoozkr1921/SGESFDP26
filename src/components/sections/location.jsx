@@ -35,7 +35,7 @@ export default function Location() {
       label: "Office Hours",
       lines: [
         "Mon–Fri: 9:00 AM – 5:30 PM",
-        "FDP Dates: 8–12 June 2026"
+        "FDP Dates: 18–22 May 2026"
       ]
     },
     {

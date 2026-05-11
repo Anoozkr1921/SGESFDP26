@@ -20,6 +20,16 @@ export const volunteers = [
     }
   },
   {
+    role: "Volunteer",
+    name: "Palak Agarwala",
+    title: "Sophomore at BIT Mesra ,ECE.",
+    initials: "PA",
+    contact: {
+      phone: "+91-8291163247",
+      email: "btech10956.24@bitmesra.ac.in"
+    }
+  },
+  {
     role: "Website Deveoloper",
     name: "Anooz Kumar Burnwal",
     title: "Undergrad at BIT Mesra ECE, 1st Year.",
