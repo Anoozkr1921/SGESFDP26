@@ -81,14 +81,21 @@ export default function Committee() {
           <div className="rule" style={{ margin: "0 auto" }} />
         </div>
 
-        <div className="cm-grid cm-grid-vol">
-          {volunteeringCommittee.map((member, index) => (
+        {/* Row 1: first 4 members */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)",
+          gap: "1.25rem",
+          maxWidth: 1000,
+          margin: "0 auto"
+        }} className="oc-row-1">
+          {volunteeringCommittee.slice(0, 4).map((member, index) => (
             <div className="cm-card cm-card-vol" key={member.name || index}>
               <div className="cm-av cm-av-vol">
                 {member.image ? (
                   <img
                     src={member.image}
-                    alt={member.name || `Volunteering committee member ${index + 1}`}
+                    alt={member.name || `Organizing committee member ${index + 1}`}
                     style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "cover" }}
                   />
                 ) : null}
@@ -97,6 +104,41 @@ export default function Committee() {
             </div>
           ))}
         </div>
+
+        {/* Row 2: remaining 3 members, centered */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "1.25rem",
+          maxWidth: 740,
+          margin: "1.25rem auto 0"
+        }} className="oc-row-2">
+          {volunteeringCommittee.slice(4).map((member, index) => (
+            <div className="cm-card cm-card-vol" key={member.name || index}>
+              <div className="cm-av cm-av-vol">
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name || `Organizing committee member ${index + 5}`}
+                    style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "cover" }}
+                  />
+                ) : null}
+              </div>
+              {member.name ? <div className="cm-name">{member.name}</div> : null}
+            </div>
+          ))}
+        </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .oc-row-1 { grid-template-columns: repeat(2, 1fr) !important; }
+            .oc-row-2 { grid-template-columns: repeat(2, 1fr) !important; max-width: 500px !important; }
+          }
+          @media (max-width: 520px) {
+            .oc-row-1 { grid-template-columns: 1fr !important; max-width: 280px !important; }
+            .oc-row-2 { grid-template-columns: 1fr !important; max-width: 280px !important; }
+          }
+        `}</style>
       </div>
     </section>
   );

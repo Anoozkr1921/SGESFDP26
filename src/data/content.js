@@ -24,6 +24,7 @@ import imgPrateemSir from "../assets/images/PrateemSir.jpeg";
 import imgBrajeshSir from "../assets/images/BrajeshSir.jpeg";
 import imgPankajSir from "../assets/images/PankajSir.jpeg";
 import imgGajendraSir from "../assets/images/GajendraSir.jpeg";
+import imgArvindSir from "../assets/images/ArvindSir.jpeg";
 
 export const topics = {
   Robotics: [
@@ -338,5 +339,6 @@ export const volunteeringCommittee = [
   { name: "Dr. Pankaj Mishra", image: imgPankajSir },
   { name: "Dr. Prateem Pan", image: imgPrateemSir },
   { name: "Dr. Brajesh Kumar", image: imgBrajeshSir },
+  { name: "Dr. Arvind Sahu", image: imgArvindSir },
 
 ];

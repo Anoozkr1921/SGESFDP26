@@ -123,7 +123,19 @@ export default function App() {
       )}
 
       <Location />
-      <Footer />
+      <Footer onNavigate={(page, sectionId) => {
+        if (page === "home") {
+          goToHome(sectionId || "home");
+        } else if (page === "about") {
+          goToAbout();
+        } else if (page === "schedule") {
+          goToSchedule();
+        } else if (page === "speakers") {
+          goToSpeakers();
+        } else if (page === "team") {
+          goToTeam();
+        }
+      }} />
 
       <SpeakerModal
         speaker={selectedSpeaker}
