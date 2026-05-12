@@ -978,5 +978,104 @@ export const participants = [
     "Gender": "Male",
     "Designation": "Masters",
     "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 90,
+    "Name of Participants": "Ramesh Kumar",
+    "Phone No.": 9931284520,
+    "Email-ID": "rmshkumar491@gmail.com",
+    "Address": "Ranchi",
+    "Institute Name/Organisation Name": "RTC Institute of Technology Ranchi Jharkhand",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 91,
+    "Name of Participants": "Benjamin Raj",
+    "Phone No.": 9570026844,
+    "Email-ID": "benjaminraj230@gmail.com",
+    "Address": "Ramgarh",
+    "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 92,
+    "Name of Participants": "Dr. Dhiraj Kumar Kushvaha",
+    "Phone No.": 8709934014,
+    "Email-ID": "drdkkushvaha@gmail.com",
+    "Address": "Radha Govind University Ramgarh Jharkhand",
+    "Institute Name/Organisation Name": "Radha Govind University Ramgarh Jharkhand",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 93,
+    "Name of Participants": "Dr. Avinash Kumar",
+    "Phone No.": 6206492759,
+    "Email-ID": "bitavinash@gmail.com",
+    "Address": "EEE department, RTC Institute of Technology",
+    "Institute Name/Organisation Name": "RTC Institute of Technology Ranchi",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 94,
+    "Name of Participants": "Diksha Kumari",
+    "Phone No.": 6201775239,
+    "Email-ID": "mtee10005.25@bitmesra.ac.in",
+    "Address": "Shivpuri Jhanjharpur, Bihar, Madhubani, 847404",
+    "Institute Name/Organisation Name": "BIT Mesra, Ranchi",
+    "Gender": "Female",
+    "Designation": "Masters",
+    "State": "Bihar"
+  },
+  {
+    "Serial No.": 95,
+    "Name of Participants": "Soma Bhattacharya",
+    "Phone No.": 7647079165,
+    "Email-ID": "sbhattacharya.phd2023.ee@nitrr.ac.in",
+    "Address": "Raipur",
+    "Institute Name/Organisation Name": "NIT Raipur",
+    "Gender": "Female",
+    "Designation": "Ph.D.",
+    "State": "Chhattisgarh"
+  },
+  {
+    "Serial No.": 96,
+    "Name of Participants": "Dr Sarita Samal",
+    "Phone No.": 8908081827,
+    "Email-ID": "ssamalfel@kiit.ac.in",
+    "Address": "KIIT University, Odisha",
+    "Institute Name/Organisation Name": "KIIT Deemed to be University",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Odisha"
+  },
+  {
+    "Serial No.": 97,
+    "Name of Participants": "Sawarya Chandra",
+    "Phone No.": 9668415873,
+    "Email-ID": "phdee10051.24@bitmesra.ac.in",
+    "Address": "Ranchi",
+    "Institute Name/Organisation Name": "BIT Mesra",
+    "Gender": "Female",
+    "Designation": "Ph.D.",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 98,
+    "Name of Participants": "Satya Prakash Nirala",
+    "Phone No.": 9334940843,
+    "Email-ID": "mtee10003.25@bitmesra.ac.in",
+    "Address": "Gandhinagar, Ramchandrapur",
+    "Institute Name/Organisation Name": "BIT Mesra",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Bihar"
   }
 ];

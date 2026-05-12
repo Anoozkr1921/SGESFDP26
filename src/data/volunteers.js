@@ -30,6 +30,16 @@ export const volunteers = [
     }
   },
   {
+    role: "Volunteer",
+    name: "Sourish Choudhary",
+    title: "Sophomore at BIT Mesra ,ECE.",
+    initials: "SC",
+    contact: {
+      phone: "+91-9334456907",
+      email: "btech10767.24@bitmesra.ac.in"
+    }
+  },
+  {
     role: "Website Deveoloper",
     name: "Anooz Kumar Burnwal",
     title: "Undergrad at BIT Mesra ECE, 1st Year.",

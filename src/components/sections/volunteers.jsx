@@ -6,6 +6,7 @@ import Aayushpic from "../../assets/images/Aayush.jpeg";
 import Anandpic from "../../assets/images/Anand.jpeg";
 import Satyampic from "../../assets/images/Satyam.jpeg";
 import PalakPic from "../../assets/images/Palak.jpeg";
+import SourishPic from "../../assets/images/Sourish.jpeg";
 
 
 const VOLUNTEER_PHOTOS = {
@@ -16,6 +17,7 @@ const VOLUNTEER_PHOTOS = {
   "Aayush Raj": Aayushpic,
   "Anand Shivam": Anandpic,
   "Satyam Kumar": Satyampic,
+  "Sourish Choudhary": SourishPic,
 };
 
 export default function Volunteers() {

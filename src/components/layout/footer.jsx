@@ -1,6 +1,21 @@
-export default function Footer() {
-  const navLinks = ["home", "about", "topics", "schedule", "speakers", "committee", "register"];
-  const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+export default function Footer({ onNavigate }) {
+  // Links that go to separate pages via state-based routing
+  const pageLinks = {
+    home: { label: "Home", action: () => onNavigate?.("home") },
+    about: { label: "About", action: () => onNavigate?.("about") },
+    schedule: { label: "Schedule", action: () => onNavigate?.("schedule") },
+    speakers: { label: "Speakers", action: () => onNavigate?.("speakers") },
+    committee: { label: "Committee", action: () => onNavigate?.("team") },
+  };
+
+  // Links that scroll to sections on the home page
+  const sectionLinks = {
+    topics: { label: "Topics", action: () => onNavigate?.("home", "topics") },
+    register: { label: "Register", action: () => onNavigate?.("home", "register") },
+  };
+
+  const allLinks = { ...pageLinks, ...sectionLinks };
+  const linkOrder = ["home", "about", "topics", "schedule", "speakers", "committee", "register"];
 
   return (
     <footer>
@@ -25,8 +40,15 @@ export default function Footer() {
           <div>
             <div className="ft-h">Workshop</div>
             <ul className="ft-list">
-              {navLinks.map(l => (
-                <li key={l}><a href={`#${l}`} onClick={e => { e.preventDefault(); go(l); }}>{l[0].toUpperCase() + l.slice(1)}</a></li>
+              {linkOrder.map(key => (
+                <li key={key}>
+                  <a
+                    href={`#${key}`}
+                    onClick={e => { e.preventDefault(); allLinks[key].action(); }}
+                  >
+                    {allLinks[key].label}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
