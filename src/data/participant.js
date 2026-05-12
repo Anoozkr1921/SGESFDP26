@@ -1077,5 +1077,27 @@ export const participants = [
     "Gender": "Male",
     "Designation": "Masters",
     "State": "Bihar"
-  }
+  },
+  {
+    "Serial No.": 99,
+    "Name of Participants": "Faheem Ahmad ",
+    "Phone No.": 7081480630,
+    "Email-ID": "faheemahmad@mmantc.edu.in",
+    "Address": "MMMANTC, Malegaon, Nashik",
+    "Institute Name/Organisation Name": "Maulana Mukhtar Ahmad Nadvi Technical Campus",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Maharashtra"
+  },
+  {
+    "Serial No.": 100,
+    "Name of Participants": "Vijeta Prasad",
+    "Phone No.": 5103864832,
+    "Email-ID": "vijetap@yahoo.com",
+    "Address": "Bay area, California",
+    "Institute Name/Organisation Name": "Intel",
+    "Gender": "Prefer Not to say",
+    "Designation": "Industry",
+    "State": "California"
+  },
 ];
