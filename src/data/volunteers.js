@@ -40,6 +40,16 @@ export const volunteers = [
     }
   },
   {
+    role: "Volunteer",
+    name: "Priyanshu Singh",
+    title: "Sophomore at BIT Mesra ,EEE.",
+    initials: "PS",
+    contact: {
+      phone: "+91-9508626805",
+      email: "btech10846.24@bitmesra.ac.in "
+    }
+  },
+  {
     role: "Website Deveoloper",
     name: "Anooz Kumar Burnwal",
     title: "Undergrad at BIT Mesra ECE, 1st Year.",

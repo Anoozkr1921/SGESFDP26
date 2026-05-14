@@ -2,7 +2,6 @@ export const participants = [
   {
     "Serial No.": 1,
     "Name of Participants": "Razik Rehmani",
-    "Phone No.": 6204210751,
     "Email-ID": "rehamani777@gmail.com",
     "Address": "Karma,Irba,Ranchi",
     "Institute Name/Organisation Name": "Marwari College, Ranchi",
@@ -13,7 +12,6 @@ export const participants = [
   {
     "Serial No.": 2,
     "Name of Participants": "Babli Kumari",
-    "Phone No.": 8658987657,
     "Email-ID": "babli.asha1892@gmail.com",
     "Address": "Barwatoli lohardaga",
     "Institute Name/Organisation Name": "BIT",
@@ -24,7 +22,6 @@ export const participants = [
   {
     "Serial No.": 3,
     "Name of Participants": "Dr.H. Joseph Prabhakar Williams",
-    "Phone No.": 9486951395,
     "Email-ID": "prajowills1978@gmail.com",
     "Address": "Sugunapuram, Kuniamuthur, Coimbarore-641008, Tamilnadu, India",
     "Institute Name/Organisation Name": "Department of Electronics and Communication Engineering, Sri Krishna College of Engineering and Technology, Sugunapuram",
@@ -35,7 +32,6 @@ export const participants = [
   {
     "Serial No.": 4,
     "Name of Participants": "Lily Lakra",
-    "Phone No.": 8404831689,
     "Email-ID": "lilyramola55@gmail.com",
     "Address": "Pathal Kudwa Beck Road Ranchi",
     "Institute Name/Organisation Name": "XIPT , Namkum, Ranchi",
@@ -46,7 +42,6 @@ export const participants = [
   {
     "Serial No.": 5,
     "Name of Participants": "Ruchi Kujur",
-    "Phone No.": 6299760020,
     "Email-ID": "ruchilnct119@gmail.com",
     "Address": "Tati basti tatisilwai Ranchi Jharkhand",
     "Institute Name/Organisation Name": "Xavier Institute of Polytechnic and Technology",
@@ -57,7 +52,6 @@ export const participants = [
   {
     "Serial No.": 6,
     "Name of Participants": "Swati Minj",
-    "Phone No.": 8987442153,
     "Email-ID": "minj.21swati@gmail.com",
     "Address": "Samlong, Ranchi",
     "Institute Name/Organisation Name": "Xavier Institute of Polytechnic and Technology",
@@ -68,7 +62,6 @@ export const participants = [
   {
     "Serial No.": 7,
     "Name of Participants": "Dr D M Srinivasa",
-    "Phone No.": 9448233256,
     "Email-ID": "dmsrinivasa.pesce@gmail.com",
     "Address": "annapoorneshwari Nagar, Mandya",
     "Institute Name/Organisation Name": "P E S College of Engineering, Mandya",
@@ -79,7 +72,6 @@ export const participants = [
   {
     "Serial No.": 8,
     "Name of Participants": "Dr. Vinod Choudhary",
-    "Phone No.": 9571804134,
     "Email-ID": "vinod.choudhary@nimsuniversity.org",
     "Address": "Department of Agricultural Engineering, NIMS Institute of Engineering & Technology (NIET)",
     "Institute Name/Organisation Name": "NIMS University Rajasthan, Jaipur",
@@ -90,7 +82,6 @@ export const participants = [
   {
     "Serial No.": 9,
     "Name of Participants": "Ankita Agarwal",
-    "Phone No.": 9426823044,
     "Email-ID": "agarwalankita682@gmail.com",
     "Address": "NIMS University, Delhi-Jaipur highway, Jaipur, Rajasthan - 303121",
     "Institute Name/Organisation Name": "NIMS University Rajasthan, Jaipur",
@@ -101,7 +92,6 @@ export const participants = [
   {
     "Serial No.": 10,
     "Name of Participants": "Dr. Deo Karan Ram",
-    "Phone No.": 7000531288,
     "Email-ID": "dr.deokaranr@nimsuniversity.org",
     "Address": "Nims University Rajasthan, Jaipur 303121",
     "Institute Name/Organisation Name": "NIET, Nims University Rajasthan, Jaipur",
@@ -112,7 +102,6 @@ export const participants = [
   {
     "Serial No.": 11,
     "Name of Participants": "Kapil Deo Mahto",
-    "Phone No.": 9798999812,
     "Email-ID": "kapildeomahto22@gmail.com",
     "Address": "Ranchi",
     "Institute Name/Organisation Name": "Xavier Institute of Polytechnic and Technology",
@@ -123,7 +112,6 @@ export const participants = [
   {
     "Serial No.": 12,
     "Name of Participants": "Dr.S.Kaliappan",
-    "Phone No.": 9789700655,
     "Email-ID": "kaliappan.s.eee@kct.ac.in",
     "Address": "Saravanampatti, Coimbatore - 641035",
     "Institute Name/Organisation Name": "Department of EEE, Kumaraguru College of Technology, Saravanampatti",
@@ -134,7 +122,6 @@ export const participants = [
   {
     "Serial No.": 13,
     "Name of Participants": "Dr. Anisa Khanam",
-    "Phone No.": 8586007422,
     "Email-ID": "anisakhanam786@gmail.com",
     "Address": "Sandip University, Sijoul, Madhubani, Bihar",
     "Institute Name/Organisation Name": "Sandip University",
@@ -145,7 +132,6 @@ export const participants = [
   {
     "Serial No.": 14,
     "Name of Participants": "Sonu Kumar",
-    "Phone No.": 9155915744,
     "Email-ID": "sonu.kumar@sandipuniversity.edu.in",
     "Address": "Madhubani , Bihar",
     "Institute Name/Organisation Name": "Sandip University, Madhubani",
@@ -156,7 +142,6 @@ export const participants = [
   {
     "Serial No.": 15,
     "Name of Participants": "Dr. Silpa Mandal",
-    "Phone No.": 8338018157,
     "Email-ID": "silpa.mandal@sandipuniversity.edu.in",
     "Address": "Madhubani, Bihar",
     "Institute Name/Organisation Name": "Sandip University, Sijoul, Madhubani, Bihar",
@@ -167,7 +152,6 @@ export const participants = [
   {
     "Serial No.": 16,
     "Name of Participants": "Satyendra Kumar Jha",
-    "Phone No.": 9532821140,
     "Email-ID": "satyendra.jha@sandipuniversity.edu.in",
     "Address": "Sijoul, Mailam, Madhubani, Bihar 847235",
     "Institute Name/Organisation Name": "Sandip University",
@@ -178,7 +162,6 @@ export const participants = [
   {
     "Serial No.": 17,
     "Name of Participants": "Sanhita Roy Acharya",
-    "Phone No.": 9433837728,
     "Email-ID": "ae@klyuniv.ac.in",
     "Address": "AD 320, White Tower, Rabindrapally, Krishnapur ,24Pgs (N) , PIN-700101",
     "Institute Name/Organisation Name": "University of Kalyani",
@@ -189,7 +172,6 @@ export const participants = [
   {
     "Serial No.": 18,
     "Name of Participants": "Avanish Kumar",
-    "Phone No.": 9835505823,
     "Email-ID": "avanisheee.rgu@gmail.com",
     "Address": "RGU Ramgarh",
     "Institute Name/Organisation Name": "Radha Govind University",
@@ -200,7 +182,6 @@ export const participants = [
   {
     "Serial No.": 19,
     "Name of Participants": "Sapna Kumari",
-    "Phone No.": 6207042149,
     "Email-ID": "sapna.23eeed013@citranchi.ac.in",
     "Address": "Ranchi",
     "Institute Name/Organisation Name": "Cambridge Institute of Technology",
@@ -211,7 +192,6 @@ export const participants = [
   {
     "Serial No.": 20,
     "Name of Participants": "Kumar Mayank",
-    "Phone No.": 9142832980,
     "Email-ID": "kumarmayankm311@gmail.com",
     "Address": "Ranchi",
     "Institute Name/Organisation Name": "Cambridge Institute of Technology, Tatisilwai",
@@ -222,7 +202,6 @@ export const participants = [
   {
     "Serial No.": 21,
     "Name of Participants": "Anup Kumar",
-    "Phone No.": 9970539832,
     "Email-ID": "kumaranup462@gmail.com",
     "Address": "Bazar Tand, Ramgarh, Jharkhand",
     "Institute Name/Organisation Name": "Radha Govind University, Ramgarh, Jharkhand",
@@ -233,7 +212,6 @@ export const participants = [
   {
     "Serial No.": 22,
     "Name of Participants": "Bhishmdev Mandal",
-    "Phone No.": 7260042432,
     "Email-ID": "bhishmdev.23eeed005@citranchi.ac.in",
     "Address": "Ranchi",
     "Institute Name/Organisation Name": "Jharkhand University of Technology",
@@ -244,7 +222,6 @@ export const participants = [
   {
     "Serial No.": 23,
     "Name of Participants": "Mohit Kumar Gupta",
-    "Phone No.": 7033975041,
     "Email-ID": "mohit.23eeed010@citranchi.ac.in",
     "Address": "Ranchi",
     "Institute Name/Organisation Name": "Jharkhand University of Technology",
@@ -255,7 +232,6 @@ export const participants = [
   {
     "Serial No.": 24,
     "Name of Participants": "Brundavanam Seshasai",
-    "Phone No.": 8500593764,
     "Email-ID": "brundavanam.phd2022.ee@nitrr.ac.in",
     "Address": "Raipur",
     "Institute Name/Organisation Name": "NIT Raipur",
@@ -266,7 +242,6 @@ export const participants = [
   {
     "Serial No.": 25,
     "Name of Participants": "Shailendra Kumar choudhary",
-    "Phone No.": 8655670643,
     "Email-ID": "Shailendra117050@gmail.com",
     "Address": "Village-Dhanwariyadih,Post-Taranakho,District-Giridih",
     "Institute Name/Organisation Name": "Radha Govind University,Ramgarh",
@@ -277,7 +252,6 @@ export const participants = [
   {
     "Serial No.": 26,
     "Name of Participants": "Nirupam Nath Choudhury",
-    "Phone No.": 8847414548,
     "Email-ID": "nnchoudhury91@gmail.com",
     "Address": "Agartala, west Tripura",
     "Institute Name/Organisation Name": "Techno College of Engineering,Agartala",
@@ -288,7 +262,6 @@ export const participants = [
   {
     "Serial No.": 27,
     "Name of Participants": "Ashish Srivastava",
-    "Phone No.": 8707822939,
     "Email-ID": "ashish1adroit@gmail.com",
     "Address": "Department of Mechanical Engineering, BIT MESRA, Ranchi",
     "Institute Name/Organisation Name": "BIT Mesra ,Ranchi",
@@ -299,7 +272,6 @@ export const participants = [
   {
     "Serial No.": 28,
     "Name of Participants": "Subhash Kumar",
-    "Phone No.": 7004243899,
     "Email-ID": "phdme10001.23@bitmesra.ac.in",
     "Address": "Department of Mechanical Engineering,BIT MESRA, Ranchi",
     "Institute Name/Organisation Name": "BIT Mesra, Ranchi",
@@ -310,7 +282,6 @@ export const participants = [
   {
     "Serial No.": 29,
     "Name of Participants": "Swarna Aishwarya Twinkle",
-    "Phone No.": 7542034584,
     "Email-ID": "9swarna9@gmail.com",
     "Address": "Birla Institute of Technology Mesra",
     "Institute Name/Organisation Name": "Birla Institute of Technology Mesra",
@@ -321,7 +292,6 @@ export const participants = [
   {
     "Serial No.": 30,
     "Name of Participants": "Dr Abhishek Thakur",
-    "Phone No.": 9927132812,
     "Email-ID": "abhishek.th02@gmail.com",
     "Address": "Sijoul Madhubani Bihar",
     "Institute Name/Organisation Name": "Sandip University",
@@ -332,7 +302,6 @@ export const participants = [
   {
     "Serial No.": 31,
     "Name of Participants": "Dr.L.Harish Kumar",
-    "Phone No.": 9845440119,
     "Email-ID": "harish.kumar@nmit.ac.in",
     "Address": "AICTE IDEA LAB, Room No. 31 , Block D, Nitte Meenakshi Institute of Technology,",
     "Institute Name/Organisation Name": "Nitte Meenakshi Institute of Technology, Bengaluru",
@@ -343,7 +312,6 @@ export const participants = [
   {
     "Serial No.": 32,
     "Name of Participants": "Deep Shekhar Acharya",
-    "Phone No.": 7541838302,
     "Email-ID": "dsacharya@bitmesra.ac.in",
     "Address": "Dept. of EEE, BIT Mesra Off-Campus Deoghar, Jasidih, Deoghar, Jharkhand-814142",
     "Institute Name/Organisation Name": "Birla Institute of Technology Mesra Off-Campus Deoghar",
@@ -354,7 +322,6 @@ export const participants = [
   {
     "Serial No.": 33,
     "Name of Participants": "Susmita Deb",
-    "Phone No.": 9620129983,
     "Email-ID": "susmitadeb@pes.edu",
     "Address": "Bangalore-26",
     "Institute Name/Organisation Name": "PES University",
@@ -365,7 +332,6 @@ export const participants = [
   {
     "Serial No.": 34,
     "Name of Participants": "Sangeeta Modi",
-    "Phone No.": 9972322110,
     "Email-ID": "smodi@pes.edu",
     "Address": "Bangalore-76",
     "Institute Name/Organisation Name": "PES University",
@@ -376,7 +342,6 @@ export const participants = [
   {
     "Serial No.": 35,
     "Name of Participants": "Smriti Bharti",
-    "Phone No.": 8789205801,
     "Email-ID": "smriti10t@gmail.com",
     "Address": "Bengaluru",
     "Institute Name/Organisation Name": "Dayananda Sagar University",
@@ -387,7 +352,6 @@ export const participants = [
   {
     "Serial No.": 36,
     "Name of Participants": "Piyush Kumar Ojha",
-    "Phone No.": 9608146151,
     "Email-ID": "pojha@bitmesra.ac.in",
     "Address": "BIT Deoghar Campus",
     "Institute Name/Organisation Name": "BIT Deoghar Campus",
@@ -398,7 +362,6 @@ export const participants = [
   {
     "Serial No.": 37,
     "Name of Participants": "Dr. Debika Debnath",
-    "Phone No.": 8729833602,
     "Email-ID": "debikanita@gmail.com",
     "Address": "Techno College of Engineering, Agartala",
     "Institute Name/Organisation Name": "Techno College of Engineering,Agartala",
@@ -409,7 +372,6 @@ export const participants = [
   {
     "Serial No.": 38,
     "Name of Participants": "Meghana A",
-    "Phone No.": 9535327832,
     "Email-ID": "meghana.a@nmit.ac.in",
     "Address": "Yelahanka",
     "Institute Name/Organisation Name": "Nitte Meenakshi Institute of Technology",
@@ -420,7 +382,6 @@ export const participants = [
   {
     "Serial No.": 39,
     "Name of Participants": "Dr. Kapil Chopra",
-    "Phone No.": 9596887107,
     "Email-ID": "kapil.chopra@smvdu.ac.in",
     "Address": "Shri Mata Vaishno Devi University, Katra",
     "Institute Name/Organisation Name": "Shri Mata Vaishno Devi University, Katra",
@@ -431,7 +392,6 @@ export const participants = [
   {
     "Serial No.": 40,
     "Name of Participants": "Dr.Mohammedvaris Sannu Khan",
-    "Phone No.": 9033246936,
     "Email-ID": "khanmohammedvaris@gmail.com",
     "Address": "At Vadnagar 3 Nawapara Street Taluka Kodinar ,Dist-Girsomnath, Gujarat",
     "Institute Name/Organisation Name": "Government Polytechnic Diu affiliated Gujarat Technological University,Ahmedabad",
@@ -442,7 +402,6 @@ export const participants = [
   {
     "Serial No.": 41,
     "Name of Participants": "Animesh Kumar",
-    "Phone No.": 7779871361,
     "Email-ID": "un.animesh@gmail.com",
     "Address": "At Milan Chowk, Tatisilwai, Ranchi",
     "Institute Name/Organisation Name": "Cambridge Institute of Technology",
@@ -453,7 +412,6 @@ export const participants = [
   {
     "Serial No.": 42,
     "Name of Participants": "Vinodini Bhushan Bhole",
-    "Phone No.": 7350408554,
     "Email-ID": "vbb.elec@coeptech.ac.in",
     "Address": "C503 Nandan Euphora Vishrantwadi Pune 15",
     "Institute Name/Organisation Name": "COEP Technological Uniersity Pune",
@@ -464,7 +422,6 @@ export const participants = [
   {
     "Serial No.": 43,
     "Name of Participants": "Dr. Neeraj Priyadarshi",
-    "Phone No.": 9470226996,
     "Email-ID": "neerajrjd@gmail.com",
     "Address": "Buddha Colony ,Patna",
     "Institute Name/Organisation Name": "JIS College of Engineering",
@@ -475,7 +432,6 @@ export const participants = [
   {
     "Serial No.": 44,
     "Name of Participants": "Sanjay Prasad",
-    "Phone No.": 9835141105,
     "Email-ID": "prsanjay2000@gmail.com",
     "Address": "Jharkhand GOVT. Tool Room and Training Centre",
     "Institute Name/Organisation Name": "JGTR Ranchi",
@@ -486,7 +442,6 @@ export const participants = [
   {
     "Serial No.": 45,
     "Name of Participants": "Anant Kumar",
-    "Phone No.": 7004117502,
     "Email-ID": "anantkumar.rs.eee21@itbhu.ac.in",
     "Address": "Varanasi",
     "Institute Name/Organisation Name": "IIT BHU",
@@ -497,7 +452,6 @@ export const participants = [
   {
     "Serial No.": 46,
     "Name of Participants": "Nitin Kumar",
-    "Phone No.": 447879584869,
     "Email-ID": "nitin_srv@hotmail.com",
     "Address": "Zurich",
     "Institute Name/Organisation Name": "Banking and Financial Services",
@@ -508,7 +462,6 @@ export const participants = [
   {
     "Serial No.": 47,
     "Name of Participants": "Shobha Singh",
-    "Phone No.": 6598377722,
     "Email-ID": "shobha.chauhan@gmail.com",
     "Address": "12 Marina View #08-01, Asia Square Tower 2, Singapore 018961",
     "Institute Name/Organisation Name": "Mizuho Bank Ltd",
@@ -519,7 +472,6 @@ export const participants = [
   {
     "Serial No.": 48,
     "Name of Participants": "Alivarani Mohapatra",
-    "Phone No.": 9439050584,
     "Email-ID": "amohapatrafel@kiit.ac.in",
     "Address": "KIIT University",
     "Institute Name/Organisation Name": "KIIT Deemed to be University",
@@ -530,7 +482,6 @@ export const participants = [
   {
     "Serial No.": 49,
     "Name of Participants": "Dr. Sarita Kumari",
-    "Phone No.": 7488369433,
     "Email-ID": "gs.sarita@gmail.com",
     "Address": "Amity University Jharkhand, Ranchi",
     "Institute Name/Organisation Name": "Amity University Jharkhand, Ranchi",
@@ -541,7 +492,6 @@ export const participants = [
   {
     "Serial No.": 50,
     "Name of Participants": "Surbhi Sharma",
-    "Phone No.": 9760793474,
     "Email-ID": "surbhis676@gmail.com",
     "Address": "Noida",
     "Institute Name/Organisation Name": "ABESEC NOIDA",
@@ -552,7 +502,6 @@ export const participants = [
   {
     "Serial No.": 51,
     "Name of Participants": "M Vijay Kumar",
-    "Phone No.": 8109870904,
     "Email-ID": "mvijaykumar10000@gmail.com",
     "Address": "House No. 11/43, Kailash Nagar, Ward No. 11, Kumhari, Durg(490042)",
     "Institute Name/Organisation Name": "NIT Raipur",
@@ -563,7 +512,6 @@ export const participants = [
   {
     "Serial No.": 52,
     "Name of Participants": "Partha Pratim Das",
-    "Phone No.": 9903001283,
     "Email-ID": "partha.pratim85@gmail.com",
     "Address": "Tatisilwai, Ranchi",
     "Institute Name/Organisation Name": "Cambridge Institute Of Technology , Ranchi",
@@ -574,7 +522,6 @@ export const participants = [
   {
     "Serial No.": 53,
     "Name of Participants": "Partha Paul",
-    "Phone No.": 9470370361,
     "Email-ID": "ppaul@bitmesra.ac.in",
     "Address": "DEPT. of Computer Science & Engineering",
     "Institute Name/Organisation Name": "Birla Institute Of Technology ,Lalpur Unit,Ranchi",
@@ -585,7 +532,6 @@ export const participants = [
   {
     "Serial No.": 54,
     "Name of Participants": "Jyoti Singh",
-    "Phone No.": 9079094019,
     "Email-ID": "jyotisingh5454a@gmail.com",
     "Address": "Room 103 PG Girls Hostel BAU Sabour Bhagalpur",
     "Institute Name/Organisation Name": "",
@@ -596,7 +542,6 @@ export const participants = [
   {
     "Serial No.": 55,
     "Name of Participants": "Bimlesh Kumar Singh",
-    "Phone No.": 9031057551,
     "Email-ID": "SINGH.BIMLESHKUMAR2304@GMAIL.COM",
     "Address": "Bunglow NO 19 Jamshedpur",
     "Institute Name/Organisation Name": "BIT Mesra",
@@ -607,7 +552,6 @@ export const participants = [
   {
     "Serial No.": 56,
     "Name of Participants": "Prashant A Athavale",
-    "Phone No.": 9448874716,
     "Email-ID": "prashanth@bmsit.in",
     "Address": "EEE BMSIT&M Avalahalli Doddaballapura Main Road Yelahanka Bengaluru",
     "Institute Name/Organisation Name": "BMS institute of Technology and Management",
@@ -618,7 +562,6 @@ export const participants = [
   {
     "Serial No.": 57,
     "Name of Participants": "Ravichandiran M",
-    "Phone No.": 9043161299,
     "Email-ID": "ravichandiran.m.eee@kct.ac.in",
     "Address": "Coimbatore",
     "Institute Name/Organisation Name": "Kumaraguru College of Technology",
@@ -629,7 +572,6 @@ export const participants = [
   {
     "Serial No.": 58,
     "Name of Participants": "Dr N Prakash",
-    "Phone No.": 9443823092,
     "Email-ID": "prakash.n.eee@kct.ac.in",
     "Address": "Coimbatore 641049",
     "Institute Name/Organisation Name": "Kumaraguru College of Technology",
@@ -640,7 +582,6 @@ export const participants = [
   {
     "Serial No.": 59,
     "Name of Participants": "Silpa Mandal",
-    "Phone No.": 8338018157,
     "Email-ID": "silpa.mandal@sandipuniversity.edu.in",
     "Address": "Neelam Vidya Vihar Sijaul Madhubani Bihar 847235",
     "Institute Name/Organisation Name": "Sandip University",
@@ -651,7 +592,6 @@ export const participants = [
   {
     "Serial No.": 60,
     "Name of Participants": "Sartaj Quraisi",
-    "Phone No.": 8210713841,
     "Email-ID": "2025rsee006@nitjsr.ac.in",
     "Address": "National Institute of Technology Jamshedpur,Jharkhand",
     "Institute Name/Organisation Name": "NIT Jamshedpur",
@@ -662,7 +602,6 @@ export const participants = [
   {
     "Serial No.": 61,
     "Name of Participants": "Alok Priyadarshi",
-    "Phone No.": 7488598714,
     "Email-ID": "apriyadarshi. ee@nitjsr.ac.in",
     "Address": "NIT jamshedpur EED pin code 831014",
     "Institute Name/Organisation Name": "NIT Jamshedpur",
@@ -673,7 +612,6 @@ export const participants = [
   {
     "Serial No.": 62,
     "Name of Participants": "Saanhita Roy Achay",
-    "Phone No.": 9433837728,
     "Email-ID": "ae@klyuniv.ac.in",
     "Address": "Jharkhand",
     "Institute Name/Organisation Name": "BIT Mesra",
@@ -684,7 +622,6 @@ export const participants = [
   {
     "Serial No.": 63,
     "Name of Participants": "Dr. Prabhat Kumar Ranjan",
-    "Phone No.": 7368021081,
     "Email-ID": "pkranjan@bitmesra.ac.in",
     "Address": "Department of EEE, BIT Mesra, Off Campus, Deoghar, Jasidih, Jharkhand-814142",
     "Institute Name/Organisation Name": "BIT Mesra,Off Campus,Deoghar",
@@ -695,7 +632,6 @@ export const participants = [
   {
     "Serial No.": 64,
     "Name of Participants": "Purnima Sharma",
-    "Phone No.": 9317929686,
     "Email-ID": "gaurisharma123.ps@gmail.com",
     "Address": "Chandigarh-Ludhiana Highway (NH-5), Gharuan, Mohali, Punjab (India), 140413",
     "Institute Name/Organisation Name": "Chandigarh University",
@@ -706,7 +642,6 @@ export const participants = [
   {
     "Serial No.": 65,
     "Name of Participants": "Ms.Susmita Kumari yadav ",
-    "Phone No.": 7608947345,
     "Email-ID": "susmitayadav1998@gmail.com",
     "Address": "Gurugram,Haryana",
     "Institute Name/Organisation Name": "School of Medical and Allied Sciences ",
@@ -717,7 +652,6 @@ export const participants = [
   {
     "Serial No.": 66,
     "Name of Participants": "Ram Kunwar Mahto",
-    "Phone No.": 9162154749,
     "Email-ID": "ramkunwarmahto@bitmesra.ac.in",
     "Address": "Mesra,Ranchi",
     "Institute Name/Organisation Name": "BIT Mesra",
@@ -728,7 +662,6 @@ export const participants = [
   {
     "Serial No.": 67,
     "Name of Participants": "Palaniyappan S",
-    "Phone No.": 9787472741,
     "Email-ID": "eeepalani@gmail.com",
     "Address": "Trichy",
     "Institute Name/Organisation Name": "Sri Vignesh College of Engineering and Technology ",
@@ -739,7 +672,6 @@ export const participants = [
   {
     "Serial No.": 68,
     "Name of Participants": "Prateem Pan",
-    "Phone No.": 8961743959,
     "Email-ID": "prateempan@bitmesra.ac.in",
     "Address": "Mesra,Ranchi",
     "Institute Name/Organisation Name": "Birla Institute of Technology,Mesra,Ranchi",
@@ -750,7 +682,6 @@ export const participants = [
   {
     "Serial No.": 69,
     "Name of Participants": "Mansi Goel",
-    "Phone No.": 8980584370,
     "Email-ID": "mansigoel068@gmail.com",
     "Address": "Mehsana",
     "Institute Name/Organisation Name": "V.M Patel Institute of Management- Ganpat Unievrsity",
@@ -761,7 +692,6 @@ export const participants = [
   {
     "Serial No.": 70,
     "Name of Participants": "Rajnandini Yadav",
-    "Phone No.": 8285757568,
     "Email-ID": "rajnandani.dce@gmail.com",
     "Address": "GNIOT,Greater Noida,Uttar Pradesh",
     "Institute Name/Organisation Name": "Greater Noida Institute of Technology",
@@ -772,7 +702,6 @@ export const participants = [
   {
     "Serial No.": 71,
     "Name of Participants": "Dr Piyush Sharma",
-    "Phone No.": 7820983267,
     "Email-ID": "piyush.sharma@gits.ac.in",
     "Address": "House No 55 ,Gokul Village, Sector 9, Udaipur",
     "Institute Name/Organisation Name": "Geetanjali Institute of Technical Studies Udaipur ,Rajasthan",
@@ -783,7 +712,6 @@ export const participants = [
   {
     "Serial No.": 72,
     "Name of Participants": "BABY Saroja Dangeti",
-    "Phone No.": 6301309269,
     "Email-ID": "saroja.eee@mlritm.ac.in",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Instutute of Technology and Management",
@@ -794,7 +722,6 @@ export const participants = [
   {
     "Serial No.": 73,
     "Name of Participants": "Kalpana Anumala",
-    "Phone No.": 8125661120,
     "Email-ID": "kalpana@mlritm.ac.in",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Instutute of Technology and Management",
@@ -805,7 +732,6 @@ export const participants = [
   {
     "Serial No.": 74,
     "Name of Participants": "Banoth Punnam Chand",
-    "Phone No.": 9494788964,
     "Email-ID": "chandueee206@mlritm.ac.in",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Instutute of Technology and Management",
@@ -816,7 +742,6 @@ export const participants = [
   {
     "Serial No.": 75,
     "Name of Participants": "Utpal Kumar Ray",
-    "Phone No.": 8882706467,
     "Email-ID": "utpalkumar.ee@gmail.com",
     "Address": "Bhagwati Nagar Prakash Marble Road Ranchi 835217",
     "Institute Name/Organisation Name": "RTC Institute of Technology Ranchi",
@@ -827,7 +752,6 @@ export const participants = [
   {
     "Serial No.": 76,
     "Name of Participants": "Yadagiri J",
-    "Phone No.": 8961743959,
     "Email-ID": "yadagirijatoth@gmail.com",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Instutute of Technology and Management",
@@ -838,7 +762,6 @@ export const participants = [
   {
     "Serial No.": 77,
     "Name of Participants": "Bommireddy Laxminarayana",
-    "Phone No.": 9505642643,
     "Email-ID": "bommireddy777@mlritm.ac.in",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Instutute of Technology and Management",
@@ -849,7 +772,6 @@ export const participants = [
   {
     "Serial No.": 78,
     "Name of Participants": "Thirupathi Sirisilla",
-    "Phone No.": 9966776541,
     "Email-ID": "thirupathimlritm256@gmail.com",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Instutute of Technology and Management",
@@ -861,7 +783,6 @@ export const participants = [
   {
     "Serial No.": 79,
     "Name of Participants": "Sandagala Rajkumar",
-    "Phone No.": 8019211460,
     "Email-ID": "srajkumar3e@gmail.com",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Institute of Technology and Management",
@@ -872,7 +793,6 @@ export const participants = [
   {
     "Serial No.": 80,
     "Name of Participants": "S K Himabindu",
-    "Phone No.": 9110704969,
     "Email-ID": "bindukrupal@mlritm.ac.in",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Institute of Technology and Management",
@@ -883,7 +803,6 @@ export const participants = [
   {
     "Serial No.": 81,
     "Name of Participants": "Dr R Chander",
-    "Phone No.": 9949123470,
     "Email-ID": "chanderou19@gmail.com",
     "Address": "Dundigal,Hyderabad",
     "Institute Name/Organisation Name": "Marri Laxman Reddy Institute of Technology and Management",
@@ -894,7 +813,6 @@ export const participants = [
   {
     "Serial No.": 82,
     "Name of Participants": "Chanchal Kumar",
-    "Phone No.": 6204986254,
     "Email-ID": "chanchalkumar9470@gmail.com",
     "Address": "Aktan",
     "Institute Name/Organisation Name": "Birla Institute of Technology,Mesra,Ranchi",
@@ -905,7 +823,6 @@ export const participants = [
   {
     "Serial No.": 83,
     "Name of Participants": "Rajesh Yadav",
-    "Phone No.": 9348589355,
     "Email-ID": "mtee10009.25@bitmesra.ac.in",
     "Address": "Getlatu, BIT More, Ranchi",
     "Institute Name/Organisation Name": "Birla Institute of Technology,Mesra,Ranchi",
@@ -916,7 +833,6 @@ export const participants = [
   {
     "Serial No.": 84,
     "Name of Participants": "Naina Singh",
-    "Phone No.": 2178198141,
     "Email-ID": "naina3@illinois.edu",
     "Address": "202 E. Green St.",
     "Institute Name/Organisation Name": "University of Illinois Urbana-Champaign",
@@ -927,7 +843,6 @@ export const participants = [
   {
     "Serial No.": 85,
     "Name of Participants": "Anjan Kumar Tiwary",
-    "Phone No.": 6207611053,
     "Email-ID": "anjankr38@gmail.com",
     "Address": "Ramgarh",
     "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
@@ -938,7 +853,6 @@ export const participants = [
   {
     "Serial No.": 86,
     "Name of Participants": "Savitri Kumari",
-    "Phone No.": 9117992292,
     "Email-ID": "savitricse@gmail.com",
     "Address": "Ramgarh",
     "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
@@ -949,7 +863,6 @@ export const participants = [
   {
     "Serial No.": 87,
     "Name of Participants": "Vinay Prakash Chaudhary",
-    "Phone No.": 9102711879,
     "Email-ID": "vinay.20210201002@cuj.ac.in",
     "Address": "Dhanbad",
     "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
@@ -960,7 +873,6 @@ export const participants = [
   {
     "Serial No.": 88,
     "Name of Participants": "MD. Farooque Azam",
-    "Phone No.": 9800538434,
     "Email-ID": "farooqueee.rgu@gmail.com",
     "Address": "Ramgarh",
     "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
@@ -971,7 +883,6 @@ export const participants = [
   {
     "Serial No.": 89,
     "Name of Participants": "Sourav Dutta",
-    "Phone No.": 7004700528,
     "Email-ID": "mtev10001.25@bitmesra.ac.in",
     "Address": "BIT Gate, Near Hanuman Mandir, Mesra",
     "Institute Name/Organisation Name": "Birla Institute of Technology,Mesra,Ranchi",
@@ -982,7 +893,6 @@ export const participants = [
   {
     "Serial No.": 90,
     "Name of Participants": "Ramesh Kumar",
-    "Phone No.": 9931284520,
     "Email-ID": "rmshkumar491@gmail.com",
     "Address": "Ranchi",
     "Institute Name/Organisation Name": "RTC Institute of Technology Ranchi Jharkhand",
@@ -993,7 +903,6 @@ export const participants = [
   {
     "Serial No.": 91,
     "Name of Participants": "Benjamin Raj",
-    "Phone No.": 9570026844,
     "Email-ID": "benjaminraj230@gmail.com",
     "Address": "Ramgarh",
     "Institute Name/Organisation Name": "Radha Govind University, Ramgarh",
@@ -1004,7 +913,6 @@ export const participants = [
   {
     "Serial No.": 92,
     "Name of Participants": "Dr. Dhiraj Kumar Kushvaha",
-    "Phone No.": 8709934014,
     "Email-ID": "drdkkushvaha@gmail.com",
     "Address": "Radha Govind University Ramgarh Jharkhand",
     "Institute Name/Organisation Name": "Radha Govind University Ramgarh Jharkhand",
@@ -1015,7 +923,6 @@ export const participants = [
   {
     "Serial No.": 93,
     "Name of Participants": "Dr. Avinash Kumar",
-    "Phone No.": 6206492759,
     "Email-ID": "bitavinash@gmail.com",
     "Address": "EEE department, RTC Institute of Technology",
     "Institute Name/Organisation Name": "RTC Institute of Technology Ranchi",
@@ -1026,7 +933,6 @@ export const participants = [
   {
     "Serial No.": 94,
     "Name of Participants": "Diksha Kumari",
-    "Phone No.": 6201775239,
     "Email-ID": "mtee10005.25@bitmesra.ac.in",
     "Address": "Shivpuri Jhanjharpur, Bihar, Madhubani, 847404",
     "Institute Name/Organisation Name": "BIT Mesra, Ranchi",
@@ -1037,7 +943,6 @@ export const participants = [
   {
     "Serial No.": 95,
     "Name of Participants": "Soma Bhattacharya",
-    "Phone No.": 7647079165,
     "Email-ID": "sbhattacharya.phd2023.ee@nitrr.ac.in",
     "Address": "Raipur",
     "Institute Name/Organisation Name": "NIT Raipur",
@@ -1048,7 +953,6 @@ export const participants = [
   {
     "Serial No.": 96,
     "Name of Participants": "Dr Sarita Samal",
-    "Phone No.": 8908081827,
     "Email-ID": "ssamalfel@kiit.ac.in",
     "Address": "KIIT University, Odisha",
     "Institute Name/Organisation Name": "KIIT Deemed to be University",
@@ -1059,7 +963,6 @@ export const participants = [
   {
     "Serial No.": 97,
     "Name of Participants": "Sawarya Chandra",
-    "Phone No.": 9668415873,
     "Email-ID": "phdee10051.24@bitmesra.ac.in",
     "Address": "Ranchi",
     "Institute Name/Organisation Name": "BIT Mesra",
@@ -1070,7 +973,6 @@ export const participants = [
   {
     "Serial No.": 98,
     "Name of Participants": "Satya Prakash Nirala",
-    "Phone No.": 9334940843,
     "Email-ID": "mtee10003.25@bitmesra.ac.in",
     "Address": "Gandhinagar, Ramchandrapur",
     "Institute Name/Organisation Name": "BIT Mesra",
@@ -1081,7 +983,6 @@ export const participants = [
   {
     "Serial No.": 99,
     "Name of Participants": "Faheem Ahmad ",
-    "Phone No.": 7081480630,
     "Email-ID": "faheemahmad@mmantc.edu.in",
     "Address": "MMMANTC, Malegaon, Nashik",
     "Institute Name/Organisation Name": "Maulana Mukhtar Ahmad Nadvi Technical Campus",
@@ -1092,12 +993,111 @@ export const participants = [
   {
     "Serial No.": 100,
     "Name of Participants": "Vijeta Prasad",
-    "Phone No.": 5103864832,
     "Email-ID": "vijetap@yahoo.com",
     "Address": "Bay area, California",
     "Institute Name/Organisation Name": "Intel",
     "Gender": "Prefer Not to say",
     "Designation": "Industry",
     "State": "California"
+  },
+  {
+    "Serial No.": 101,
+    "Name of Participants": "Shiva Shankar",
+    "Email-ID": "b.shiva1992@gmail.com",
+    "Address": "Nelvdi",
+    "Institute Name/Organisation Name": "",
+    "Gender": "Male",
+    "Designation": "",
+    "State": "Telangana"
+  },
+  {
+    "Serial No.": 102,
+    "Name of Participants": "Konda Srinivas",
+    "Email-ID": "kondasreenivas99@gmail.com",
+    "Address": "Dundigal, Hyderabad",
+    "Institute Name/Organisation Name": "Marri Laxman Reddy Institute of Technology and Management, Hyderabad",
+    "Gender": "Male",
+    "Designation": "",
+    "State": "Telangana"
+  },
+  {
+    "Serial No.": 103,
+    "Name of Participants": "Vijeta P",
+    "Email-ID": "Vijetapd@gmail.com",
+    "Address": "Ten BKC Bandra East Mumbai 400051",
+    "Institute Name/Organisation Name": "Intel Corporation",
+    "Gender": "Male",
+    "Designation": "Industry",
+    "State": "Maharashtra"
+  },
+  {
+    "Serial No.": 104,
+    "Name of Participants": "Kashyap Shah",
+    "Email-ID": "Kashyapshah2003@gmail.com",
+    "Address": "Hostel 5, BIT Mesra",
+    "Institute Name/Organisation Name": "Birla Institute of Technology Mesra",
+    "Gender": "Male",
+    "Designation": "",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 105,
+    "Name of Participants": "Saurav Kumar",
+    "Email-ID": "sauravrmg@gmail.com",
+    "Address": "Ramgarh",
+    "Institute Name/Organisation Name": "Radha Govind University",
+    "Gender": "Male",
+    "Designation": "",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 106,
+    "Name of Participants": "Dr Bikash Chandra Saha",
+    "Email-ID": "bikash.eee@citranchi.ac.in",
+    "Address": "Tatisilwai -835103",
+    "Institute Name/Organisation Name": "Cambridge Institute of Technology, Ranchi",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 107,
+    "Name of Participants": "Soham Pal",
+    "Email-ID": "sohampal1607@gmail.com",
+    "Address": "Bardhaman",
+    "Institute Name/Organisation Name": "Birla Institute of Technology Mesra",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "West Bengal"
+  },
+  {
+    "Serial No.": 108,
+    "Name of Participants": "Krishna Modi",
+    "Email-ID": "krishnamodi14b@gmail.com",
+    "Address": "Lalpur Ranchi",
+    "Institute Name/Organisation Name": "CIT Ranchi",
+    "Gender": "Male",
+    "Designation": "UG persuing",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 109,
+    "Name of Participants": "Harsh Ranjan",
+    "Email-ID": "meee10001.25@bitmesra.ac.in",
+    "Address": "Hostel 5, BIT Mesra",
+    "Institute Name/Organisation Name": "BIT Mesra",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 110,
+    "Name of Participants": "Pooja Sharma",
+    "Email-ID": "poojas196@gmail.com",
+    "Address": "",
+    "Institute Name/Organisation Name": "United College of Engineering and Research",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Uttar Pradesh"
   },
 ];

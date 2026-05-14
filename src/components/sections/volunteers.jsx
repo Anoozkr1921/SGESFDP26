@@ -8,7 +8,6 @@ import Satyampic from "../../assets/images/Satyam.jpeg";
 import PalakPic from "../../assets/images/Palak.jpeg";
 import SourishPic from "../../assets/images/Sourish.jpeg";
 
-
 const VOLUNTEER_PHOTOS = {
   "Anooz Kumar Burnwal": anoozPic,
   "Dhannay Patil": DhnyPic,
