@@ -1100,4 +1100,124 @@ export const participants = [
     "Designation": "Faculty",
     "State": "Uttar Pradesh"
   },
+  {
+    "Serial No.": 111,
+    "Name of Participants": "Chandrashekhar Lavania",
+    "Email-ID": "clavania@bitmesra.ac.in",
+    "Address": "BIT Mesra",
+    "Institute Name/Organisation Name": "BIT Mesra",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 112,
+    "Name of Participants": "N.Bhargavi",
+    "Email-ID": "bhargavi.nalamala@mritm.ac.in",
+    "Address": "Dundigal",
+    "Institute Name/Organisation Name": "MLRITM",
+    "Gender": "Female",
+    "Designation": "Masters",
+    "State": "Telangana"
+  },
+  {
+    "Serial No.": 113,
+    "Name of Participants": "Priya Kumari Gope",
+    "Email-ID": "meee10002.25@bitmesra.ac.in",
+    "Address": "Birga colony, Karam Toli,Ranchi",
+    "Institute Name/Organisation Name": "Birla Institute of Technology",
+    "Gender": "Female",
+    "Designation": "Masters",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 114,
+    "Name of Participants": "Vishwajit Choudhary",
+    "Email-ID": "mtevt10003.25@bitmesra.ac.in",
+    "Address": "Pundag, Ranchi",
+    "Institute Name/Organisation Name": "BIT MESRA",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 115,
+    "Name of Participants": "Kumudlata Bhaskar",
+    "Email-ID": "kumudlata12@gmail.com",
+    "Address": "Varanasi",
+    "Institute Name/Organisation Name": "Kashi Institute of technology",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Uttar Pradesh"
+  },
+  {
+    "Serial No.": 116,
+    "Name of Participants": "Abhishek Thakur",
+    "Email-ID": "abhishekthakur9396@bitmesra.ac.in",
+    "Address": "BIT Mesra, Jaipur Campus",
+    "Institute Name/Organisation Name": "BIT Mesra, Jaipur",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Rajasthan"
+  },
+  {
+    "Serial No.": 117,
+    "Name of Participants": "Pravir Yadav",
+    "Email-ID": "pravir.yadav@bitmesra.ac.in",
+    "Address": "BIT Mesra, Jaipur Campus",
+    "Institute Name/Organisation Name": "BIT MESRA OFF CAMPUS JAIPUR",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Rajasthan"
+  },
+  {
+    "Serial No.": 118,
+    "Name of Participants": "Amber Saurav Kunal",
+    "Email-ID": "ambersaurav792@gmail.com",
+    "Address": "Birla institute of technology, mesra, Ranchi",
+    "Institute Name/Organisation Name": "Birla institute of technology, Mesra, Ranchi",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 119,
+    "Name of Participants": "Deepak Kumar",
+    "Email-ID": "deepakrajj35@gmail.com",
+    "Address": "Ranchi",
+    "Institute Name/Organisation Name": "Cambridge Institute of Technology  Ranchi",
+    "Gender": "Male",
+    "Designation": "UG persuing",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 120,
+    "Name of Participants": "Sanjukta Chatterjee",
+    "Email-ID": "c_sanjukta@hotmail.com",
+    "Address": "Nashua NH ",
+    "Institute Name/Organisation Name": "BIT Mesra ",
+    "Gender": "Female",
+    "Designation": "Bachelors",
+    "State": "New Hampshire"
+  },
+  {
+    "Serial No.": 121,
+    "Name of Participants": "Rani Kumari",
+    "Email-ID": "rani.mfp@gmail.com",
+    "Address": "Ranchi",
+    "Institute Name/Organisation Name": "RTC Institute of Technology, Ranchi",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 122,
+    "Name of Participants": "Ravi Singh Sengar",
+    "Email-ID": "ravisss190@gmail.com",
+    "Address": "Ranchi",
+    "Institute Name/Organisation Name": "Birla Institute Of Technology",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Jharkhand"
+  },
 ];
