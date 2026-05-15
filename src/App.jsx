@@ -6,6 +6,7 @@ import Footer from "./components/layout/footer";
 
 // Section Components
 import Hero from "./components/sections/hero";
+import ChiefGuestSpotlight from "./components/sections/chiefGuest";
 import SponsorsSection from "./components/sections/sponsors";
 import RadioOrangeSection from "./components/sections/radioOrange";
 import About from "./components/sections/about";
@@ -74,9 +75,9 @@ export default function App() {
   return (
     <>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-      
-      <Navbar 
-        onOpenSchedule={goToSchedule} 
+
+      <Navbar
+        onOpenSchedule={goToSchedule}
         onOpenSpeakers={goToSpeakers}
         onOpenTeam={goToTeam}
         onOpenAbout={goToAbout}
@@ -85,11 +86,12 @@ export default function App() {
         onNavigate={goToHome}
         currentPage={currentPage}
       />
-      
+
       {currentPage === "home" && (
         <main>
           <Hero />
           <SponsorsSection />
+          <ChiefGuestSpotlight />
           <RadioOrangeSection />
           <About />
           <CallToAction />

@@ -45,9 +45,9 @@ export default function Location() {
         </svg>
       ),
       label: "Coordinates",
-      lines: ["23.4123° N, 85.4399° E"],
+      lines: ["23.4131° N, 85.4417° E"],
       link: {
-        href: "https://maps.app.goo.gl/2S5AcZmtUoDyAvMF9",
+        href: "https://www.google.com/maps/place/R+%26+D+Building/@23.4131486,85.4396345,18z/data=!4m10!1m2!2m1!1sResearch+and+Developement+Building,+BIT+Mesra,+Ranchi,+Jharkhand!3m6!1s0x39f4fb002cfa813d:0xff0fd72f1f591fb8!8m2!3d23.4130805!4d85.4416522",
         text: "Open in Google Maps →"
       }
     }
@@ -104,8 +104,8 @@ export default function Location() {
           <div className="loc-map-wrap">
             <div className="loc-map-frame">
               <iframe
-                title="BIT Mesra Location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=85.40,23.39,85.47,23.43&layer=mapnik&marker=23.4123,85.4399"
+                title="R&D Building, BIT Mesra"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=85.435,23.409,85.448,23.418&layer=mapnik&marker=23.4131,85.4417"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -115,7 +115,7 @@ export default function Location() {
               />
             </div>
             <a
-              href="https://maps.app.goo.gl/2S5AcZmtUoDyAvMF9"
+              href="https://www.google.com/maps/place/R+%26+D+Building/@23.4131486,85.4396345,18z/data=!4m10!1m2!2m1!1sResearch+and+Developement+Building,+BIT+Mesra,+Ranchi,+Jharkhand!3m6!1s0x39f4fb002cfa813d:0xff0fd72f1f591fb8!8m2!3d23.4130805!4d85.4416522"
               target="_blank"
               rel="noopener noreferrer"
               className="loc-map-btn"

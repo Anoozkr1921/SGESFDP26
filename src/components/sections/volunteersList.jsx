@@ -75,7 +75,7 @@ export default function VolunteersList() {
         <h2 className="sec-h">Volunteers List</h2>
         <div className="rule" style={{ margin: "0 auto" }} />
         <p style={{ color: "var(--slate)", marginTop: "1rem", fontSize: "1.02rem", lineHeight: 1.8 }}>
-        
+
         </p>
       </div>
 
