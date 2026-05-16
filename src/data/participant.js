@@ -1220,4 +1220,84 @@ export const participants = [
     "Designation": "Masters",
     "State": "Jharkhand"
   },
+  {
+    "Serial No.": 123,
+    "Name of Participants": "Jay Raj",
+    "Email-ID": "jdraja@gmail.com",
+    "Address": "878 Pastoria Avenue",
+    "Institute Name/Organisation Name": "Cisco",
+    "Gender": "Male",
+    "Designation": "Industry",
+    "State": "California"
+  },
+  {
+    "Serial No.": 124,
+    "Name of Participants": "Sutapa Mondal",
+    "Email-ID": "smondal@bitmesra.ac.in",
+    "Address": "Department of ECE, BIT Mesra, Off Campus Deoghar",
+    "Institute Name/Organisation Name": "BIT Mesra",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 125,
+    "Name of Participants": "Hareshwar Prasad",
+    "Email-ID": "hprasad@bitmesra.ac.in",
+    "Address": "BIT Mesra Lalpur",
+    "Institute Name/Organisation Name": "BIT Mesra",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 126,
+    "Name of Participants": "Khalid Ashraf",
+    "Email-ID": "khalidashraf@bitmesra.ac.in",
+    "Address": "BIT Mesra Ranchi Lalpur City Campus",
+    "Institute Name/Organisation Name": "BIT Mesra Ranchi Lalpur City Campus",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 127,
+    "Name of Participants": "Vivek Kumar Srivastava",
+    "Email-ID": "vivek.srivastava@gla.ac.in",
+    "Address": "GLA University Mathura PIN 281406",
+    "Institute Name/Organisation Name": "GLA University",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Uttar Pradesh"
+  },
+  {
+    "Serial No.": 128,
+    "Name of Participants": "Dr. Durgesh Kumar",
+    "Email-ID": "durgesh.kumar@sbu.ac.in",
+    "Address": "SBU Ranchi",
+    "Institute Name/Organisation Name": "Sarala Birla University",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 129,
+    "Name of Participants": "Dr.K.Swarna Latha",
+    "Email-ID": "swarna.kandukuri@gnits.ac.in",
+    "Address": "Hyderabad",
+    "Institute Name/Organisation Name": "G.Narayanamma Institute of Technology and Science",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Telangana"
+  },
+  {
+    "Serial No.": 130,
+    "Name of Participants": "Nisha Rani",
+    "Email-ID": "nishaarani@gmail.com",
+    "Address": "Lalki Ghati",
+    "Institute Name/Organisation Name": "Radha Govind University",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
 ];
