@@ -92,7 +92,7 @@ export const schedule = [
     day: "Day 4", subtitle: "Smart Grid, Wind & AI", date: "21 May 2026",
     items: [
       { ico: "📡", time: "09:30 – 10:30 AM", event: "PMU Applications in Smart Grid", spk: "Dr. M. Jaya Bharata Reddy", inst: "NIT Tiruchirappalli", hl: true },
-      { ico: "🌬️", time: "10:30 – 11:30 AM", event: "Wind Energy Control Systems", spk: "Prof. K.B. Mohanty", inst: "NIT Rourkela", hl: true },
+      { ico: "🧠", time: "10:30 – 11:30 AM", event: "Typhoon Hill Solutions for Efficient digital Control Techniques fostering sustainable systems.", spk: "Era Bajpai", inst: "Quarbz Info Systems, Kanpur", hl: true },
       { ico: "☕", time: "11:30 – 11:45 AM", event: "Tea Break", spk: null, inst: "", hl: false },
       { ico: "🧠", time: "11:45 AM – 01:00 PM", event: "Adaptive Control for Microgrids", spk: "Prof. Bidyadhar Subudhi", inst: "IIT Goa", hl: true },
       { ico: "🍽️", time: "01:00 – 02:30 PM", event: "Break", spk: null, inst: "", hl: false },
@@ -106,7 +106,7 @@ export const schedule = [
     items: [
       { ico: "♻️", time: "09:00 – 10:30 AM", event: "Control Techniques for RE Applications", spk: "Dr. Aditya R. Gautam", inst: "BITS Pilani", hl: true },
       { ico: "☕", time: "10:30 – 10:45 AM", event: "Tea Break", spk: null, inst: "", hl: false },
-      { ico: "🧠", time: "10:45 - 12:00 PM", event: "Typhoon Hill Solutions for Efficient digital Control Techniques fostering sustainable systems.", spk: "Era Bajpai", inst: "Quarbz Info Systems, Kanpur", hl: true },
+      { ico: "🌬️", time: "10:45 - 12:00 PM", event: "Wind Energy Control Systems", spk: "Prof. K.B. Mohanty", inst: "NIT Rourkela", hl: true },
       { ico: "🍽️", time: "12:00 PM – 2:00 PM", event: "Break", spk: null, inst: "", hl: false },
       { ico: "🎉", time: "2:00 PM Onwards", event: "Valedictory Session", spk: null, inst: "", hl: false }
     ],

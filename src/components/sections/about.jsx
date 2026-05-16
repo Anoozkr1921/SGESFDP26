@@ -135,7 +135,7 @@ export default function About() {
                   <strong>
                     Five-Day Online Faculty Development Programme
                   </strong>{" "}
-                  brings together 18 distinguished speakers from IITs, NITs,
+                  brings together 19 distinguished speakers from IITs, NITs,
                   international universities, and industry to deliver a rigorous
                   exploration of emerging control and digital technologies for
                   green energy systems.
@@ -211,7 +211,7 @@ export default function About() {
               >
                 {[
                   { lbl: "Dates", val: "18 – 22 May 2026" },
-                  { lbl: "Venue", val: "Dept. of EEE, BIT Mesra\nRanchi, Jharkhand – 835215" },
+                  { lbl: "Venue", val: "R & D Building, Seminar Hall 1\nBirla Institute of Technology, Mesra\nRanchi, Jharkhand" },
                   { lbl: "Duration", val: "5 Days · Hands-on Training" },
                   { lbl: "Eligible", val: "Faculty · PhD · PG Research Fellow · UG Final Year · Industry" },
                   { lbl: "Registration Fee", val: "Nominal - Rs. 118 (including GST)" },

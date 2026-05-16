@@ -193,7 +193,7 @@ export default function AboutPage() {
                   <strong>
                     Five-Day Online Faculty Development Programme
                   </strong>{" "}
-                  brings together 18 distinguished speakers from IITs, NITs,
+                  brings together 19 distinguished speakers from IITs, NITs,
                   international universities, and industry to deliver a rigorous
                   exploration of emerging control and digital technologies for
                   green energy systems.
@@ -610,7 +610,7 @@ export default function AboutPage() {
                       />
                       {/* Gradient overlay for text reading */}
                       {lab.image && (
-                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.6) 100%)", pointerEvents: "none" }} />
+                        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.6) 100%)", pointerEvents: "none" }} />
                       )}
 
                       {!isActive && (
