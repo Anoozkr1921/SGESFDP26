@@ -58,7 +58,7 @@ export default function WorkshopAtAGlance() {
         >
           {[
             { lbl: "Dates", val: "18 – 22 May 2026" },
-            { lbl: "Venue", val: "Dept. of EEE, BIT Mesra\nRanchi, Jharkhand – 835215" },
+            { lbl: "Venue", val: "R & D Building, Seminar Hall 1, BIT Mesra , Ranchi" },
             { lbl: "Duration", val: "5 Days" },
             { lbl: "Eligible", val: "Faculty · PhD Scholars · PG Research Fellow · UG Final Year · Industry" },
             { lbl: "Registration Fee", val: "Nominal - Rs. 118 (including GST)" },

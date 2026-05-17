@@ -2,10 +2,10 @@ export default function Ticker() {
   const tickerItems = [
     { e: "📅", l: "Dates", v: "18–22 May 2026" },
     { e: "🏛", l: "Format", v: "Five Day Workshop · Hands-on Training" },
-    { e: "⚡", l: "Theme", v: "Emerging Control & Digital Technologies" },
-    { e: "📍", l: "Venue", v: "Dept. of EEE, BIT Mesra, Ranchi" },
+    { e: "⚡", l: "Theme", v: "Emerging Control & Digital Technologies for Green Energy Systems" },
+    { e: "📍", l: "Venue", v: "R & D Building, Seminar Hall 1, BIT Mesra" },
     { e: "🎓", l: "Mode", v: "Hybrid" },
-    { e: "📋", l: "Seats", v: "Limited No. Of Seats. Hurry Up to fix yours." },
+    { e: "📋", l: "Seats", v: "Limited Seats. Hurry Up to fix yours." },
   ];
 
   return (

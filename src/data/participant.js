@@ -1300,4 +1300,94 @@ export const participants = [
     "Designation": "Faculty",
     "State": "Jharkhand"
   },
+  {
+    "Serial No.": 131,
+    "Name of Participants": "Rohit Kumar Mahto",
+    "Email-ID": "rohityesonly@gmail.com",
+    "Address": "Ranchi",
+    "Institute Name/Organisation Name": "Birla Institute of Technology Mesra",
+    "Gender": "Male",
+    "Designation": "Ph.D.",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 132,
+    "Name of Participants": "KRISHNA MOHAN PANDEY",
+    "Email-ID": "mtee10008.25@bitmesra.ac.in",
+    "Address": "164 A Block Professional Flat, Kadma Sonari Link Road, Jamshedpur",
+    "Institute Name/Organisation Name": "BIT MESRA",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 133,
+    "Name of Participants": "Dr VINOD ADLA",
+    "Email-ID": "hodeee@mlritm.ac.in",
+    "Address": "Dundigal Hyderabad",
+    "Institute Name/Organisation Name": "Marri Laxman Reddy Instutute of Technology and Management",
+    "Gender": "Male",
+    "Designation": "Ph.D.",
+    "State": "Telangana"
+  },
+  {
+    "Serial No.": 134,
+    "Name of Participants": "Arush Singh",
+    "Email-ID": "mamtagahlan@msit.in",
+    "Address": "Orchid Vally Sector 10B Dwarka -New delhi",
+    "Institute Name/Organisation Name": "Mount Carmel School ,Dwarka, New Delhi",
+    "Gender": "Male",
+    "Designation": "Bachelors",
+    "State": "New Delhi"
+  },
+  {
+    "Serial No.": 135,
+    "Name of Participants": "Ankita Chandola",
+    "Email-ID": "ankita.chandola44@gmail.com",
+    "Address": "Selaqui,Dehradun",
+    "Institute Name/Organisation Name": "JBIT , DEHRADUN",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Uttarakhand"
+  },
+  {
+    "Serial No.": 136,
+    "Name of Participants": "Pushpalata Khalkho",
+    "Email-ID": "pushpi215@gmail.com",
+    "Address": "Anandi Ormanjhi Ranchi",
+    "Institute Name/Organisation Name": "RTC Institute of Technology Ranchi",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 137,
+    "Name of Participants": "Babita Kumari",
+    "Email-ID": "babita_kumari@rtcit.ac.in",
+    "Address": "Anandi Ormanjhi Ranchi",
+    "Institute Name/Organisation Name": "RTC Institute of Technology Ranchi",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "JHARKHAND"
+  },
+  {
+    "Serial No.": 138,
+    "Name of Participants": "Mohini Ramesh Bhadikar",
+    "Email-ID": "mbhadikar13@gmail.com",
+    "Address": "Latur",
+    "Institute Name/Organisation Name": "Vilasrao Deshmukh Foundation Group of Institutions Latur",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Maharashtra"
+  },
+  {
+    "Serial No.": 139,
+    "Name of Participants": "Dr. Sushanta Kumar Sahu",
+    "Email-ID": "sushanta.sahu@nist.edu",
+    "Address": "301, TIFAC Building, NIST, Berhampur 761008",
+    "Institute Name/Organisation Name": "NIST University",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Odisha"
+  }
 ];
