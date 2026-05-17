@@ -1389,5 +1389,125 @@ export const participants = [
     "Gender": "Male",
     "Designation": "Faculty",
     "State": "Odisha"
+  },
+  {
+    "Serial No.": 140,
+    "Name of Participants": "Om Prakash Sinha",
+    "Email-ID": "omprakashsinha9155@gmail.com",
+    "Address": "Thane, Mumbai",
+    "Institute Name/Organisation Name": "Alamuri Ratnamala Institute of Engineering and Technology",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Mumbai"
+  },
+  {
+    "Serial No.": 141,
+    "Name of Participants": "Abhijeet Anand",
+    "Email-ID": "abhi.rtcit@gmail.com",
+    "Address": "Teacher's colony, New Shivaji Nagar, Bargain, Buti, Ranchi",
+    "Institute Name/Organisation Name": "BIT Mesra Ranchi",
+    "Gender": "Male",
+    "Designation": "Ph.D.",
+    "State": "Ranchi, Jharkhand"
+  },
+  {
+    "Serial No.": 142,
+    "Name of Participants": "Bharat S sudame",
+    "Email-ID": "bharat_sudame@rediffmail.com",
+    "Address": "Yeshwantrao Chavan College of Engineering, Nagpur",
+    "Institute Name/Organisation Name": "Yeshwantrao Chavan College of Engineering, Nagpur",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Maharashtra"
+  },
+  {
+    "Serial No.": 143,
+    "Name of Participants": "Nitin chand",
+    "Email-ID": "nitin.chand.en@coeruniversity.ac.in",
+    "Address": "COER University ,Roorkee",
+    "Institute Name/Organisation Name": "COER University",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Uttarakhand"
+  },
+  {
+    "Serial No.": 144,
+    "Name of Participants": "Ms. Nikita M. Malwar",
+    "Email-ID": "nikita2311patil@gmail.com",
+    "Address": "10/c Ganesh nagar near SD Hospital Nandanvan,Nagpur",
+    "Institute Name/Organisation Name": "SBJITMR",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Maharashtra"
+  },
+  {
+    "Serial No.": 145,
+    "Name of Participants": "Shital R Bakal",
+    "Email-ID": "shital.bakal93@gmail.com",
+    "Address": "Jyoti nagar new usmanpura chh sambhajinagar",
+    "Institute Name/Organisation Name": "Chh Shahu College of Engineering,",
+    "Gender": "Female",
+    "Designation": "Ph.D.",
+    "State": "Maharashtra"
+  },
+  {
+    "Serial No.": 146,
+    "Name of Participants": "Misbah Khan",
+    "Email-ID": "Misbah.khan@fcrit.ac.in",
+    "Address": "Mumbai",
+    "Institute Name/Organisation Name": "Fr. Conceicao Rodrigues Institute of Technology",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Maharashtra"
+  },
+  {
+    "Serial No.": 147,
+    "Name of Participants": "Susmita Paul",
+    "Email-ID": "er.susmitapaultit@gmail.com",
+    "Address": "Agartala",
+    "Institute Name/Organisation Name": "Techno College of Engineering",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Tripura"
+  },
+  {
+    "Serial No.": 148,
+    "Name of Participants": "Dhananjay Roy",
+    "Email-ID": "phdee10001.24@bitmesra.ac.in",
+    "Address": "BIT Mesra Ranchi",
+    "Institute Name/Organisation Name": "BIT Mesra Ranchi",
+    "Gender": "Male",
+    "Designation": "Ph.D.",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 149,
+    "Name of Participants": "Rajeshwar Mishra",
+    "Email-ID": "mtee10005.24@bitmesra.ac.in",
+    "Address": "BIT Mesra Ranchi",
+    "Institute Name/Organisation Name": "BIT Mesra Ranchi",
+    "Gender": "Male",
+    "Designation": "Masters",
+    "State": "Jharkhand"
+  },
+  {
+    "Serial No.": 150,
+    "Name of Participants": "Shubhangini Kamble",
+    "Email-ID": "kambless023@gmail.com",
+    "Address": "PES College of Engineering, Electrical Department, Near Panchakki, Nagsenvan",
+    "Institute Name/Organisation Name": "PES College of Engineering",
+    "Gender": "Female",
+    "Designation": "Faculty",
+    "State": "Maharashtra"
+  },
+  {
+    "Serial No.": 151,
+    "Name of Participants": "Dr. Abhinandan Kumar",
+    "Email-ID": "abhinandan@bmsit.in",
+    "Address": "Bangalore",
+    "Institute Name/Organisation Name": "BMSITM",
+    "Gender": "Male",
+    "Designation": "Faculty",
+    "State": "Karnataka"
   }
 ];
