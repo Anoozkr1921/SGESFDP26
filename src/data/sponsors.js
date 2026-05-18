@@ -3,11 +3,13 @@ import imgCreativeRobotics from "../assets/images/Creative Robotics.jpeg";
 import imgQuarbz from "../assets/images/QUARBZ Typhoon HIL.jpeg";
 import imgOpalRT from "../assets/images/OpalRT.png";
 import imgJREDA from "../assets/images/jreda.png";
+import imgCCL from "../assets/images/ccl.jpg";
 
 export const sponsors = [
   { name: "JREDA", tier: " Main Sponsor", image: imgJREDA },
   { name: "GAIL", tier: "Main Sponsor", image: imgGAIL },
   { name: "Creative Robotics", tier: "Sponsor", image: imgCreativeRobotics },
   { name: "QUARBZ Typhoon HIL", tier: "Sponsor", image: imgQuarbz },
-  { name: "OPAL-RT Technologies", tier: "C0-Sponsor", image: imgOpalRT },
+  { name: "OPAL-RT Technologies", tier: "Co-Sponsor", image: imgOpalRT },
+  { name: "CCL", tier: "Co-Sponsor", image: imgCCL },
 ];
