@@ -14,6 +14,7 @@ import Speakers from "./components/sections/speakers";
 import Committee from "./components/sections/committee";
 import CallToAction from "./components/sections/callToAction";
 import Location from "./components/sections/location";
+import InauguralMoments from "./components/sections/inauguralMoments";
 
 // Page Components (standalone pages)
 import AboutPage from "./components/ui/AboutPage";
@@ -90,6 +91,7 @@ export default function App() {
       {currentPage === "home" && (
         <main>
           <Hero />
+          <InauguralMoments />
           <SponsorsSection />
           <ChiefGuestSpotlight />
           <RadioOrangeSection />
