@@ -2,25 +2,25 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Award, Calendar, Clock, MapPin, Star, ExternalLink, X, Briefcase, Lightbulb, Trophy, Handshake } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
-import chiefGuestImg from "../../assets/images/SandipSir.jpeg";
+import chiefGuestImg from "../../assets/images/SushantSir.jpeg";
+import guestOfHonourImg from "../../assets/images/PranshuSir.jpg";
 
 /* ── Chief Guest Data ── */
 const chiefGuest = {
-  name: "Shri Sandip Kr. Kar",
-  designation: "Executive Director (ED), RDCIS",
-  organization: "Steel Authority of India Ltd. (SAIL), Ranchi",
-  quote: "\"Pioneering sustainability through green steel initiatives, biochar trials, and innovative R&D — driving industrial excellence with specialized rail grades and transformative technology partnerships.\"",
-  eventDate: "18 May 2026",
-  eventTime: "10:30 AM – 11:30 AM",
+  name: "Shri Sushant Gaurav",
+  designation: "RMC Commissioner(IAS), Ranchi",
+  organization: "Government of Jharkhand",
+  quote: "“Education is the most powerful weapon which you can use to change the world.”",
+  eventDate: "22nd May, 2026",
+  eventTime: "2:00pm Onwards",
   venue: "BIT Mesra, Ranchi",
-  bio: "Shri Sandip Kr. Kar, ED(RDCIS) was conferred the SAIL Corporate Award for Excellence in the category of R&D Specialist for his numerous innovative new process & product development initiatives.",
-  highlights: [
-    { icon: "trophy", label: "Award", text: "SAIL Corporate Award for Excellence — R&D Specialist category" },
-    { icon: "briefcase", label: "Designation", text: "Executive Director (ED), RDCIS — SAIL, Ranchi" },
-    { icon: "lightbulb", label: "Key Contributions", text: "R260, 60E1(A1), 1175HT grades of Rails — pioneering new process & product development" },
-    { icon: "lightbulb", label: "Focus Areas", text: "Sustainability, green steel initiatives (biochar trials), and industrial research for process improvements" },
-    { icon: "handshake", label: "Recent Activity", text: "Active in signing MoAs for technology development (e.g., with IOCL) and leading sustainability initiatives" },
-  ],
+  bio: "Sushant Gaurav is an Indian Administrative Service (IAS) officer of the 2014 batch from the Jharkhand cadre, a Direct Recruit (DR) entrant via the UPSC Civil Services Examination. Officer identity: 01JH113J04. Currently posted as Nagar Aayukta, Ranchi Nagar Nigam Additional Charge (i) V.C., RRDA, Jharkhand since 14-03-2026. Career to date: 5 documented postings, 5 distinct locations, 12 years of service. Educational qualification on file: B.E.(Electrical Engg.). Pay Level 12 in the IAS Pay Matrix; home state Jharkhand. Profile compiled from the Department of Personnel & Training (DoPT) IAS Civil List and Executive Record Sheet, as published on the public portal.",
+  
+};
+
+const guestOfHonour = {
+  name: "Pranshu Patidar",
+  designation: "Programme Manager, Vedantu",
 };
 
 /* ── Animation Variants ── */
@@ -45,7 +45,6 @@ const scaleIn = {
 export default function ChiefGuestSpotlight() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
-  const [showModal, setShowModal] = useState(false);
 
   return (
     <section
@@ -114,13 +113,10 @@ export default function ChiefGuestSpotlight() {
 
           <h2 style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+            fontSize: "clamp(2.4rem, 5vw, 4.2rem)",
             fontWeight: 900, color: "#fff", lineHeight: 1.15, marginBottom: 8,
           }}>
-            Guest of <span style={{
-              background: "linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%)",
-              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-            }}>Honour</span>
+            Chief Guest
           </h2>
           <div style={{
             width: 64, height: 3, margin: "0 auto",
@@ -317,25 +313,12 @@ export default function ChiefGuestSpotlight() {
                 </p>
               </motion.div>
 
-              {/* Decorative divider */}
-              <motion.div
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                variants={fadeUp}
-                custom={3.5}
-                style={{
-                  width: 48, height: 2,
-                  background: "linear-gradient(to right, #fbbf24, rgba(251,191,36,0.2))",
-                  borderRadius: 2, marginBottom: 14,
-                }}
-              />
-
               {/* Quote */}
               <motion.div
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={fadeUp}
-                custom={4}
+                custom={3.3}
                 style={{
                   position: "relative",
                   padding: "14px 18px",
@@ -361,6 +344,19 @@ export default function ChiefGuestSpotlight() {
                 </p>
               </motion.div>
 
+              {/* Decorative divider */}
+              <motion.div
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                variants={fadeUp}
+                custom={3.5}
+                style={{
+                  width: 48, height: 2,
+                  background: "linear-gradient(to right, #fbbf24, rgba(251,191,36,0.2))",
+                  borderRadius: 2, marginBottom: 14,
+                }}
+              />
+
               {/* Event Info Grid */}
               <motion.div
                 initial="hidden"
@@ -380,15 +376,103 @@ export default function ChiefGuestSpotlight() {
                 <InfoChip icon={<MapPin size={16} />} label="Venue" value={chiefGuest.venue} />
               </motion.div>
 
-              {/* CTA Button */}
-              <motion.div
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                variants={fadeUp}
-                custom={6}
-              >
-                <KnowMoreButton onClick={() => setShowModal(true)} />
-              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ── Guest Of Honour Placeholder ── */}
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={fadeUp}
+          custom={7}
+          style={{
+            marginTop: 28,
+            background: "linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)",
+            border: "1px solid rgba(255,255,255,0.08)",
+            borderRadius: 24,
+            backdropFilter: "blur(20px)",
+            boxShadow: "0 24px 60px rgba(0, 0, 0, 0.28)",
+            overflow: "hidden",
+            padding: "28px 24px",
+          }}
+        >
+          <div style={{
+            display: "inline-flex", alignItems: "center", gap: 8,
+            background: "linear-gradient(135deg, rgba(234, 179, 8, 0.15), rgba(234, 179, 8, 0.05))",
+            border: "1px solid rgba(234, 179, 8, 0.25)",
+            borderRadius: 50, padding: "6px 16px", marginBottom: 14,
+          }}>
+            <Star size={13} style={{ color: "#fbbf24" }} fill="#fbbf24" />
+            <span style={{
+              fontSize: ".72rem", fontWeight: 900, textTransform: "uppercase",
+              letterSpacing: ".16em", color: "#fbbf24",
+            }}>
+              Guest Of Honour
+            </span>
+            <Star size={13} style={{ color: "#fbbf24" }} fill="#fbbf24" />
+          </div>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "220px 1fr",
+            gap: 24,
+            alignItems: "center",
+          }}
+            className="cg-card-grid"
+          >
+            <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
+              <div style={{
+                position: "absolute",
+                inset: -14,
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(232, 152, 10, 0.22) 0%, rgba(24, 163, 82, 0.12) 45%, transparent 72%)",
+                filter: "blur(10px)",
+              }} />
+              <div style={{
+                width: 180,
+                height: 180,
+                borderRadius: "50%",
+                overflow: "hidden",
+                border: "3px solid rgba(126, 223, 168, 0.28)",
+                boxShadow: "0 0 28px rgba(24, 163, 82, 0.22), 0 0 54px rgba(232, 152, 10, 0.12), 0 18px 42px rgba(0,0,0,0.42)",
+                background: "#062817",
+              }}>
+                <img
+                  src={guestOfHonourImg}
+                  alt={guestOfHonour.name}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top center",
+                    display: "block",
+                  }}
+                />
+              </div>
+            </div>
+
+            <div>
+              <h3 style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: "clamp(1.8rem, 3.4vw, 2.6rem)",
+                fontWeight: 900,
+                color: "#fff",
+                lineHeight: 1.15,
+                margin: "0 0 10px",
+              }}>
+                {guestOfHonour.name}
+              </h3>
+
+              <p style={{
+                margin: 0,
+                fontSize: "1.08rem",
+                lineHeight: 1.6,
+                color: "#7edfa8",
+                fontWeight: 700,
+              }}>
+                {guestOfHonour.designation}
+              </p>
             </div>
           </div>
         </motion.div>
@@ -449,12 +533,6 @@ export default function ChiefGuestSpotlight() {
         }
       `}</style>
 
-      {/* ── Know More Modal ── */}
-      <AnimatePresence>
-        {showModal && (
-          <ChiefGuestModal onClose={() => setShowModal(false)} />
-        )}
-      </AnimatePresence>
     </section>
   );
 }
@@ -499,223 +577,12 @@ function InfoChip({ icon, label, value }) {
   );
 }
 
-function KnowMoreButton({ onClick }) {
-  const [hovered, setHovered] = useState(false);
-
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        display: "inline-flex", alignItems: "center", gap: 10,
-        background: hovered
-          ? "linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)"
-          : "linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,191,36,0.05))",
-        color: hovered ? "#0f172a" : "#fbbf24",
-        border: hovered ? "1.5px solid #fbbf24" : "1.5px solid rgba(251,191,36,0.3)",
-        padding: "12px 28px",
-        borderRadius: 14,
-        fontFamily: "'Helvetica', 'Arial', sans-serif",
-        fontSize: ".85rem", fontWeight: 900,
-        textTransform: "uppercase", letterSpacing: ".1em",
-        cursor: "pointer",
-        transition: "all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-        boxShadow: hovered
-          ? "0 8px 30px rgba(251, 191, 36, 0.3)"
-          : "0 4px 15px rgba(251, 191, 36, 0.08)",
-        transform: hovered ? "translateY(-2px)" : "translateY(0)",
-        outline: "none",
-      }}
-    >
-      Know More
-      <ExternalLink size={15} style={{
-        transition: "transform 0.3s",
-        transform: hovered ? "translate(2px, -2px)" : "translate(0, 0)",
-      }} />
-    </button>
-  );
-}
-
 const highlightIcons = {
   trophy: Trophy,
   briefcase: Briefcase,
   lightbulb: Lightbulb,
   handshake: Handshake,
 };
-
-function ChiefGuestModal({ onClose }) {
-  // Close on Escape key
-  useEffect(() => {
-    const handler = (e) => { if (e.key === "Escape") onClose(); };
-    window.addEventListener("keydown", handler);
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", handler);
-      document.body.style.overflow = "";
-    };
-  }, [onClose]);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.25 }}
-      onClick={onClose}
-      style={{
-        position: "fixed", inset: 0, zIndex: 3000,
-        background: "rgba(3, 26, 13, 0.8)",
-        backdropFilter: "blur(12px)",
-        display: "flex", alignItems: "center", justifyContent: "center",
-        padding: "1.5rem",
-      }}
-    >
-      <motion.div
-        initial={{ opacity: 0, scale: 0.92, y: 30 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.92, y: 30 }}
-        transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
-        onClick={(e) => e.stopPropagation()}
-        style={{
-          position: "relative",
-          maxWidth: 680, width: "100%", maxHeight: "85vh",
-          overflowY: "auto",
-          background: "linear-gradient(160deg, #062817 0%, #0a3420 50%, #0b3d22 100%)",
-          border: "1px solid rgba(255,255,255,0.1)",
-          borderRadius: 24,
-          boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05) inset",
-          padding: 0,
-        }}
-      >
-        {/* Top gradient bar */}
-        <div style={{
-          position: "sticky", top: 0, left: 0, right: 0, height: 3, zIndex: 5,
-          background: "linear-gradient(90deg, #14834a 0%, #18a352 35%, #e8980a 65%, #fcd34d 100%)",
-        }} />
-
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          style={{
-            position: "absolute", top: 18, right: 18, zIndex: 10,
-            width: 36, height: 36, borderRadius: "50%",
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.12)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            cursor: "pointer", color: "rgba(255,255,255,0.6)",
-            transition: "all 0.2s",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(255,255,255,0.15)";
-            e.currentTarget.style.color = "#fff";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(255,255,255,0.08)";
-            e.currentTarget.style.color = "rgba(255,255,255,0.6)";
-          }}
-        >
-          <X size={18} />
-        </button>
-
-        {/* Modal Header */}
-        <div style={{ padding: "2.5rem 2.5rem 1.5rem", display: "flex", alignItems: "center", gap: 20 }}>
-          <div style={{
-            width: 72, height: 72, borderRadius: "50%", flexShrink: 0,
-            overflow: "hidden",
-            border: "3px solid rgba(251,191,36,0.3)",
-            boxShadow: "0 0 20px rgba(251,191,36,0.15)",
-          }}>
-            <img src={chiefGuestImg} alt={chiefGuest.name} style={{
-              width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center",
-            }} />
-          </div>
-          <div>
-            <h3 style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "1.5rem", fontWeight: 900, color: "#fff", lineHeight: 1.2, marginBottom: 4,
-            }}>
-              {chiefGuest.name}
-            </h3>
-            <p style={{
-              fontSize: ".9rem", fontWeight: 600,
-              color: "#7edfa8",
-              marginBottom: 2, lineHeight: 1.3,
-            }}>
-              {chiefGuest.designation}
-            </p>
-            <p style={{ fontSize: ".82rem", color: "rgba(255,255,255,0.45)", lineHeight: 1.3 }}>
-              {chiefGuest.organization}
-            </p>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div style={{ margin: "0 2.5rem", height: 1, background: "rgba(255,255,255,0.08)" }} />
-
-        {/* Bio */}
-        <div style={{ padding: "1.5rem 2.5rem" }}>
-          <p style={{
-            fontSize: "1rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.75, margin: 0,
-          }}>
-            {chiefGuest.bio}
-          </p>
-        </div>
-
-        {/* Highlights */}
-        <div style={{ padding: "0 2.5rem 2.5rem", display: "flex", flexDirection: "column", gap: 12 }}>
-          {chiefGuest.highlights.map((h, i) => {
-            const IconComp = highlightIcons[h.icon] || Lightbulb;
-            return (
-              <div key={i} style={{
-                display: "flex", alignItems: "flex-start", gap: 14,
-                padding: "14px 16px",
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.07)",
-                borderRadius: 14,
-                transition: "all 0.2s",
-              }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "rgba(255,255,255,0.06)";
-                  e.currentTarget.style.borderColor = "rgba(251,191,36,0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "rgba(255,255,255,0.03)";
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
-                }}
-              >
-                <div style={{
-                  width: 36, height: 36, borderRadius: 10, flexShrink: 0,
-                  background: "linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,191,36,0.05))",
-                  border: "1px solid rgba(251,191,36,0.2)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                }}>
-                  <IconComp size={16} style={{ color: "#fbbf24" }} />
-                </div>
-                <div style={{ flex: 1 }}>
-                  <span style={{
-                    fontSize: ".65rem", fontWeight: 900, textTransform: "uppercase",
-                    letterSpacing: ".12em", color: "rgba(255,255,255,0.4)",
-                    display: "block", marginBottom: 4,
-                  }}>
-                    {h.label}
-                  </span>
-                  <p style={{
-                    fontSize: ".92rem", color: "rgba(255,255,255,0.8)",
-                    lineHeight: 1.55, margin: 0,
-                  }}>
-                    {h.text}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
 
 function ShineEffect() {
   return (
