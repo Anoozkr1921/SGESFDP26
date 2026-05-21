@@ -1,6 +1,8 @@
 import { Calendar, MapPin, Users, MonitorSmartphone } from "lucide-react";
 import whiteBg from "../../assets/images/white bg.png";
 import WorkshopAtAGlance from "../ui/WorkshopAtAGlance";
+import InauguralMoments from "./inauguralMoments";
+import KisanSathiLaunch from "./kisanSathiLaunch";
 
 export default function Hero({ onOpenSchedule }) {
   const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -115,6 +117,10 @@ export default function Hero({ onOpenSchedule }) {
           </div>
         </div>
       </section>
+
+      <KisanSathiLaunch />
+
+      <InauguralMoments />
 
       {/* ── JOIN THE PROGRAMME — Dark CTA Bar + Slow Ticker ── */}
       <section
